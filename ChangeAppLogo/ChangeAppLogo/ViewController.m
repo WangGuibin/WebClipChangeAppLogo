@@ -12,6 +12,7 @@
 #import "AppListViewController.h"
 #import <UIButton+WebCache.h>
 #import <TZImagePickerController.h>
+#import "FilesManagerViewController.h"
 
 //官方接口：
 //1、通过appId获取信息
@@ -37,10 +38,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if(!self.webServer.isRunning){
+        [self.webServer startWithPort:8090 bonjourName:nil];
+    }
+    
     self.selectAppBtn.layer.masksToBounds = YES;
     self.selectIconBtn.layer.masksToBounds = YES;
     // Do any additional setup after loading the view.
     NSLog(@"%@",NSHomeDirectory());
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"文件" style:(UIBarButtonItemStylePlain) target:self action:@selector(skipFilesManagerPage)];
+}
+
+- (void)skipFilesManagerPage{
+    FilesManagerViewController *fileVC = [FilesManagerViewController new];
+    [self.navigationController pushViewController:fileVC animated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -77,9 +89,6 @@
 //生成描述文件并打开Safari
 - (IBAction)createMobileConfig:(UIButton *)sender {
     [self.view endEditing:YES];
-    if(!self.webServer.isRunning){
-        [self.webServer startWithPort:8090 bonjourName:nil];
-    }
     [self createConfigFile];
 }
 

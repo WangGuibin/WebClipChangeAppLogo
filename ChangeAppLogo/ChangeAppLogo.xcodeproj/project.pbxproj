@@ -17,6 +17,7 @@
 		CA1E8B252543F94F00049305 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E8B242543F94F00049305 /* main.m */; };
 		CA1E8B312544112800049305 /* AppStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E8B302544112800049305 /* AppStoreModel.m */; };
 		CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E8B3825441B3500049305 /* AppListViewController.m */; };
+		CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E8B582544487000049305 /* FilesManagerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		CA1E8B302544112800049305 /* AppStoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStoreModel.m; sourceTree = "<group>"; };
 		CA1E8B3725441B3500049305 /* AppListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppListViewController.h; sourceTree = "<group>"; };
 		CA1E8B3825441B3500049305 /* AppListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppListViewController.m; sourceTree = "<group>"; };
+		CA1E8B572544487000049305 /* FilesManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilesManagerViewController.h; sourceTree = "<group>"; };
+		CA1E8B582544487000049305 /* FilesManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesManagerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				CA1E8B192543F94A00049305 /* ViewController.m */,
 				CA1E8B3725441B3500049305 /* AppListViewController.h */,
 				CA1E8B3825441B3500049305 /* AppListViewController.m */,
+				CA1E8B572544487000049305 /* FilesManagerViewController.h */,
+				CA1E8B582544487000049305 /* FilesManagerViewController.m */,
 				CA1E8B1B2543F94A00049305 /* Main.storyboard */,
 				CA1E8B1E2543F94F00049305 /* Assets.xcassets */,
 				CA1E8B202543F94F00049305 /* LaunchScreen.storyboard */,
@@ -227,6 +232,7 @@
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
+				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
 			);
