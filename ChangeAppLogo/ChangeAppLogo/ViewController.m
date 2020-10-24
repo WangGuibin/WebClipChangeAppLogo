@@ -43,12 +43,16 @@
     NSLog(@"%@",NSHomeDirectory());
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
 //获取APP信息
 - (IBAction)getAppAction:(UIButton *)sender {
     AppListViewController *appVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AppListViewController"];
     [appVC setCallBack:^(AppInfoModel * _Nonnull model) {
         self.currentModel = model;
-        [self.selectAppBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:model.artworkUrl60] forState:UIControlStateNormal];
+        [self.selectAppBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:model.artworkUrl512] forState:UIControlStateNormal];
         [self.selectAppBtn setTitle:@"" forState:UIControlStateNormal];
     }];
     [self.navigationController pushViewController:appVC animated:YES];
@@ -72,12 +76,11 @@
 
 //生成描述文件并打开Safari
 - (IBAction)createMobileConfig:(UIButton *)sender {
+    [self.view endEditing:YES];
     if(!self.webServer.isRunning){
         [self.webServer startWithPort:8090 bonjourName:nil];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self createConfigFile];
-    });
+    [self createConfigFile];
 }
 
 
@@ -106,13 +109,11 @@
             [fileString writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
         }
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSString *realStr = [fileName stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-        NSString *url = [NSString stringWithFormat:@"http://127.0.0.1:8090/%@",realStr];
-        SFSafariViewController *webVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url]];
-        [self presentViewController:webVC animated:YES completion:nil];
-        [self cleanPage];
-    });
+    NSString *realStr = [fileName stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString *url = [NSString stringWithFormat:@"http://127.0.0.1:8090/%@",realStr];
+    SFSafariViewController *webVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url]];
+    [self presentViewController:webVC animated:YES completion:nil];
+    [self cleanPage];
 }
 
 //重置页面数据

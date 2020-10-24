@@ -7,6 +7,58 @@
 
 #import "AppListViewController.h"
 #import <UIImageView+WebCache.h>
+
+@interface AppCell : UITableViewCell
+
+@property (nonatomic, strong) UIImageView *logoImgView;
+@property (nonatomic, strong) UILabel *appNameLabel;
+
+@end
+
+
+@implementation AppCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.logoImgView.layer.cornerRadius = 5.0f;
+        self.logoImgView.layer.masksToBounds = YES;
+        [self.contentView addSubview:self.logoImgView];
+        [self.contentView addSubview:self.appNameLabel];
+        [self setupLayout];
+    }
+    return self;
+}
+
+- (void)setupLayout {
+    CGFloat cellW = UIScreen.mainScreen.bounds.size.width;
+    self.logoImgView.frame = CGRectMake(10, 10, 60 , 60);
+    self.appNameLabel.frame = CGRectMake(CGRectGetMaxX(self.logoImgView.frame) + 10, 25, cellW - 100 , 30);
+    
+}
+
+- (UIImageView *)logoImgView {
+    if (!_logoImgView) {
+        _logoImgView = [[UIImageView alloc] initWithImage:nil];
+        _logoImgView.contentMode = UIViewContentModeScaleAspectFill;
+        _logoImgView.clipsToBounds = YES;
+    }
+    return _logoImgView;
+}
+
+- (UILabel *)appNameLabel {
+    if (!_appNameLabel) {
+        _appNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _appNameLabel.textAlignment = NSTextAlignmentLeft;
+        _appNameLabel.textColor = [UIColor blackColor];
+        _appNameLabel.font = [UIFont boldSystemFontOfSize:16];
+    }
+    return  _appNameLabel;
+}
+
+@end
+
+
 @interface AppListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *appNameTF;
@@ -20,11 +72,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self.tableview registerClass:[AppCell class] forCellReuseIdentifier:NSStringFromClass([AppCell class])];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 
 - (IBAction)searchAction:(id)sender {
+    [self.view endEditing:YES];
     if (!self.appNameTF.text.length) {
         return;
     }
@@ -41,14 +97,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: NSStringFromClass([UITableViewCell class])];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:  NSStringFromClass([UITableViewCell class])];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
+    AppCell *cell = [tableView dequeueReusableCellWithIdentifier: NSStringFromClass([AppCell class])];
     AppInfoModel *model = self.bigModel.results[indexPath.row];
-    cell.textLabel.text = model.trackName;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.artworkUrl100] placeholderImage:nil];
+    cell.appNameLabel.text = model.trackName;
+    [cell.logoImgView sd_setImageWithURL:[NSURL URLWithString:model.artworkUrl60] placeholderImage:[UIImage imageNamed:@"AppIcon"]];
     return cell;
 }
 
