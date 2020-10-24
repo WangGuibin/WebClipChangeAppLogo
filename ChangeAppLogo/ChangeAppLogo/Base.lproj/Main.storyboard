@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DKa-4s-dpm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xNQ-2w-nWY">
+            <objects>
+                <navigationController id="DKa-4s-dpm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7pE-AC-tbo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eRS-J2-YUY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UP8-Tq-9aU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1191" y="-48"/>
+        </scene>
+        <!--自定义应用图标-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="XBL-20-8wr">
+                                <rect key="frame" x="50" y="138" width="314" height="132"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTL-fy-kfj">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                        <color key="backgroundColor" red="1" green="0.50588235290000005" blue="0.50588235290000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="CTL-fy-kfj" secondAttribute="height" multiplier="1:1" id="OUD-9W-Ctg"/>
+                                        </constraints>
+                                        <state key="normal" title="选取App">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getAppAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hlj-WN-eld"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-8F-ftL">
+                                        <rect key="frame" x="182" y="0.0" width="132" height="132"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="K9l-8F-ftL" secondAttribute="height" multiplier="1:1" id="XeT-at-kzR"/>
+                                        </constraints>
+                                        <state key="normal" title="选取图标">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="getIconDataAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QS2-Yh-aeU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入应用名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-jq-z0l">
+                                <rect key="frame" x="57" y="300" width="300" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DBm-Uy-EaX"/>
+                                    <constraint firstAttribute="height" constant="44" id="aEY-cA-yzi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-sZ-yCs">
+                                <rect key="frame" x="100" y="388" width="214" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="HhL-vR-5xD"/>
+                                </constraints>
+                                <state key="normal" title="生成">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createMobileConfig:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVc-SF-3N5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XBL-20-8wr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5WU-qa-T2z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBL-20-8wr" secondAttribute="trailing" constant="50" id="M7g-xP-4If"/>
+                            <constraint firstItem="I1A-jq-z0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qbj-f4-MJk"/>
+                            <constraint firstItem="y6a-sZ-yCs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="S5H-ST-cep"/>
+                            <constraint firstItem="XBL-20-8wr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WoB-vj-Oiu"/>
+                            <constraint firstItem="y6a-sZ-yCs" firstAttribute="top" secondItem="I1A-jq-z0l" secondAttribute="bottom" constant="44" id="XIj-Fb-fOJ"/>
+                            <constraint firstItem="I1A-jq-z0l" firstAttribute="top" secondItem="XBL-20-8wr" secondAttribute="bottom" constant="30" id="ZUj-nk-C8l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6a-sZ-yCs" secondAttribute="trailing" constant="100" id="r1j-p5-hUp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="自定义应用图标" id="Wiz-5g-sD9"/>
+                    <connections>
+                        <outlet property="appNameTextfield" destination="I1A-jq-z0l" id="5aU-oE-pg5"/>
+                        <outlet property="selectAppBtn" destination="CTL-fy-kfj" id="xrX-gp-b0M"/>
+                        <outlet property="selectIconBtn" destination="K9l-8F-ftL" id="Dty-Yt-1PB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-562.31884057971024" y="-48.214285714285715"/>
+        </scene>
+        <!--选择App-->
+        <scene sceneID="IkT-gJ-Tpa">
+            <objects>
+                <viewController storyboardIdentifier="AppListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nzJ-hQ-Q8O" customClass="AppListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kwq-6O-Y3R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ygE-AZ-SfN">
+                                <rect key="frame" x="0.0" y="121" width="414" height="741"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nzJ-hQ-Q8O" id="Yd5-j4-01G"/>
+                                    <outlet property="delegate" destination="nzJ-hQ-Q8O" id="lKY-6f-6sa"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入App名称搜索🔍" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jry-bU-k4D">
+                                <rect key="frame" x="30" y="67" width="259" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BZ1-zg-wRw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdm-LA-QKB">
+                                <rect key="frame" x="304" y="74" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50588235290000005" blue="0.50588235290000005" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HtO-pQ-rPb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="lT8-mW-Yhf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="搜 索"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchAction:" destination="nzJ-hQ-Q8O" eventType="touchUpInside" id="iPF-Nd-8DQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yPI-Mt-yd6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jry-bU-k4D" firstAttribute="centerY" secondItem="kdm-LA-QKB" secondAttribute="centerY" id="8dd-LD-eIF"/>
+                            <constraint firstItem="Jry-bU-k4D" firstAttribute="leading" secondItem="yPI-Mt-yd6" secondAttribute="leading" constant="30" id="D97-g5-bPZ"/>
+                            <constraint firstItem="ygE-AZ-SfN" firstAttribute="top" secondItem="Jry-bU-k4D" secondAttribute="bottom" constant="10" id="DvQ-tM-RmA"/>
+                            <constraint firstItem="yPI-Mt-yd6" firstAttribute="trailing" secondItem="kdm-LA-QKB" secondAttribute="trailing" constant="30" id="Vb4-Qs-oI1"/>
+                            <constraint firstItem="yPI-Mt-yd6" firstAttribute="bottom" secondItem="ygE-AZ-SfN" secondAttribute="bottom" id="kBG-9A-XgB"/>
+                            <constraint firstItem="kdm-LA-QKB" firstAttribute="top" secondItem="yPI-Mt-yd6" secondAttribute="top" constant="30" id="kL1-Ds-wk4"/>
+                            <constraint firstItem="ygE-AZ-SfN" firstAttribute="leading" secondItem="yPI-Mt-yd6" secondAttribute="leading" id="nD2-sT-kpk"/>
+                            <constraint firstItem="kdm-LA-QKB" firstAttribute="leading" secondItem="Jry-bU-k4D" secondAttribute="trailing" constant="15" id="ryK-xV-ICD"/>
+                            <constraint firstItem="yPI-Mt-yd6" firstAttribute="trailing" secondItem="ygE-AZ-SfN" secondAttribute="trailing" id="t2I-Cu-fa5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="选择App" id="qpb-uW-9OU"/>
+                    <connections>
+                        <outlet property="appNameTF" destination="Jry-bU-k4D" id="Ays-0h-kd3"/>
+                        <outlet property="tableview" destination="ygE-AZ-SfN" id="cMB-RN-xkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nOD-nI-cGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="-48.214285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
