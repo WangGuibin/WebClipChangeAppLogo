@@ -83,7 +83,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-sZ-yCs">
-                                <rect key="frame" x="100" y="388" width="214" height="64"/>
+                                <rect key="frame" x="100" y="444" width="214" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="HhL-vR-5xD"/>
@@ -100,23 +100,37 @@
                                     <action selector="createMobileConfig:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVc-SF-3N5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否允许桌面上删除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWp-Ig-egI">
+                                <rect key="frame" x="57" y="374" width="138" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s91-11-mku">
+                                <rect key="frame" x="308" y="367.5" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xWp-Ig-egI" firstAttribute="leading" secondItem="I1A-jq-z0l" secondAttribute="leading" id="4d2-3e-uPz"/>
                             <constraint firstItem="XBL-20-8wr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5WU-qa-T2z"/>
+                            <constraint firstItem="s91-11-mku" firstAttribute="centerY" secondItem="xWp-Ig-egI" secondAttribute="centerY" id="KSl-Fa-5Ge"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBL-20-8wr" secondAttribute="trailing" constant="50" id="M7g-xP-4If"/>
                             <constraint firstItem="I1A-jq-z0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qbj-f4-MJk"/>
                             <constraint firstItem="y6a-sZ-yCs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="S5H-ST-cep"/>
                             <constraint firstItem="XBL-20-8wr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WoB-vj-Oiu"/>
-                            <constraint firstItem="y6a-sZ-yCs" firstAttribute="top" secondItem="I1A-jq-z0l" secondAttribute="bottom" constant="44" id="XIj-Fb-fOJ"/>
+                            <constraint firstItem="y6a-sZ-yCs" firstAttribute="top" secondItem="I1A-jq-z0l" secondAttribute="bottom" constant="100" id="XIj-Fb-fOJ"/>
                             <constraint firstItem="I1A-jq-z0l" firstAttribute="top" secondItem="XBL-20-8wr" secondAttribute="bottom" constant="30" id="ZUj-nk-C8l"/>
+                            <constraint firstItem="xWp-Ig-egI" firstAttribute="top" secondItem="I1A-jq-z0l" secondAttribute="bottom" constant="30" id="dQo-ty-2iV"/>
+                            <constraint firstItem="s91-11-mku" firstAttribute="trailing" secondItem="I1A-jq-z0l" secondAttribute="trailing" id="pgu-JF-A0Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6a-sZ-yCs" secondAttribute="trailing" constant="100" id="r1j-p5-hUp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="自定义应用图标" id="Wiz-5g-sD9"/>
                     <connections>
                         <outlet property="appNameTextfield" destination="I1A-jq-z0l" id="5aU-oE-pg5"/>
+                        <outlet property="isRemoveSwitch" destination="s91-11-mku" id="OgG-do-QDy"/>
                         <outlet property="selectAppBtn" destination="CTL-fy-kfj" id="xrX-gp-b0M"/>
                         <outlet property="selectIconBtn" destination="K9l-8F-ftL" id="Dty-Yt-1PB"/>
                     </connections>

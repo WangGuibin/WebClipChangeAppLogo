@@ -8,7 +8,7 @@
 #import "FilesManagerViewController.h"
 #import <SafariServices/SafariServices.h>
 
-@interface FilesManagerViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FilesManagerViewController () <UITableViewDelegate, UITableViewDataSource,SFSafariViewControllerDelegate>
 
 @property (nonatomic, strong) NSMutableArray *configs;
 @property (nonatomic, strong) UITableView *tableView;
@@ -38,6 +38,13 @@
     self.tipsLabel.hidden = self.configs.count;
 }
 
+
+//点击完成的时候
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
+//    App-prefs:root=General&path=ManagedConfigurationList/PurgatoryInstallRequested
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-prefs:root=General&path=ManagedConfigurationList/PurgatoryInstallRequested"] options:@{} completionHandler:nil];
+}
+
 #pragma mark - tableView DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.configs.count;
@@ -62,6 +69,7 @@
     NSString *urlStr = [NSString stringWithFormat:@"http://127.0.0.1:8090/%@",realStr];
     NSURL *url = [NSURL URLWithString:urlStr];
     SFSafariViewController *sfVC = [[SFSafariViewController alloc] initWithURL:url];
+    sfVC.delegate = self;
     [self presentViewController:sfVC animated:YES completion:nil];
 
 }

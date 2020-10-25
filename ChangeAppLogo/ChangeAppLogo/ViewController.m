@@ -20,13 +20,14 @@
 //2、通过应用名称获取信息
 //https://itunes.apple.com/search?term=你的应用程序名称&entity=software
 
-@interface ViewController ()
+@interface ViewController ()<SFSafariViewControllerDelegate>
 
 @property (nonatomic, strong) GCDWebServer *webServer;
 
 @property (weak, nonatomic) IBOutlet UITextField *appNameTextfield;
 @property (weak, nonatomic) IBOutlet UIButton *selectAppBtn;
 @property (weak, nonatomic) IBOutlet UIButton *selectIconBtn;
+@property (weak, nonatomic) IBOutlet UISwitch *isRemoveSwitch;
 
 @property (nonatomic, strong) AppInfoModel *currentModel;
 @property (nonatomic, strong) UIImage *iconImg;
@@ -105,9 +106,9 @@
         iconText = @"";
     }
 
-    NSString *uuid1 = [NSUUID UUID].UUIDString;
-    NSString *uuid2 = [NSUUID UUID].UUIDString;
-    NSString *isRemove = @"true";
+    NSString *uuid1 = [NSUUID UUID].UUIDString;//随机1
+    NSString *uuid2 = [NSUUID UUID].UUIDString;//随机2
+    NSString *isRemove = self.isRemoveSwitch.on? @"true" : @"false";
     NSString *fileString = [NSString stringWithFormat:@"<?xml version='1.0' encoding='UTF-8'?><!DOCTYPE plist PUBLIC '-//Apple//DTD PLIST 1.0//EN' 'http://www.apple.com/DTDs/PropertyList-1.0.dtd'><plist version='1.0'><dict><key>PayloadContent</key><array><dict><key>FullScreen</key><true/><key>IsRemovable</key><%@/>%@<key>Label</key><string>%@</string><key>PayloadDescription</key><string>Configures settings for a Web Clip</string><key>PayloadDisplayName</key><string>Web Clip</string><key>PayloadIdentifier</key><string>%@.apple.webClip.managed.%@</string><key>PayloadType</key><string>com.apple.webClip.managed</string><key>PayloadUUID</key><string>%@</string><key>PayloadVersion</key><real>1</real><key>Precomposed</key><true/><key>URL</key><string>未知</string>            <key>TargetApplicationBundleIdentifier</key><string>%@</string><key>Precomposed</key><true/></dict></array><key>PayloadDisplayName</key><string>%@描述文件</string><key>PayloadIdentifier</key><string>%@</string><key>PayloadRemovalDisallowed</key><false/><key>PayloadType</key><string>Configuration</string><key>PayloadUUID</key><string>%@</string><key>PayloadVersion</key><integer>1</integer></dict></plist>",isRemove,iconText,appName,uuid1,uuid1,uuid2,bundleId,appName,uuid2,uuid2];
     
         NSString *fileName = [NSString stringWithFormat:@"%@.mobileconfig",appName];
@@ -120,10 +121,18 @@
 
     NSString *realStr = [fileName stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSString *url = [NSString stringWithFormat:@"http://127.0.0.1:8090/%@",realStr];
+    //这里只能是应用内访问 因为本地服务切到后台还要保活之类的 以及Safari能否访问沙盒犹未可知 大概是不行的 除非先把描述文件放到云端 然后打开Safari去访问云端那个地址
     SFSafariViewController *webVC = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url]];
+    webVC.delegate = self;
     [self presentViewController:webVC animated:YES completion:nil];
     [self cleanPage];
 }
+
+//点击完成的时候 直接跳到设置去 URLScheme参考: https://gist.github.com/deanlyoung/368e274945a6929e0ea77c4eca345560
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-prefs:root=General&path=ManagedConfigurationList/PurgatoryInstallRequested"] options:@{} completionHandler:nil];
+}
+
 
 //重置页面数据
 - (void)cleanPage{
