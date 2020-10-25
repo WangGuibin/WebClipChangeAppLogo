@@ -23,7 +23,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"已生成的描述文件";
-    
+    self.tableView.tableFooterView = [UIView new];
+
     NSString *rootPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSFileManager *manager = [NSFileManager defaultManager];
     NSArray<NSString*> *pathArr = [manager contentsOfDirectoryAtPath:rootPath error:nil];

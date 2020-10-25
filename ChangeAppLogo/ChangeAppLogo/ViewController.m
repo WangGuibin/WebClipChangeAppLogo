@@ -16,7 +16,7 @@
 
 //官方接口：
 //1、通过appId获取信息
-//https://itunes.apple.com/lookup?id=应用ID
+//https://itunes.apple.com/cn/lookup?id=应用ID
 //2、通过应用名称获取信息
 //https://itunes.apple.com/search?term=你的应用程序名称&entity=software
 

@@ -62,7 +62,7 @@
 @interface AppListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITextField *appNameTF;
-@property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) AppStoreModel *bigModel;
 
 @end
@@ -72,7 +72,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tableview registerClass:[AppCell class] forCellReuseIdentifier:NSStringFromClass([AppCell class])];
+    self.tableView.tableFooterView = [UIView new];
+    [self.tableView registerClass:[AppCell class] forCellReuseIdentifier:NSStringFromClass([AppCell class])];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -87,7 +88,7 @@
     [AppStoreModel getAppInfoFromAppStoreWithAppName:self.appNameTF.text callBack:^(AppStoreModel * _Nonnull AppModel) {
         self.bigModel = AppModel;
         self.appNameTF.text = nil;
-        [self.tableview reloadData];
+        [self.tableView reloadData];
     }];
 }
 

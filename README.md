@@ -1,5 +1,24 @@
 # WebClipChangeAppLogo
 iOS14利用WebClip更换图标,做到无缝启动App 
+
+<p>
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/wangguibin/WebClipChangeAppLogo?color=green&label=stars%20%E2%98%86&logo=star&logoColor=white&style=for-the-badge">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/wangguibin/WebClipChangeAppLogo?style=social">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/wangguibin/WebClipChangeAppLogo/main">
+    <img alt="GitHub search hit counter" src="https://img.shields.io/github/search/wangguibin/WebClipChangeAppLogo/webclip?color=red&style=flat-square">
+
+</p>
+
+[![Sparkline](https://stars.medv.io/Wangguibin/WebClipChangeAppLogo.svg)](https://stars.medv.io/Wangguibin/WebClipChangeAppLogo)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Wangguibin/WebClipChangeAppLogo.svg)](https://starchart.cc/Wangguibin/WebClipChangeAppLogo)
+
+
+
+
+
 <img src="./1.png" alt="简陋的UI凑合一下" style="zoom:50%;" />
 
 ## 1. 准备 

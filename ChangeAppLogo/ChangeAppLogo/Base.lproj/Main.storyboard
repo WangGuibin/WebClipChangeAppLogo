@@ -185,7 +185,7 @@
                     <navigationItem key="navigationItem" title="选择App" id="qpb-uW-9OU"/>
                     <connections>
                         <outlet property="appNameTF" destination="Jry-bU-k4D" id="Ays-0h-kd3"/>
-                        <outlet property="tableview" destination="ygE-AZ-SfN" id="cMB-RN-xkh"/>
+                        <outlet property="tableView" destination="ygE-AZ-SfN" id="y76-X9-3pi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOD-nI-cGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
