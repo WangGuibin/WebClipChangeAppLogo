@@ -1,0 +1,225 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  SCHEME = "ChangeAppLogo"
+  TEST_SCHEME = "ChangeAppLogo"
+  WORKSPACE = "ChangeAppLogo.xcworkspace"
+  XCODEPROJ = "ChangeAppLogo.xcodeproj"
+
+  TESTS_SCHEME = "ChangeAppLogo"
+
+  before_all do
+    clean_cocoapods_cache
+    cocoapods(
+      clean: true,
+      use_bundle_exec: true
+    )
+    clear_derived_data
+  end
+
+  lane :lint do
+    oclint(
+    )
+  end
+
+  desc "Runs all the tests"
+  lane :tests do
+    run_tests(scheme: TESTS_SCHEME)
+  end
+
+  lane :beta do
+    increment_build_number_in_plist(target: SCHEME)
+    build_app(
+      workspace: WORKSPACE,
+      scheme: SCHEME,
+      silent: true,
+      clean: true,
+      output_directory: '.ipa/Testflight',
+      output_name: 'app.ipa',
+      export_xcargs: "-allowProvisioningUpdates",
+      export_options: {
+        method: 'app-store',
+        manifest: {
+          appURL: 'https://example.com/MyApp.ipa',
+          displayImageURL: 'http://ali-fir-pro-icon.fir.im/02094e38809eb0048daab356e3d0568e82647200?auth_key=1579071904-0-0-930be19bfa982f521ab41bbe80a2e87f&tmp=1579070104.1540496',
+          fullSizeImageURL: 'http://ali-fir-pro-icon.fir.im/02094e38809eb0048daab356e3d0568e82647200?auth_key=1579071904-0-0-930be19bfa982f521ab41bbe80a2e87f&tmp=1579070104.1540496'
+        }
+      }
+    )
+    upload_to_testflight(
+      ipa: '.ipa/Testflight/app.ipa'
+    )
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :release do |options|
+    # sync_code_signing(type: "appstore")
+    sigh(
+      output_path: '.certificates',
+      force: true
+    )
+
+    increment_version_number_in_plist(
+      target: SCHEME,
+      version_number: options[:version_number]
+    )
+    increment_build_number_in_plist(target: SCHEME)
+
+    gym(
+      scheme: SCHEME,
+      clean: true,
+      silent: true,
+      output_directory: 'AppStore',
+      output_name: 'app.ipa',
+      configuration: 'Release',
+      export_xcargs: "-allowProvisioningUpdates"
+    )
+    upload_to_app_store(
+      force: true,
+      ipa: 'AppStore/app.ipa',
+      skip_screenshots: true,
+      automatic_release: true
+    )
+
+    show_notification(
+      subtitle: "上传成功",
+      message: "APP已经上传至 App Store，请大佬查收。"
+    )
+    # frameit
+  end
+
+  lane :screenshot do
+    snapshot(
+    scheme: SCHEME,
+    output_directory: 'screenshot'
+    )
+  end
+
+  desc "Register device to develop center."
+  lane :register_uuid do |options|
+    register_device(
+      name: options[:user],
+      udid: options[:uuid]
+    )
+  end
+
+  desc "Runs linting (and eventually static analysis)"
+  lane :analyze do
+    xcodebuild(
+      scheme: SCHEME,
+      sdk: 'iphonesimulator',
+      destination: 'platform=iOS Simulator,OS=10.1,name=iPhone 6s Plus',
+      analyze: true  
+    )
+  end
+
+  desc "打生产包，打包后会自动打开文件夹"
+  lane :release_build do
+    packing(identifier: 'com.ChangeWorld.CoderWGB.ChangeAppLogo', scheme: SCHEME)
+    sh('open ../.ipa/ChangeAppLogo')
+  end
+
+  desc "打测试包，打包后会自动上传到蒲公英"
+  lane :firim_for_release do
+    packing(identifier: 'com.ChangeWorld.CoderWGB.ChangeAppLogo', scheme: TEST_SCHEME)
+  end
+
+  desc "Submit a new version to Firim"
+  lane :upload_ipa_to_firim do |options|
+    upload_to_firim(scheme: options[:scheme])
+    show_notification(
+      subtitle: '上传成功咯!!!', 
+      message: '内测包上传成功啦，请大佬查收'
+    )
+  end
+
+  private_lane :packing do |options|
+    # show_notification(subtitle: '开始打包咯！！！', message: '开始努力打包咯....')
+
+    default_sigh(identifier: options[:identifier])
+
+    s = options[:scheme]
+
+    increment_build_number_in_plist(target: s)
+
+    time = Time.now.strftime("%Y-%m-%d %H:%M:%S")
+
+    gym_with_configuration(scheme: s, time: time)
+
+    # show_notification(subtitle: '打包好了哦！！！', message: '准备开始上传咯...')
+
+    upload_ipa_to_pgyer(scheme: s, time: time)
+
+    show_notification(subtitle: '上传成功咯!!!', message: '赶快查看哦！！！')
+  end
+
+  private_lane :gym_with_configuration do |options|
+    scheme = options[:scheme]
+    gym(
+      scheme: scheme,
+      clean: true,
+      output_directory: ".ipa/#{scheme}/#{options[:time]}",
+      output_name: 'app.ipa',
+      configuration: 'Release',
+      export_xcargs: "-allowProvisioningUpdates"
+    )
+  end
+
+  private_lane :upload_to_firim do |options|
+    firim(
+      firim_api_token: 'xxxxx',
+      ipa: ".ipa/#{options[:scheme]}/#{options[:time]}/app.ipa"
+    ) 
+  end
+
+  private_lane :upload_ipa_to_pgyer do |options|
+    pgyer(
+      api_key: "3ff7a7d62bdb3c00e0a729129a59a364",
+      user_key: "9983a4c1a76d681fa6d68db4bf50eb8f",
+      ipa: ".ipa/#{options[:scheme]}/#{options[:time]}/app.ipa"
+    )
+  end
+  
+  private_lane :default_sigh do |options|
+    cert
+    sigh(
+      adhoc: true,
+      output_path: '.certificates',
+      app_identifier: options[:identifier],
+    )
+  end
+
+  private_lane :show_notification do |options|
+    # notification(
+    #   subtitle: options[:subtitle],
+    #   message: options[:message],
+    #   app_icon: 'https://ali-fir-pro-icon.fir.im/02094e38809eb0048daab356e3d0568e82647200?auth_key=1579071904-0-0-930be19bfa982f521ab41bbe80a2e87f&tmp=1579070104.1540496',
+    #   open: "https://fir.im/9c8d"
+    # )
+  end
+
+  after_all do |lane|
+    
+  end
+
+  error do |lane, exception|
+    show_notification(subtitle: "出错啦~", message: exception)
+  end
+
+end

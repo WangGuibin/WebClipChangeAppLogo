@@ -1,0 +1,6 @@
+app_identifier "com.ChangeWorld.CoderWGB.ChangeAppLogo" # The bundle identifier of your app
+apple_id "864562082@qq.com" # Your Apple email address
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
