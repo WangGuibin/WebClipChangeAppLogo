@@ -1,0 +1,20 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  },
+  "stickers" : [
+    {
+      "filename" : "showtime.sticker"
+    },
+    {
+      "filename" : "actor.sticker"
+    },
+    {
+      "filename" : "trouble.sticker"
+    }
+  ]
+}
