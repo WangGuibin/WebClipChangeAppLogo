@@ -21,6 +21,9 @@
 		CA1E8BD3254D0C3400049305 /* iconVersioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8BD2254D0C3400049305 /* iconVersioning.sh */; };
 		CA1E8C5A254E997800049305 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8C59254E997800049305 /* Stickers.xcassets */; };
 		CA1E8C5E254E997800049305 /* WGBEmoticonsFaceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA1E8CA0254EA4A400049305 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E8C9F254EA4A400049305 /* ShareViewController.m */; };
+		CA1E8CA3254EA4A400049305 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8CA1254EA4A400049305 /* MainInterface.storyboard */; };
+		CA1E8CA7254EA4A400049305 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1E8C9C254EA4A400049305 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,13 @@
 			remoteGlobalIDString = CA1E8C56254E997300049305;
 			remoteInfo = WGBEmoticonsFaceExtension;
 		};
+		CA1E8CA5254EA4A400049305 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1E8B072543F94A00049305 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1E8C9B254EA4A400049305;
+			remoteInfo = ShareExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				CA1E8CA7254EA4A400049305 /* ShareExtension.appex in Embed App Extensions */,
 				CA1E8C5E254E997800049305 /* WGBEmoticonsFaceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -73,6 +84,11 @@
 		CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WGBEmoticonsFaceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1E8C59254E997800049305 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		CA1E8C5B254E997800049305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1E8C9C254EA4A400049305 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1E8C9E254EA4A400049305 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		CA1E8C9F254EA4A400049305 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		CA1E8CA2254EA4A400049305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CA1E8CA4254EA4A400049305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD67043EFE4303DAD838964 /* Pods_ChangeAppLogo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1E8C99254EA4A400049305 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +124,7 @@
 			children = (
 				CA1E8B112543F94A00049305 /* ChangeAppLogo */,
 				CA1E8C58254E997300049305 /* WGBEmoticonsFaceExtension */,
+				CA1E8C9D254EA4A400049305 /* ShareExtension */,
 				CA1E8B102543F94A00049305 /* Products */,
 				7ADBDF8403CF796F9471B12F /* Pods */,
 				D5817BDAA99A8423AD1E03AB /* Frameworks */,
@@ -112,6 +136,7 @@
 			children = (
 				CA1E8B0F2543F94A00049305 /* ChangeAppLogo.app */,
 				CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */,
+				CA1E8C9C254EA4A400049305 /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +175,17 @@
 			path = WGBEmoticonsFaceExtension;
 			sourceTree = "<group>";
 		};
+		CA1E8C9D254EA4A400049305 /* ShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				CA1E8C9E254EA4A400049305 /* ShareViewController.h */,
+				CA1E8C9F254EA4A400049305 /* ShareViewController.m */,
+				CA1E8CA1254EA4A400049305 /* MainInterface.storyboard */,
+				CA1E8CA4254EA4A400049305 /* Info.plist */,
+			);
+			path = ShareExtension;
+			sourceTree = "<group>";
+		};
 		D5817BDAA99A8423AD1E03AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +213,7 @@
 			);
 			dependencies = (
 				CA1E8C5D254E997800049305 /* PBXTargetDependency */,
+				CA1E8CA6254EA4A400049305 /* PBXTargetDependency */,
 			);
 			name = ChangeAppLogo;
 			productName = ChangeAppLogo;
@@ -198,6 +235,23 @@
 			productReference = CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
+		CA1E8C9B254EA4A400049305 /* ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1E8CA8254EA4A400049305 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildPhases = (
+				CA1E8C98254EA4A400049305 /* Sources */,
+				CA1E8C99254EA4A400049305 /* Frameworks */,
+				CA1E8C9A254EA4A400049305 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShareExtension;
+			productName = ShareExtension;
+			productReference = CA1E8C9C254EA4A400049305 /* ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +264,9 @@
 						CreatedOnToolsVersion = 12.0.1;
 					};
 					CA1E8C56254E997300049305 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					CA1E8C9B254EA4A400049305 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
@@ -229,6 +286,7 @@
 			targets = (
 				CA1E8B0E2543F94A00049305 /* ChangeAppLogo */,
 				CA1E8C56254E997300049305 /* WGBEmoticonsFaceExtension */,
+				CA1E8C9B254EA4A400049305 /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1E8C5A254E997800049305 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1E8C9A254EA4A400049305 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1E8CA3254EA4A400049305 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +396,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA1E8C98254EA4A400049305 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1E8CA0254EA4A400049305 /* ShareViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -337,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = CA1E8C56254E997300049305 /* WGBEmoticonsFaceExtension */;
 			targetProxy = CA1E8C5C254E997800049305 /* PBXContainerItemProxy */;
+		};
+		CA1E8CA6254EA4A400049305 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1E8C9B254EA4A400049305 /* ShareExtension */;
+			targetProxy = CA1E8CA5254EA4A400049305 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -355,6 +434,14 @@
 				CA1E8B212543F94F00049305 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CA1E8CA1254EA4A400049305 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1E8CA2254EA4A400049305 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -540,6 +627,42 @@
 			};
 			name = Release;
 		};
+		CA1E8CA9254EA4A400049305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E36C88FNS3;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA1E8CAA254EA4A400049305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E36C88FNS3;
+				INFOPLIST_FILE = ShareExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -566,6 +689,15 @@
 			buildConfigurations = (
 				CA1E8C60254E997800049305 /* Debug */,
 				CA1E8C61254E997800049305 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1E8CA8254EA4A400049305 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1E8CA9254EA4A400049305 /* Debug */,
+				CA1E8CAA254EA4A400049305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
