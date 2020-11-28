@@ -29,6 +29,12 @@
 	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>更换图标需要选择相册的图片</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>DataStoreIntent</string>
+		<string>DeleteDataStoreIntent</string>
+		<string>SearchDataStoreIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

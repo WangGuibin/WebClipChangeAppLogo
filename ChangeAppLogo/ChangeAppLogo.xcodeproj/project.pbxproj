@@ -21,9 +21,10 @@
 		CA1E8BD3254D0C3400049305 /* iconVersioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8BD2254D0C3400049305 /* iconVersioning.sh */; };
 		CA1E8C5A254E997800049305 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8C59254E997800049305 /* Stickers.xcassets */; };
 		CA1E8C5E254E997800049305 /* WGBEmoticonsFaceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CA1E8CA0254EA4A400049305 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1E8C9F254EA4A400049305 /* ShareViewController.m */; };
-		CA1E8CA3254EA4A400049305 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8CA1254EA4A400049305 /* MainInterface.storyboard */; };
-		CA1E8CA7254EA4A400049305 /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1E8C9C254EA4A400049305 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
+		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
+		CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +35,12 @@
 			remoteGlobalIDString = CA1E8C56254E997300049305;
 			remoteInfo = WGBEmoticonsFaceExtension;
 		};
-		CA1E8CA5254EA4A400049305 /* PBXContainerItemProxy */ = {
+		CABF3FC12571D72C00EBF0E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA1E8B072543F94A00049305 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CA1E8C9B254EA4A400049305;
-			remoteInfo = ShareExtension;
+			remoteGlobalIDString = CABF3FA82571D72C00EBF0E0;
+			remoteInfo = Shortcuts;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,8 +51,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				CA1E8CA7254EA4A400049305 /* ShareExtension.appex in Embed App Extensions */,
 				CA1E8C5E254E997800049305 /* WGBEmoticonsFaceExtension.appex in Embed App Extensions */,
+				CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,11 +85,12 @@
 		CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WGBEmoticonsFaceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1E8C59254E997800049305 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		CA1E8C5B254E997800049305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA1E8C9C254EA4A400049305 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA1E8C9E254EA4A400049305 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		CA1E8C9F254EA4A400049305 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
-		CA1E8CA2254EA4A400049305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		CA1E8CA4254EA4A400049305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
+		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
+		CABF3FAE2571D72C00EBF0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CABF3FB42571D72C00EBF0E0 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA1E8C99254EA4A400049305 /* Frameworks */ = {
+		CABF3FA62571D72C00EBF0E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +126,7 @@
 			children = (
 				CA1E8B112543F94A00049305 /* ChangeAppLogo */,
 				CA1E8C58254E997300049305 /* WGBEmoticonsFaceExtension */,
-				CA1E8C9D254EA4A400049305 /* ShareExtension */,
+				CABF3FAA2571D72C00EBF0E0 /* Shortcuts */,
 				CA1E8B102543F94A00049305 /* Products */,
 				7ADBDF8403CF796F9471B12F /* Pods */,
 				D5817BDAA99A8423AD1E03AB /* Frameworks */,
@@ -136,7 +138,7 @@
 			children = (
 				CA1E8B0F2543F94A00049305 /* ChangeAppLogo.app */,
 				CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */,
-				CA1E8C9C254EA4A400049305 /* ShareExtension.appex */,
+				CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,21 +177,22 @@
 			path = WGBEmoticonsFaceExtension;
 			sourceTree = "<group>";
 		};
-		CA1E8C9D254EA4A400049305 /* ShareExtension */ = {
+		CABF3FAA2571D72C00EBF0E0 /* Shortcuts */ = {
 			isa = PBXGroup;
 			children = (
-				CA1E8C9E254EA4A400049305 /* ShareViewController.h */,
-				CA1E8C9F254EA4A400049305 /* ShareViewController.m */,
-				CA1E8CA1254EA4A400049305 /* MainInterface.storyboard */,
-				CA1E8CA4254EA4A400049305 /* Info.plist */,
+				CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */,
+				CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */,
+				CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */,
+				CABF3FAE2571D72C00EBF0E0 /* Info.plist */,
 			);
-			path = ShareExtension;
+			path = Shortcuts;
 			sourceTree = "<group>";
 		};
 		D5817BDAA99A8423AD1E03AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				6A30A8282D12E15DA7AEC5AC /* Pods_ChangeAppLogo.framework */,
+				CABF3FB42571D72C00EBF0E0 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,7 +216,7 @@
 			);
 			dependencies = (
 				CA1E8C5D254E997800049305 /* PBXTargetDependency */,
-				CA1E8CA6254EA4A400049305 /* PBXTargetDependency */,
+				CABF3FC22571D72C00EBF0E0 /* PBXTargetDependency */,
 			);
 			name = ChangeAppLogo;
 			productName = ChangeAppLogo;
@@ -235,21 +238,21 @@
 			productReference = CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
-		CA1E8C9B254EA4A400049305 /* ShareExtension */ = {
+		CABF3FA82571D72C00EBF0E0 /* Shortcuts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CA1E8CA8254EA4A400049305 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildConfigurationList = CABF3FC72571D72C00EBF0E0 /* Build configuration list for PBXNativeTarget "Shortcuts" */;
 			buildPhases = (
-				CA1E8C98254EA4A400049305 /* Sources */,
-				CA1E8C99254EA4A400049305 /* Frameworks */,
-				CA1E8C9A254EA4A400049305 /* Resources */,
+				CABF3FA52571D72C00EBF0E0 /* Sources */,
+				CABF3FA62571D72C00EBF0E0 /* Frameworks */,
+				CABF3FA72571D72C00EBF0E0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ShareExtension;
-			productName = ShareExtension;
-			productReference = CA1E8C9C254EA4A400049305 /* ShareExtension.appex */;
+			name = Shortcuts;
+			productName = Shortcuts;
+			productReference = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +269,7 @@
 					CA1E8C56254E997300049305 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
-					CA1E8C9B254EA4A400049305 = {
+					CABF3FA82571D72C00EBF0E0 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
@@ -286,7 +289,7 @@
 			targets = (
 				CA1E8B0E2543F94A00049305 /* ChangeAppLogo */,
 				CA1E8C56254E997300049305 /* WGBEmoticonsFaceExtension */,
-				CA1E8C9B254EA4A400049305 /* ShareExtension */,
+				CABF3FA82571D72C00EBF0E0 /* Shortcuts */,
 			);
 		};
 /* End PBXProject section */
@@ -311,11 +314,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA1E8C9A254EA4A400049305 /* Resources */ = {
+		CABF3FA72571D72C00EBF0E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1E8CA3254EA4A400049305 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,15 +394,17 @@
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
 				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
+				CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CA1E8C98254EA4A400049305 /* Sources */ = {
+		CABF3FA52571D72C00EBF0E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1E8CA0254EA4A400049305 /* ShareViewController.m in Sources */,
+				CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,10 +416,10 @@
 			target = CA1E8C56254E997300049305 /* WGBEmoticonsFaceExtension */;
 			targetProxy = CA1E8C5C254E997800049305 /* PBXContainerItemProxy */;
 		};
-		CA1E8CA6254EA4A400049305 /* PBXTargetDependency */ = {
+		CABF3FC22571D72C00EBF0E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CA1E8C9B254EA4A400049305 /* ShareExtension */;
-			targetProxy = CA1E8CA5254EA4A400049305 /* PBXContainerItemProxy */;
+			target = CABF3FA82571D72C00EBF0E0 /* Shortcuts */;
+			targetProxy = CABF3FC12571D72C00EBF0E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -434,14 +438,6 @@
 				CA1E8B212543F94F00049305 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		CA1E8CA1254EA4A400049305 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA1E8CA2254EA4A400049305 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -567,7 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E36C88FNS3;
+				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = ChangeAppLogo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -585,7 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E36C88FNS3;
+				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = ChangeAppLogo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,7 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E36C88FNS3;
+				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.WGBEmoticonsFaceExtension;
@@ -617,7 +613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Messages Icon";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E36C88FNS3;
+				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.WGBEmoticonsFaceExtension;
@@ -627,36 +623,36 @@
 			};
 			name = Release;
 		};
-		CA1E8CA9254EA4A400049305 /* Debug */ = {
+		CABF3FC82571D72C00EBF0E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E36C88FNS3;
-				INFOPLIST_FILE = ShareExtension/Info.plist;
+				DEVELOPMENT_TEAM = E27WNKVHV9;
+				INFOPLIST_FILE = Shortcuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CA1E8CAA254EA4A400049305 /* Release */ = {
+		CABF3FC92571D72C00EBF0E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E36C88FNS3;
-				INFOPLIST_FILE = ShareExtension/Info.plist;
+				DEVELOPMENT_TEAM = E27WNKVHV9;
+				INFOPLIST_FILE = Shortcuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChangeWorld.CoderWGB.ChangeAppLogo.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -693,11 +689,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CA1E8CA8254EA4A400049305 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+		CABF3FC72571D72C00EBF0E0 /* Build configuration list for PBXNativeTarget "Shortcuts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CA1E8CA9254EA4A400049305 /* Debug */,
-				CA1E8CAA254EA4A400049305 /* Release */,
+				CABF3FC82571D72C00EBF0E0 /* Debug */,
+				CABF3FC92571D72C00EBF0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
