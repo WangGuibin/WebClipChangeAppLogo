@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
 		CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
+		CABF400B25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF400A25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m */; };
+		CABF400C25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF400A25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		CABF3FAE2571D72C00EBF0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CABF3FB42571D72C00EBF0E0 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		CABF400925724A7800EBF0E0 /* NSString+WordsSegmentExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WordsSegmentExtension.h"; sourceTree = "<group>"; };
+		CABF400A25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WordsSegmentExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,12 +184,22 @@
 		CABF3FAA2571D72C00EBF0E0 /* Shortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				CABF400825724A2D00EBF0E0 /* WordsSegment */,
 				CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */,
 				CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */,
 				CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */,
 				CABF3FAE2571D72C00EBF0E0 /* Info.plist */,
 			);
 			path = Shortcuts;
+			sourceTree = "<group>";
+		};
+		CABF400825724A2D00EBF0E0 /* WordsSegment */ = {
+			isa = PBXGroup;
+			children = (
+				CABF400925724A7800EBF0E0 /* NSString+WordsSegmentExtension.h */,
+				CABF400A25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m */,
+			);
+			path = WordsSegment;
 			sourceTree = "<group>";
 		};
 		D5817BDAA99A8423AD1E03AB /* Frameworks */ = {
@@ -275,7 +289,7 @@
 				};
 			};
 			buildConfigurationList = CA1E8B0A2543F94A00049305 /* Build configuration list for PBXProject "ChangeAppLogo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -391,6 +405,7 @@
 				CA1E8B1A2543F94A00049305 /* ViewController.m in Sources */,
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
+				CABF400B25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
 				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
@@ -403,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABF400C25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
 				CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
 				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
 			);

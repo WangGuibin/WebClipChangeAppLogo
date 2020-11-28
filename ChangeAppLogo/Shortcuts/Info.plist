@@ -35,7 +35,9 @@
 				<string>INSearchForMessagesIntent</string>
 				<string>INSendMessageIntent</string>
 				<string>INSetMessageAttributeIntent</string>
+				<string>PinWordsSegmentIntent</string>
 				<string>SearchDataStoreIntent</string>
+				<string>VCardTemplateIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

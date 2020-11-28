@@ -33,7 +33,9 @@
 	<array>
 		<string>DataStoreIntent</string>
 		<string>DeleteDataStoreIntent</string>
+		<string>PinWordsSegmentIntent</string>
 		<string>SearchDataStoreIntent</string>
+		<string>VCardTemplateIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

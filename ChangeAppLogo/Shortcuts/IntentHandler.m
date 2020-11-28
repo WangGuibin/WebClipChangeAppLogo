@@ -9,6 +9,9 @@
 #import "DataStoreIntent.h"
 #import "SearchDataStoreIntent.h"
 #import "DeleteDataStoreIntent.h"
+#import "PinWordsSegmentIntent.h"
+#import "NSString+WordsSegmentExtension.h"
+#import "VCardTemplateIntent.h"
 
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
@@ -19,7 +22,7 @@
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling>
+@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling>
 
 @end
 
@@ -71,5 +74,56 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     completion([DeleteDataStoreIntentResponse successIntentResponseWithResult:@(1)]);
 }
+
+///MARK:- <PinWordsSegmentIntentHandling> 分词功能
+- (void)handlePinWordsSegment:(PinWordsSegmentIntent *)intent completion:(void (^)(PinWordsSegmentIntentResponse *response))completion {
+    NSString *text = intent.text;
+    NSString *symbol = intent.symbol;
+    PinWordsSegmentModeEnum mode = intent.mode;
+    PINSegmentationOptions option = PINSegmentationOptionsNone;
+    if (mode == PinWordsSegmentModeEnumDeduplication) {
+        option = PINSegmentationOptionsDeduplication;
+    }else if(mode == PinWordsSegmentModeEnumKeepEnglish){
+        option = PINSegmentationOptionsKeepEnglish;
+    }else if(mode == PinWordsSegmentModeEnumKeepSymbols){
+        option = PINSegmentationOptionsKeepSymbols;
+    }else{
+        option = PINSegmentationOptionsNone;
+    }
+    
+    NSArray<NSString *> *textArray = [text segment:option];
+    if (textArray.count <= 1) {
+        PinWordsSegmentIntentResponse *error = [[PinWordsSegmentIntentResponse alloc] initWithCode:(PinWordsSegmentIntentResponseCodeFailure) userActivity:nil];
+        completion(error);
+    }else{
+        NSString *result = [textArray componentsJoinedByString:symbol];
+        PinWordsSegmentIntentResponse *success = [PinWordsSegmentIntentResponse successIntentResponseWithResults:result];
+        completion(success);
+    }
+}
+
+///MARK:- <VCardTemplateIntentHandling> vCard模板生成
+- (void)handleVCardTemplate:(VCardTemplateIntent *)intent completion:(void (^)(VCardTemplateIntentResponse *response))completion {
+//BEGIN:VCARD
+//VERSION:3.0
+//N:;词典 (name);;;
+//ORG:词典 (org);
+//PHOTO;ENCODING=b:词典 (image);
+//URL:词典 (url);
+//END:VCARD
+    
+    NSString *name = intent.name;
+    NSString *org = intent.org;
+    NSString *image = intent.image;
+    NSString *url = intent.url;
+    if (!name) {
+        completion([[VCardTemplateIntentResponse alloc] initWithCode:(VCardTemplateIntentResponseCodeFailure) userActivity:nil]);
+        return;
+    }
+    NSString *vCard = [NSString stringWithFormat:@"BEGIN:VCARD\nVERSION:3.0\nN:;%@;;;\nORG:%@;\nPHOTO;ENCODING=b:%@;\nURL:%@;\nEND:VCARD",name,org,image,url];
+    VCardTemplateIntentResponse *success = [VCardTemplateIntentResponse successIntentResponseWithResult:vCard];
+    completion(success);
+}
+
 
 @end
