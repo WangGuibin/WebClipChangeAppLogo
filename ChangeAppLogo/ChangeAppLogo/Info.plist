@@ -31,10 +31,15 @@
 	<string>更换图标需要选择相册的图片</string>
 	<key>NSUserActivityTypes</key>
 	<array>
+		<string>ChangeBatchAppLogoGroupIntent</string>
+		<string>ChangeBatchLogoConfigIntent</string>
+		<string>ChangeLogoOnlyOneIntent</string>
 		<string>DataStoreIntent</string>
 		<string>DeleteDataStoreIntent</string>
+		<string>MD5Intent</string>
 		<string>PinWordsSegmentIntent</string>
 		<string>SearchDataStoreIntent</string>
+		<string>UUIDGenerateIntent</string>
 		<string>VCardTemplateIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>

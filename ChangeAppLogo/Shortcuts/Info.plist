@@ -30,13 +30,18 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>ChangeBatchAppLogoGroupIntent</string>
+				<string>ChangeBatchLogoConfigIntent</string>
+				<string>ChangeLogoOnlyOneIntent</string>
 				<string>DataStoreIntent</string>
 				<string>DeleteDataStoreIntent</string>
 				<string>INSearchForMessagesIntent</string>
 				<string>INSendMessageIntent</string>
 				<string>INSetMessageAttributeIntent</string>
+				<string>MD5Intent</string>
 				<string>PinWordsSegmentIntent</string>
 				<string>SearchDataStoreIntent</string>
+				<string>UUIDGenerateIntent</string>
 				<string>VCardTemplateIntent</string>
 			</array>
 		</dict>

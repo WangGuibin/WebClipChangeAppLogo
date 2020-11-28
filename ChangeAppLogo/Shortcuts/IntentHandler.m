@@ -12,6 +12,13 @@
 #import "PinWordsSegmentIntent.h"
 #import "NSString+WordsSegmentExtension.h"
 #import "VCardTemplateIntent.h"
+#import "UUIDGenerateIntent.h"
+#import "MD5Intent.h"
+#import "NSString+WGBExtension.h"
+#import "ChangeLogoOnlyOneIntent.h"
+#import "ChageLogoMobileconfig.h"
+#import "ChangeBatchLogoConfigIntent.h"
+#import "ChangeBatchAppLogoGroupIntent.h"
 
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
@@ -22,7 +29,7 @@
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling>
+@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling,UUIDGenerateIntentHandling,MD5IntentHandling,ChangeLogoOnlyOneIntentHandling,ChangeBatchLogoConfigIntentHandling,ChangeBatchAppLogoGroupIntentHandling>
 
 @end
 
@@ -125,5 +132,42 @@
     completion(success);
 }
 
+
+///MARK- 生成UUID
+- (void)handleUUIDGenerate:(UUIDGenerateIntent *)intent completion:(void (^)(UUIDGenerateIntentResponse *response))completion {
+    UUIDGenerateIntentResponse *success = [UUIDGenerateIntentResponse successIntentResponseWithUuid:[NSString UUID]];
+    completion(success);
+}
+
+///MARK- 生成MD5
+- (void)handleMD5:(MD5Intent *)intent completion:(void (^)(MD5IntentResponse *response))completion {
+    NSString *str = intent.text;
+    MD5IntentResponse *success = [MD5IntentResponse successIntentResponseWithMd5:[str md5String]];
+    completion(success);
+}
+
+///MARK:- 一次生成一个更换应用图标的描述文件
+- (void)handleChangeLogoOnlyOne:(ChangeLogoOnlyOneIntent *)intent completion:(void (^)(ChangeLogoOnlyOneIntentResponse *response))completion {
+    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:intent.iconBase64 isRemoveFromDestop:intent.isRemoveDesktop appName:intent.appName uuid:[NSUUID UUID].UUIDString bundleId:intent.bundleId];
+    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:appconfigStr appSetName:intent.appName uuid:[NSUUID UUID].UUIDString];
+    NSData *data = [fileString dataUsingEncoding:NSUTF8StringEncoding];
+    INFile *file = [INFile fileWithData:data filename:@"result" typeIdentifier:@"mobileconfig"];
+    ChangeLogoOnlyOneIntentResponse *success = [ChangeLogoOnlyOneIntentResponse successIntentResponseWithResult:file];
+    completion(success);
+}
+
+///MARK:- 一次生成更换应用图标的描述文件配置1
+- (void)handleChangeBatchLogoConfig:(ChangeBatchLogoConfigIntent *)intent completion:(void (^)(ChangeBatchLogoConfigIntentResponse *response))completion {
+    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:intent.base64 isRemoveFromDestop:intent.isRemoveDesktop appName:intent.appName uuid:[NSUUID UUID].UUIDString bundleId:intent.bundleId];
+    ChangeBatchLogoConfigIntentResponse *success = [ChangeBatchLogoConfigIntentResponse successIntentResponseWithResult:appconfigStr];
+    completion(success);
+}
+
+///MARK:- 一次生成更换应用图标的描述文件配置2
+- (void)handleChangeBatchAppLogoGroup:(ChangeBatchAppLogoGroupIntent *)intent completion:(void (^)(ChangeBatchAppLogoGroupIntentResponse *response))completion {
+    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:intent.appConfigs appSetName:intent.name uuid:[NSUUID UUID].UUIDString];
+    ChangeBatchAppLogoGroupIntentResponse *success = [ChangeBatchAppLogoGroupIntentResponse successIntentResponseWithResult:fileString];
+    completion(success);
+}
 
 @end

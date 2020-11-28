@@ -13,6 +13,7 @@
 #import <UIButton+WebCache.h>
 #import <TZImagePickerController.h>
 #import "FilesManagerViewController.h"
+#import "ChageLogoMobileconfig.h"
 
 //官方接口：
 //1、通过appId获取信息
@@ -97,28 +98,22 @@
 - (void)createConfigFile{
     NSString *appName = self.appNameTextfield.text? : self.currentModel.trackName;
     NSString *bundleId = self.currentModel.bundleId;
-    
-    
     NSData *iconData = UIImageJPEGRepresentation(self.iconImg, 0.7);
     NSString *base64Img = [iconData base64EncodedStringWithOptions:(NSDataBase64Encoding64CharacterLineLength)];
-    NSString *iconText = [NSString stringWithFormat:@"<key>Icon</key><data>%@</data>",base64Img];
-    if (!base64Img.length) {
-        iconText = @"";
-    }
-
     NSString *uuid1 = [NSUUID UUID].UUIDString;//随机1
     NSString *uuid2 = [NSUUID UUID].UUIDString;//随机2
-    NSString *isRemove = self.isRemoveSwitch.on? @"true" : @"false";
-    NSString *fileString = [NSString stringWithFormat:@"<?xml version='1.0' encoding='UTF-8'?><!DOCTYPE plist PUBLIC '-//Apple//DTD PLIST 1.0//EN' 'http://www.apple.com/DTDs/PropertyList-1.0.dtd'><plist version='1.0'><dict><key>PayloadContent</key><array><dict><key>FullScreen</key><true/><key>IsRemovable</key><%@/>%@<key>Label</key><string>%@</string><key>PayloadDescription</key><string>Configures settings for a Web Clip</string><key>PayloadDisplayName</key><string>Web Clip</string><key>PayloadIdentifier</key><string>%@.apple.webClip.managed.%@</string><key>PayloadType</key><string>com.apple.webClip.managed</string><key>PayloadUUID</key><string>%@</string><key>PayloadVersion</key><real>1</real><key>Precomposed</key><true/><key>URL</key><string>未知</string>            <key>TargetApplicationBundleIdentifier</key><string>%@</string><key>Precomposed</key><true/></dict></array><key>PayloadDisplayName</key><string>%@描述文件</string><key>PayloadIdentifier</key><string>%@</string><key>PayloadRemovalDisallowed</key><false/><key>PayloadType</key><string>Configuration</string><key>PayloadUUID</key><string>%@</string><key>PayloadVersion</key><integer>1</integer></dict></plist>",isRemove,iconText,appName,uuid1,uuid1,uuid2,bundleId,appName,uuid2,uuid2];
     
-        NSString *fileName = [NSString stringWithFormat:@"%@.mobileconfig",appName];
-        NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@",fileName]];
-        if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
-            [[NSFileManager defaultManager] createFileAtPath:path contents:[fileString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
-        }else{
-            [fileString writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
-        }
+    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:base64Img isRemoveFromDestop:self.isRemoveSwitch.on appName:appName uuid:uuid1 bundleId:bundleId];
+    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:appconfigStr appSetName:@"图标易容术的描述文件📃" uuid:uuid2];
 
+    NSString *fileName = [NSString stringWithFormat:@"%@.mobileconfig",appName];
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@",fileName]];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        [[NSFileManager defaultManager] createFileAtPath:path contents:[fileString dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+    }else{
+        [fileString writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
+    
     NSString *realStr = [fileName stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSString *url = [NSString stringWithFormat:@"http://127.0.0.1:8090/%@",realStr];
     //这里只能是应用内访问 因为本地服务切到后台还要保活之类的 以及Safari能否访问沙盒犹未可知 大概是不行的 除非先把描述文件放到云端 然后打开Safari去访问云端那个地址

@@ -21,6 +21,10 @@
 		CA1E8BD3254D0C3400049305 /* iconVersioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8BD2254D0C3400049305 /* iconVersioning.sh */; };
 		CA1E8C5A254E997800049305 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8C59254E997800049305 /* Stickers.xcassets */; };
 		CA1E8C5E254E997800049305 /* WGBEmoticonsFaceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CAAC6B5225727AAA00033FD7 /* NSString+WGBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */; };
+		CAAC6B5325727AAA00033FD7 /* NSString+WGBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */; };
+		CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */; };
+		CAAC6B6025727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */; };
 		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
@@ -87,6 +91,10 @@
 		CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WGBEmoticonsFaceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1E8C59254E997800049305 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		CA1E8C5B254E997800049305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAAC6B5025727AAA00033FD7 /* NSString+WGBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WGBExtension.h"; sourceTree = "<group>"; };
+		CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WGBExtension.m"; sourceTree = "<group>"; };
+		CAAC6B5D25727FE100033FD7 /* ChageLogoMobileconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChageLogoMobileconfig.h; sourceTree = "<group>"; };
+		CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChageLogoMobileconfig.m; sourceTree = "<group>"; };
 		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
 		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
@@ -159,6 +167,8 @@
 				CA1E8B302544112800049305 /* AppStoreModel.m */,
 				CA1E8B182543F94A00049305 /* ViewController.h */,
 				CA1E8B192543F94A00049305 /* ViewController.m */,
+				CAAC6B5D25727FE100033FD7 /* ChageLogoMobileconfig.h */,
+				CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */,
 				CA1E8B3725441B3500049305 /* AppListViewController.h */,
 				CA1E8B3825441B3500049305 /* AppListViewController.m */,
 				CA1E8B572544487000049305 /* FilesManagerViewController.h */,
@@ -184,7 +194,7 @@
 		CABF3FAA2571D72C00EBF0E0 /* Shortcuts */ = {
 			isa = PBXGroup;
 			children = (
-				CABF400825724A2D00EBF0E0 /* WordsSegment */,
+				CABF400825724A2D00EBF0E0 /* Category */,
 				CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */,
 				CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */,
 				CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */,
@@ -193,13 +203,15 @@
 			path = Shortcuts;
 			sourceTree = "<group>";
 		};
-		CABF400825724A2D00EBF0E0 /* WordsSegment */ = {
+		CABF400825724A2D00EBF0E0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CAAC6B5025727AAA00033FD7 /* NSString+WGBExtension.h */,
+				CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */,
 				CABF400925724A7800EBF0E0 /* NSString+WordsSegmentExtension.h */,
 				CABF400A25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m */,
 			);
-			path = WordsSegment;
+			path = Category;
 			sourceTree = "<group>";
 		};
 		D5817BDAA99A8423AD1E03AB /* Frameworks */ = {
@@ -402,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6B5225727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
 				CA1E8B1A2543F94A00049305 /* ViewController.m in Sources */,
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
@@ -409,6 +422,7 @@
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
 				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
+				CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
 			);
@@ -419,7 +433,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABF400C25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
+				CAAC6B6025727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CAAC6B5325727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
 				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
