@@ -19,6 +19,11 @@
 #import "ChageLogoMobileconfig.h"
 #import "ChangeBatchLogoConfigIntent.h"
 #import "ChangeBatchAppLogoGroupIntent.h"
+#import "WGBReachability.h"
+#import "JudgeNetworkConnectIntent.h"
+#import "DetectQRCodeTool.h"
+#import "DetectedQRCodeIntent.h"
+
 
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
@@ -29,7 +34,7 @@
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling,UUIDGenerateIntentHandling,MD5IntentHandling,ChangeLogoOnlyOneIntentHandling,ChangeBatchLogoConfigIntentHandling,ChangeBatchAppLogoGroupIntentHandling>
+@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling,UUIDGenerateIntentHandling,MD5IntentHandling,ChangeLogoOnlyOneIntentHandling,ChangeBatchLogoConfigIntentHandling,ChangeBatchAppLogoGroupIntentHandling,JudgeNetworkConnectIntentHandling,DetectedQRCodeIntentHandling>
 
 @end
 
@@ -133,13 +138,13 @@
 }
 
 
-///MARK- 生成UUID
+///MARK:- 生成UUID
 - (void)handleUUIDGenerate:(UUIDGenerateIntent *)intent completion:(void (^)(UUIDGenerateIntentResponse *response))completion {
     UUIDGenerateIntentResponse *success = [UUIDGenerateIntentResponse successIntentResponseWithUuid:[NSString UUID]];
     completion(success);
 }
 
-///MARK- 生成MD5
+///MARK:- 生成MD5
 - (void)handleMD5:(MD5Intent *)intent completion:(void (^)(MD5IntentResponse *response))completion {
     NSString *str = intent.text;
     MD5IntentResponse *success = [MD5IntentResponse successIntentResponseWithMd5:[str md5String]];
@@ -167,6 +172,21 @@
 - (void)handleChangeBatchAppLogoGroup:(ChangeBatchAppLogoGroupIntent *)intent completion:(void (^)(ChangeBatchAppLogoGroupIntentResponse *response))completion {
     NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:intent.appConfigs appSetName:intent.name uuid:[NSUUID UUID].UUIDString];
     ChangeBatchAppLogoGroupIntentResponse *success = [ChangeBatchAppLogoGroupIntentResponse successIntentResponseWithResult:fileString];
+    completion(success);
+}
+
+///MARK:- 是否联网
+- (void)handleJudgeNetworkConnect:(JudgeNetworkConnectIntent *)intent completion:(void (^)(JudgeNetworkConnectIntentResponse *response))completion {
+    BOOL isReachable = [WGBReachability judgeIsConnectionAvailable];
+    JudgeNetworkConnectIntentResponse *success = [JudgeNetworkConnectIntentResponse successIntentResponseWithResult:@(isReachable)];
+    completion(success);
+}
+
+///MARK:- 识别二维码
+- (void)handleDetectedQRCode:(DetectedQRCodeIntent *)intent completion:(void (^)(DetectedQRCodeIntentResponse *response))completion NS_SWIFT_NAME(handle(intent:completion:)){
+    UIImage *image = [UIImage imageWithData:intent.image.data];
+    NSString *text = [DetectQRCodeTool detectQrCodeWithImage:image];
+    DetectedQRCodeIntentResponse *success = [DetectedQRCodeIntentResponse successIntentResponseWithText:text];
     completion(success);
 }
 

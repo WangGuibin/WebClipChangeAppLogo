@@ -35,12 +35,15 @@
 				<string>ChangeLogoOnlyOneIntent</string>
 				<string>DataStoreIntent</string>
 				<string>DeleteDataStoreIntent</string>
+				<string>DetectedQRCodeIntent</string>
 				<string>INSearchForMessagesIntent</string>
 				<string>INSendMessageIntent</string>
 				<string>INSetMessageAttributeIntent</string>
+				<string>JudgeNetworkConnectIntent</string>
 				<string>MD5Intent</string>
 				<string>PinWordsSegmentIntent</string>
 				<string>SearchDataStoreIntent</string>
+				<string>SocialValuesEncoderDecoderIntent</string>
 				<string>UUIDGenerateIntent</string>
 				<string>VCardTemplateIntent</string>
 			</array>

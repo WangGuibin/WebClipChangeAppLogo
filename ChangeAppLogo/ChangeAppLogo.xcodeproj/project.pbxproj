@@ -25,6 +25,14 @@
 		CAAC6B5325727AAA00033FD7 /* NSString+WGBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */; };
 		CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */; };
 		CAAC6B6025727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */; };
+		CAAC6BA325735A5400033FD7 /* WGBReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6BA225735A5400033FD7 /* WGBReachability.m */; };
+		CAAC6BA425735A5400033FD7 /* WGBReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6BA225735A5400033FD7 /* WGBReachability.m */; };
+		CAAC6BB62573610D00033FD7 /* DetectQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6BB52573610D00033FD7 /* DetectQRCodeTool.m */; };
+		CAAC6BB72573610D00033FD7 /* DetectQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6BB52573610D00033FD7 /* DetectQRCodeTool.m */; };
+		CAAC6C0425739DAC00033FD7 /* values-encoder in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6C0325739DAB00033FD7 /* values-encoder */; };
+		CAAC6C0525739DAC00033FD7 /* values-encoder in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6C0325739DAB00033FD7 /* values-encoder */; };
+		CAAC6C0B25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */; };
+		CAAC6C0C25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */; };
 		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
@@ -95,6 +103,13 @@
 		CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WGBExtension.m"; sourceTree = "<group>"; };
 		CAAC6B5D25727FE100033FD7 /* ChageLogoMobileconfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChageLogoMobileconfig.h; sourceTree = "<group>"; };
 		CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChageLogoMobileconfig.m; sourceTree = "<group>"; };
+		CAAC6BA125735A5400033FD7 /* WGBReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGBReachability.h; sourceTree = "<group>"; };
+		CAAC6BA225735A5400033FD7 /* WGBReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGBReachability.m; sourceTree = "<group>"; };
+		CAAC6BB42573610D00033FD7 /* DetectQRCodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetectQRCodeTool.h; sourceTree = "<group>"; };
+		CAAC6BB52573610D00033FD7 /* DetectQRCodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetectQRCodeTool.m; sourceTree = "<group>"; };
+		CAAC6C0325739DAB00033FD7 /* values-encoder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "values-encoder"; sourceTree = SOURCE_ROOT; };
+		CAAC6C0925739DDE00033FD7 /* SocialValuesEncoderDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialValuesEncoderDecoder.h; sourceTree = "<group>"; };
+		CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialValuesEncoderDecoder.m; sourceTree = "<group>"; };
 		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
 		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
@@ -158,7 +173,9 @@
 		CA1E8B112543F94A00049305 /* ChangeAppLogo */ = {
 			isa = PBXGroup;
 			children = (
+				CAAC6BA025735A2D00033FD7 /* Tool */,
 				CA1E8BD2254D0C3400049305 /* iconVersioning.sh */,
+				CAAC6C0325739DAB00033FD7 /* values-encoder */,
 				CA1E8B122543F94A00049305 /* AppDelegate.h */,
 				CA1E8B132543F94A00049305 /* AppDelegate.m */,
 				CA1E8B152543F94A00049305 /* SceneDelegate.h */,
@@ -189,6 +206,19 @@
 				CA1E8C5B254E997800049305 /* Info.plist */,
 			);
 			path = WGBEmoticonsFaceExtension;
+			sourceTree = "<group>";
+		};
+		CAAC6BA025735A2D00033FD7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6BA125735A5400033FD7 /* WGBReachability.h */,
+				CAAC6BA225735A5400033FD7 /* WGBReachability.m */,
+				CAAC6BB42573610D00033FD7 /* DetectQRCodeTool.h */,
+				CAAC6BB52573610D00033FD7 /* DetectQRCodeTool.m */,
+				CAAC6C0925739DDE00033FD7 /* SocialValuesEncoderDecoder.h */,
+				CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		CABF3FAA2571D72C00EBF0E0 /* Shortcuts */ = {
@@ -328,6 +358,7 @@
 				CA1E8B222543F94F00049305 /* LaunchScreen.storyboard in Resources */,
 				CA1E8B1F2543F94F00049305 /* Assets.xcassets in Resources */,
 				CA1E8BD3254D0C3400049305 /* iconVersioning.sh in Resources */,
+				CAAC6C0425739DAC00033FD7 /* values-encoder in Resources */,
 				CA1E8B1D2543F94A00049305 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6C0525739DAC00033FD7 /* values-encoder in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,15 +447,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAAC6B5225727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
+				CAAC6BB62573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CA1E8B1A2543F94A00049305 /* ViewController.m in Sources */,
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
 				CABF400B25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
+				CAAC6BA325735A5400033FD7 /* WGBReachability.m in Sources */,
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
 				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
 				CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CAAC6C0B25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,11 +467,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6C0C25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */,
 				CABF400C25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
 				CAAC6B6025727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
 				CAAC6B5325727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
+				CAAC6BB72573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
+				CAAC6BA425735A5400033FD7 /* WGBReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,10 +631,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26378B57F9725400CB10744B /* Pods-ChangeAppLogo.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = ChangeAppLogo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,10 +651,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 546A2614ABC86A5F0F68863C /* Pods-ChangeAppLogo.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = ChangeAppLogo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

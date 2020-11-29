@@ -14,6 +14,7 @@
 #import <TZImagePickerController.h>
 #import "FilesManagerViewController.h"
 #import "ChageLogoMobileconfig.h"
+#import "SocialValuesEncoderDecoder.h"
 
 //官方接口：
 //1、通过appId获取信息
@@ -55,6 +56,15 @@
 - (void)skipFilesManagerPage{
     FilesManagerViewController *fileVC = [FilesManagerViewController new];
     [self.navigationController pushViewController:fileVC animated:YES];
+//    SocialValuesEncoderDecoder *coder = [SocialValuesEncoderDecoder shareCoder];
+//    coder.text = @"牛逼";
+//    coder.isEncode = YES;
+//    [coder setCallBackResultBlock:^(NSString * _Nonnull result) {
+//            
+//    }];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [coder sendCovertJS];
+//    });
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
