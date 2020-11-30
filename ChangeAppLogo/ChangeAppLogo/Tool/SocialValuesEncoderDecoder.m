@@ -11,8 +11,6 @@
 
 @interface SocialValuesEncoderDecoder ()<WKScriptMessageHandler>
 @property (nonatomic, strong) WKWebView *webView;
-@property (nonatomic, copy) NSString *resultText;
-
 @end
 
 @implementation SocialValuesEncoderDecoder
@@ -24,16 +22,16 @@ static SocialValuesEncoderDecoder *_coder = nil;
     });
     return _coder;
 }
-
+ 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        [self addDelegate];
         NSString *path = [[NSBundle mainBundle] pathForResource:@"values-encoder/index.html" ofType:nil];
         NSURL *url = [NSURL fileURLWithPath:path];
         NSURLRequest *req = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:req];
-        [self addDelegate];
     }
     return self;
 }
@@ -61,14 +59,14 @@ static SocialValuesEncoderDecoder *_coder = nil;
 }
 
 - (void)sendEncodeJS{
-    NSString *js = [NSString stringWithFormat:@"document.getElementById('decoded-area').value='%@';document.getElementById('encode-btn').click();",self.text];
+    NSString *js = [NSString stringWithFormat:@"window.document.getElementById('decoded-area').value='%@';window.document.getElementById('encode-btn').click();clickEncode();",self.text];
     [self.webView evaluateJavaScript:js completionHandler:^(id obj, NSError * _Nullable error) {
         
     }];
 }
 
 - (void)sendDecodeJS{
-    NSString *js = [NSString stringWithFormat:@"document.getElementById('encoded-area').value='%@';document.getElementById('decode-btn').click();",self.text];
+    NSString *js = [NSString stringWithFormat:@"window.document.getElementById('encoded-area').value='%@';window.document.getElementById('decode-btn').click();clickDecode();",self.text];
     [self.webView evaluateJavaScript:js completionHandler:^(id obj, NSError * _Nullable error) {
         
     }];

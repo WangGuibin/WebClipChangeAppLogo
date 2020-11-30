@@ -13,10 +13,8 @@
         <textarea id="decoded-area" placeholder="Decoded Text Here"></textarea>
         <div class="buttons">
             
-                <button id='encode-btn' onclick="clickEncode()">Encode &gt;&gt;</button>
-          
-            
-                <button id='decode-btn' onclick="clickDecode()">&lt;&lt; Decode</button>
+                <button id='encode-btn'>Encode &gt;&gt;</button>
+                <button id='decode-btn'>&lt;&lt; Decode</button>
             
         </div>
         <textarea id="encoded-area" placeholder="Encoded Text Here"></textarea>
@@ -27,17 +25,13 @@
     <script type="text/javascript" src="./dist/bundle.js"></script>
     <script type="text/javascript">
         function clickEncode(){
-            setTimeout(function(){
-                var text = window.document.getElementById('encoded-area').value
-                window.webkit.messageHandlers.clickEncode.postMessage(text);
-            }, 1000);
+            var text = window.document.getElementById('encoded-area').value;
+            window.webkit.messageHandlers.clickEncode.postMessage(text);
         }
         
         function clickDecode(){
-            setTimeout(function(){
-                var text = window.document.getElementById('decoded-area').value
-                window.webkit.messageHandlers.clickDecode.postMessage(text);
-            },1000);
+          var text = window.document.getElementById('decoded-area').value;
+          window.webkit.messageHandlers.clickDecode.postMessage(text);
         }
    </script>
 
