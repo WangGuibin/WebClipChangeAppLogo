@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Connectivity.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>wifi</string>
+        <string>wifi.slash</string>
+        <string>wifi.exclamationmark</string>
+        <string>dot.radiowaves.left.and.right</string>
+        <string>dot.radiowaves.right</string>
+        <string>radiowaves.left</string>
+        <string>radiowaves.right</string>
+        <string>antenna.radiowaves.left.and.right</string>
+    </array>
+</plist>

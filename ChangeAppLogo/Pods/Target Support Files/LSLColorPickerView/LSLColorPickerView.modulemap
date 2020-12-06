@@ -1,0 +1,6 @@
+framework module LSLColorPickerView {
+  umbrella header "LSLColorPickerView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.TextFormatting.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>paragraph</string>
+        <string>list.dash</string>
+        <string>list.bullet</string>
+        <string>list.bullet.indent</string>
+        <string>list.number</string>
+        <string>increase.indent</string>
+        <string>decrease.indent</string>
+        <string>decrease.quotelevel</string>
+        <string>increase.quotelevel</string>
+        <string>text.alignleft</string>
+        <string>text.aligncenter</string>
+        <string>text.alignright</string>
+        <string>text.justify</string>
+        <string>text.justifyleft</string>
+        <string>text.justifyright</string>
+        <string>a</string>
+        <string>textformat.size</string>
+        <string>textformat.alt</string>
+        <string>textformat</string>
+        <string>textformat.subscript</string>
+        <string>textformat.superscript</string>
+        <string>bold</string>
+        <string>italic</string>
+        <string>underline</string>
+        <string>strikethrough</string>
+        <string>bold.italic.underline</string>
+        <string>bold.underline</string>
+        <string>text.cursor</string>
+        <string>textformat.abc</string>
+        <string>textformat.abc.dottedunderline</string>
+        <string>textformat.123</string>
+        <string>textbox</string>
+    </array>
+</plist>

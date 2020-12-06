@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Shapes.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>rectangle</string>
+        <string>rectangle.fill</string>
+        <string>shield</string>
+        <string>shield.fill</string>
+        <string>hexagon</string>
+        <string>hexagon.fill</string>
+        <string>app</string>
+        <string>app.fill</string>
+        <string>triangle</string>
+        <string>triangle.fill</string>
+        <string>capsule</string>
+        <string>capsule.fill</string>
+        <string>circle</string>
+        <string>circle.fill</string>
+        <string>square</string>
+        <string>square.fill</string>
+    </array>
+</plist>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Editing.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>pencil</string>
+        <string>pencil.circle</string>
+        <string>pencil.circle.fill</string>
+        <string>pencil.slash</string>
+        <string>square.and.pencil</string>
+        <string>pencil.and.outline</string>
+        <string>pencil.tip</string>
+        <string>pencil.tip.crop.circle</string>
+        <string>pencil.tip.crop.circle.badge.plus</string>
+        <string>pencil.tip.crop.circle.badge.minus</string>
+        <string>eye.slash</string>
+        <string>eye.slash.fill</string>
+        <string>signature</string>
+        <string>scissors</string>
+        <string>scissors.badge.ellipsis</string>
+        <string>wand.and.rays</string>
+        <string>wand.and.rays.inverse</string>
+        <string>wand.and.stars</string>
+        <string>wand.and.stars.inverse</string>
+        <string>crop</string>
+        <string>crop.rotate</string>
+        <string>dial</string>
+        <string>dial.fill</string>
+        <string>paintbrush</string>
+        <string>paintbrush.fill</string>
+        <string>bandage</string>
+        <string>bandage.fill</string>
+        <string>eyedropper</string>
+        <string>eyedropper.halffull</string>
+        <string>eyedropper.full</string>
+        <string>rotate.left</string>
+        <string>rotate.left.fill</string>
+        <string>rotate.right</string>
+        <string>rotate.right.fill</string>
+        <string>selection.pin.in.out</string>
+        <string>slider.horizontal.below.rectangle</string>
+        <string>perspective</string>
+        <string>aspectratio</string>
+        <string>aspectratio.fill</string>
+        <string>skew</string>
+        <string>flip.horizontal</string>
+        <string>flip.horizontal.fill</string>
+        <string>scribble</string>
+        <string>lasso</string>
+        <string>slider.horizontal.3</string>
+        <string>circle.lefthalf.fill</string>
+        <string>circle.righthalf.fill</string>
+    </array>
+</plist>

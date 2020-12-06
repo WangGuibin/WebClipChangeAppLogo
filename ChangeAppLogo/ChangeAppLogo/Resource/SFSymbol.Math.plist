@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Math.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>sum</string>
+        <string>percent</string>
+        <string>function</string>
+        <string>plus</string>
+        <string>plus.circle</string>
+        <string>plus.circle.fill</string>
+        <string>plus.square</string>
+        <string>plus.square.fill</string>
+        <string>minus</string>
+        <string>minus.circle</string>
+        <string>minus.circle.fill</string>
+        <string>minus.square</string>
+        <string>minus.square.fill</string>
+        <string>plusminus</string>
+        <string>plusminus.circle</string>
+        <string>plusminus.circle.fill</string>
+        <string>plus.slash.minus</string>
+        <string>minus.slash.plus</string>
+        <string>multiply</string>
+        <string>multiply.circle</string>
+        <string>multiply.circle.fill</string>
+        <string>multiply.square</string>
+        <string>multiply.square.fill</string>
+        <string>divide</string>
+        <string>divide.circle</string>
+        <string>divide.circle.fill</string>
+        <string>divide.square</string>
+        <string>divide.square.fill</string>
+        <string>equal</string>
+        <string>equal.circle</string>
+        <string>equal.circle.fill</string>
+        <string>equal.square</string>
+        <string>equal.square.fill</string>
+        <string>lessthan</string>
+        <string>lessthan.circle</string>
+        <string>lessthan.circle.fill</string>
+        <string>lessthan.square</string>
+        <string>lessthan.square.fill</string>
+        <string>greaterthan</string>
+        <string>greaterthan.circle</string>
+        <string>greaterthan.circle.fill</string>
+        <string>greaterthan.square</string>
+        <string>greaterthan.square.fill</string>
+        <string>number</string>
+        <string>number.circle</string>
+        <string>number.circle.fill</string>
+        <string>number.square</string>
+        <string>number.square.fill</string>
+        <string>x.squareroot</string>
+    </array>
+</plist>

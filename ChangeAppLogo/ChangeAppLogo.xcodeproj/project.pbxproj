@@ -33,6 +33,61 @@
 		CAAC6C0525739DAC00033FD7 /* values-encoder in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6C0325739DAB00033FD7 /* values-encoder */; };
 		CAAC6C0B25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */; };
 		CAAC6C0C25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */; };
+		CAAC6CD0257CC36300033FD7 /* AppMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6CCF257CC36300033FD7 /* AppMainViewController.m */; };
+		CAAC6CD6257CC5DC00033FD7 /* CustomLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6CD5257CC5DC00033FD7 /* CustomLogoViewController.m */; };
+		CAAC6CF0257CCEF800033FD7 /* SFSymbol.Connectivity.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDC257CCEF800033FD7 /* SFSymbol.Connectivity.plist */; };
+		CAAC6CF1257CCEF800033FD7 /* SFSymbol.Health.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDD257CCEF800033FD7 /* SFSymbol.Health.plist */; };
+		CAAC6CF2257CCEF800033FD7 /* SFSymbol.Objects&Tools.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDE257CCEF800033FD7 /* SFSymbol.Objects&Tools.plist */; };
+		CAAC6CF3257CCEF800033FD7 /* SFSymbol.Communication.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDF257CCEF800033FD7 /* SFSymbol.Communication.plist */; };
+		CAAC6CF4257CCEF800033FD7 /* SFSymbol.Editing.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE0257CCEF800033FD7 /* SFSymbol.Editing.plist */; };
+		CAAC6CF5257CCEF800033FD7 /* SFSymbol.All.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE1257CCEF800033FD7 /* SFSymbol.All.plist */; };
+		CAAC6CF6257CCEF800033FD7 /* SFSymbol.Transportation.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE2257CCEF800033FD7 /* SFSymbol.Transportation.plist */; };
+		CAAC6CF7257CCEF800033FD7 /* SFSymbol.Nature.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE3257CCEF800033FD7 /* SFSymbol.Nature.plist */; };
+		CAAC6CF8257CCEF800033FD7 /* SFSymbol.Human.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE4257CCEF800033FD7 /* SFSymbol.Human.plist */; };
+		CAAC6CF9257CCEF800033FD7 /* SFSymbol.Commerce.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE5257CCEF800033FD7 /* SFSymbol.Commerce.plist */; };
+		CAAC6CFA257CCEF800033FD7 /* SFSymbol.Keyboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE6257CCEF800033FD7 /* SFSymbol.Keyboard.plist */; };
+		CAAC6CFB257CCEF800033FD7 /* SFSymbol.Devices.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE7257CCEF800033FD7 /* SFSymbol.Devices.plist */; };
+		CAAC6CFC257CCEF800033FD7 /* SFSymbol.Weather.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE8257CCEF800033FD7 /* SFSymbol.Weather.plist */; };
+		CAAC6CFD257CCEF800033FD7 /* SFSymbol.TextFormatting.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE9257CCEF800033FD7 /* SFSymbol.TextFormatting.plist */; };
+		CAAC6CFE257CCEF800033FD7 /* SFSymbol.Arrows.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEA257CCEF800033FD7 /* SFSymbol.Arrows.plist */; };
+		CAAC6CFF257CCEF800033FD7 /* SFSymbol.Time.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEB257CCEF800033FD7 /* SFSymbol.Time.plist */; };
+		CAAC6D00257CCEF800033FD7 /* SFSymbol.Media.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEC257CCEF800033FD7 /* SFSymbol.Media.plist */; };
+		CAAC6D01257CCEF800033FD7 /* SFSymbol.Indices.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CED257CCEF800033FD7 /* SFSymbol.Indices.plist */; };
+		CAAC6D02257CCEF800033FD7 /* SFSymbol.Shapes.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEE257CCEF800033FD7 /* SFSymbol.Shapes.plist */; };
+		CAAC6D03257CCEF800033FD7 /* SFSymbol.Math.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEF257CCEF800033FD7 /* SFSymbol.Math.plist */; };
+		CAAC6D07257CCF1A00033FD7 /* SFSymbol.Weather.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE8257CCEF800033FD7 /* SFSymbol.Weather.plist */; };
+		CAAC6D08257CCF1A00033FD7 /* SFSymbol.Time.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEB257CCEF800033FD7 /* SFSymbol.Time.plist */; };
+		CAAC6D09257CCF1A00033FD7 /* SFSymbol.Nature.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE3257CCEF800033FD7 /* SFSymbol.Nature.plist */; };
+		CAAC6D0A257CCF1A00033FD7 /* SFSymbol.Keyboard.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE6257CCEF800033FD7 /* SFSymbol.Keyboard.plist */; };
+		CAAC6D0B257CCF1A00033FD7 /* SFSymbol.Health.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDD257CCEF800033FD7 /* SFSymbol.Health.plist */; };
+		CAAC6D0C257CCF1A00033FD7 /* SFSymbol.Commerce.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE5257CCEF800033FD7 /* SFSymbol.Commerce.plist */; };
+		CAAC6D0D257CCF1A00033FD7 /* SFSymbol.Editing.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE0257CCEF800033FD7 /* SFSymbol.Editing.plist */; };
+		CAAC6D0E257CCF1A00033FD7 /* SFSymbol.Connectivity.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDC257CCEF800033FD7 /* SFSymbol.Connectivity.plist */; };
+		CAAC6D0F257CCF1A00033FD7 /* SFSymbol.Human.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE4257CCEF800033FD7 /* SFSymbol.Human.plist */; };
+		CAAC6D10257CCF1A00033FD7 /* SFSymbol.Shapes.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEE257CCEF800033FD7 /* SFSymbol.Shapes.plist */; };
+		CAAC6D11257CCF1A00033FD7 /* SFSymbol.Math.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEF257CCEF800033FD7 /* SFSymbol.Math.plist */; };
+		CAAC6D12257CCF1A00033FD7 /* SFSymbol.Transportation.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE2257CCEF800033FD7 /* SFSymbol.Transportation.plist */; };
+		CAAC6D13257CCF1A00033FD7 /* SFSymbol.Indices.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CED257CCEF800033FD7 /* SFSymbol.Indices.plist */; };
+		CAAC6D14257CCF1A00033FD7 /* SFSymbol.Devices.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE7257CCEF800033FD7 /* SFSymbol.Devices.plist */; };
+		CAAC6D15257CCF1A00033FD7 /* SFSymbol.Arrows.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEA257CCEF800033FD7 /* SFSymbol.Arrows.plist */; };
+		CAAC6D16257CCF1A00033FD7 /* SFSymbol.Media.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CEC257CCEF800033FD7 /* SFSymbol.Media.plist */; };
+		CAAC6D17257CCF1A00033FD7 /* SFSymbol.Objects&Tools.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDE257CCEF800033FD7 /* SFSymbol.Objects&Tools.plist */; };
+		CAAC6D18257CCF1A00033FD7 /* SFSymbol.Communication.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CDF257CCEF800033FD7 /* SFSymbol.Communication.plist */; };
+		CAAC6D19257CCF1A00033FD7 /* SFSymbol.TextFormatting.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE9257CCEF800033FD7 /* SFSymbol.TextFormatting.plist */; };
+		CAAC6D1A257CCF1A00033FD7 /* SFSymbol.All.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAAC6CE1257CCEF800033FD7 /* SFSymbol.All.plist */; };
+		CAAC6D33257CD00B00033FD7 /* SFSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D20257CD00B00033FD7 /* SFSymbol.m */; };
+		CAAC6D34257CD00B00033FD7 /* SFSymbolCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D21257CD00B00033FD7 /* SFSymbolCategory.m */; };
+		CAAC6D35257CD00B00033FD7 /* SFSymbolDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D23257CD00B00033FD7 /* SFSymbolDatasource.m */; };
+		CAAC6D36257CD00B00033FD7 /* ReusableTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D26257CD00B00033FD7 /* ReusableTitleView.m */; };
+		CAAC6D37257CD00B00033FD7 /* SymbolPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D27257CD00B00033FD7 /* SymbolPreviewCell.m */; };
+		CAAC6D38257CD00B00033FD7 /* SymbolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D2D257CD00B00033FD7 /* SymbolsViewController.m */; };
+		CAAC6D39257CD00B00033FD7 /* SymbolDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D30257CD00B00033FD7 /* SymbolDetailsViewController.m */; };
+		CAAC6D3A257CD00B00033FD7 /* SymbolSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D31257CD00B00033FD7 /* SymbolSearchResultsViewController.m */; };
+		CAAC6D3B257CD00B00033FD7 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D32257CD00B00033FD7 /* CategoriesViewController.m */; };
+		CAAC6D3F257CD03000033FD7 /* SFSymbolCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D21257CD00B00033FD7 /* SFSymbolCategory.m */; };
+		CAAC6D40257CD03000033FD7 /* SFSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D20257CD00B00033FD7 /* SFSymbol.m */; };
+		CAAC6D41257CD03000033FD7 /* SFSymbolDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D23257CD00B00033FD7 /* SFSymbolDatasource.m */; };
+		CAAC6D88257CDE8400033FD7 /* SelectColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */; };
 		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
@@ -110,6 +165,51 @@
 		CAAC6C0325739DAB00033FD7 /* values-encoder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "values-encoder"; sourceTree = SOURCE_ROOT; };
 		CAAC6C0925739DDE00033FD7 /* SocialValuesEncoderDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialValuesEncoderDecoder.h; sourceTree = "<group>"; };
 		CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialValuesEncoderDecoder.m; sourceTree = "<group>"; };
+		CAAC6CCE257CC36300033FD7 /* AppMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMainViewController.h; sourceTree = "<group>"; };
+		CAAC6CCF257CC36300033FD7 /* AppMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMainViewController.m; sourceTree = "<group>"; };
+		CAAC6CD4257CC5DC00033FD7 /* CustomLogoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLogoViewController.h; sourceTree = "<group>"; };
+		CAAC6CD5257CC5DC00033FD7 /* CustomLogoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLogoViewController.m; sourceTree = "<group>"; };
+		CAAC6CDC257CCEF800033FD7 /* SFSymbol.Connectivity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Connectivity.plist; sourceTree = "<group>"; };
+		CAAC6CDD257CCEF800033FD7 /* SFSymbol.Health.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Health.plist; sourceTree = "<group>"; };
+		CAAC6CDE257CCEF800033FD7 /* SFSymbol.Objects&Tools.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SFSymbol.Objects&Tools.plist"; sourceTree = "<group>"; };
+		CAAC6CDF257CCEF800033FD7 /* SFSymbol.Communication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Communication.plist; sourceTree = "<group>"; };
+		CAAC6CE0257CCEF800033FD7 /* SFSymbol.Editing.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Editing.plist; sourceTree = "<group>"; };
+		CAAC6CE1257CCEF800033FD7 /* SFSymbol.All.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.All.plist; sourceTree = "<group>"; };
+		CAAC6CE2257CCEF800033FD7 /* SFSymbol.Transportation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Transportation.plist; sourceTree = "<group>"; };
+		CAAC6CE3257CCEF800033FD7 /* SFSymbol.Nature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Nature.plist; sourceTree = "<group>"; };
+		CAAC6CE4257CCEF800033FD7 /* SFSymbol.Human.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Human.plist; sourceTree = "<group>"; };
+		CAAC6CE5257CCEF800033FD7 /* SFSymbol.Commerce.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Commerce.plist; sourceTree = "<group>"; };
+		CAAC6CE6257CCEF800033FD7 /* SFSymbol.Keyboard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Keyboard.plist; sourceTree = "<group>"; };
+		CAAC6CE7257CCEF800033FD7 /* SFSymbol.Devices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Devices.plist; sourceTree = "<group>"; };
+		CAAC6CE8257CCEF800033FD7 /* SFSymbol.Weather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Weather.plist; sourceTree = "<group>"; };
+		CAAC6CE9257CCEF800033FD7 /* SFSymbol.TextFormatting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.TextFormatting.plist; sourceTree = "<group>"; };
+		CAAC6CEA257CCEF800033FD7 /* SFSymbol.Arrows.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Arrows.plist; sourceTree = "<group>"; };
+		CAAC6CEB257CCEF800033FD7 /* SFSymbol.Time.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Time.plist; sourceTree = "<group>"; };
+		CAAC6CEC257CCEF800033FD7 /* SFSymbol.Media.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Media.plist; sourceTree = "<group>"; };
+		CAAC6CED257CCEF800033FD7 /* SFSymbol.Indices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Indices.plist; sourceTree = "<group>"; };
+		CAAC6CEE257CCEF800033FD7 /* SFSymbol.Shapes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Shapes.plist; sourceTree = "<group>"; };
+		CAAC6CEF257CCEF800033FD7 /* SFSymbol.Math.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFSymbol.Math.plist; sourceTree = "<group>"; };
+		CAAC6D1F257CD00B00033FD7 /* SFSymbolDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSymbolDatasource.h; sourceTree = "<group>"; };
+		CAAC6D20257CD00B00033FD7 /* SFSymbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSymbol.m; sourceTree = "<group>"; };
+		CAAC6D21257CD00B00033FD7 /* SFSymbolCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSymbolCategory.m; sourceTree = "<group>"; };
+		CAAC6D22257CD00B00033FD7 /* SFSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSymbol.h; sourceTree = "<group>"; };
+		CAAC6D23257CD00B00033FD7 /* SFSymbolDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSymbolDatasource.m; sourceTree = "<group>"; };
+		CAAC6D24257CD00B00033FD7 /* SFSymbolCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSymbolCategory.h; sourceTree = "<group>"; };
+		CAAC6D26257CD00B00033FD7 /* ReusableTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReusableTitleView.m; sourceTree = "<group>"; };
+		CAAC6D27257CD00B00033FD7 /* SymbolPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolPreviewCell.m; sourceTree = "<group>"; };
+		CAAC6D28257CD00B00033FD7 /* ReusableTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReusableTitleView.h; sourceTree = "<group>"; };
+		CAAC6D29257CD00B00033FD7 /* SymbolPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolPreviewCell.h; sourceTree = "<group>"; };
+		CAAC6D2B257CD00B00033FD7 /* SymbolSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolSearchResultsViewController.h; sourceTree = "<group>"; };
+		CAAC6D2C257CD00B00033FD7 /* SymbolDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolDetailsViewController.h; sourceTree = "<group>"; };
+		CAAC6D2D257CD00B00033FD7 /* SymbolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolsViewController.m; sourceTree = "<group>"; };
+		CAAC6D2E257CD00B00033FD7 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		CAAC6D2F257CD00B00033FD7 /* SymbolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolsViewController.h; sourceTree = "<group>"; };
+		CAAC6D30257CD00B00033FD7 /* SymbolDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolDetailsViewController.m; sourceTree = "<group>"; };
+		CAAC6D31257CD00B00033FD7 /* SymbolSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolSearchResultsViewController.m; sourceTree = "<group>"; };
+		CAAC6D32257CD00B00033FD7 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		CAAC6D49257CD34000033FD7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CAAC6D86257CDE8400033FD7 /* SelectColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectColorViewController.h; sourceTree = "<group>"; };
+		CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectColorViewController.m; sourceTree = "<group>"; };
 		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
 		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
@@ -130,6 +230,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CABF3FA62571D72C00EBF0E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F877F4C1AC655FC1D32F7F99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,6 +280,9 @@
 		CA1E8B112543F94A00049305 /* ChangeAppLogo */ = {
 			isa = PBXGroup;
 			children = (
+				CAAC6D48257CD32800033FD7 /* HeaderFiles */,
+				CAAC6CDB257CCEF800033FD7 /* Resource */,
+				CAAC6CDA257CCED500033FD7 /* SFSymbolsPreview */,
 				CAAC6BA025735A2D00033FD7 /* Tool */,
 				CA1E8BD2254D0C3400049305 /* iconVersioning.sh */,
 				CAAC6C0325739DAB00033FD7 /* values-encoder */,
@@ -180,6 +290,12 @@
 				CA1E8B132543F94A00049305 /* AppDelegate.m */,
 				CA1E8B152543F94A00049305 /* SceneDelegate.h */,
 				CA1E8B162543F94A00049305 /* SceneDelegate.m */,
+				CAAC6CCE257CC36300033FD7 /* AppMainViewController.h */,
+				CAAC6CCF257CC36300033FD7 /* AppMainViewController.m */,
+				CAAC6CD4257CC5DC00033FD7 /* CustomLogoViewController.h */,
+				CAAC6CD5257CC5DC00033FD7 /* CustomLogoViewController.m */,
+				CAAC6D86257CDE8400033FD7 /* SelectColorViewController.h */,
+				CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */,
 				CA1E8B2F2544112800049305 /* AppStoreModel.h */,
 				CA1E8B302544112800049305 /* AppStoreModel.m */,
 				CA1E8B182543F94A00049305 /* ViewController.h */,
@@ -219,6 +335,90 @@
 				CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		CAAC6CDA257CCED500033FD7 /* SFSymbolsPreview */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6D2A257CD00B00033FD7 /* C */,
+				CAAC6D1E257CD00B00033FD7 /* M */,
+				CAAC6D25257CD00B00033FD7 /* V */,
+			);
+			path = SFSymbolsPreview;
+			sourceTree = "<group>";
+		};
+		CAAC6CDB257CCEF800033FD7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6CDC257CCEF800033FD7 /* SFSymbol.Connectivity.plist */,
+				CAAC6CDD257CCEF800033FD7 /* SFSymbol.Health.plist */,
+				CAAC6CDE257CCEF800033FD7 /* SFSymbol.Objects&Tools.plist */,
+				CAAC6CDF257CCEF800033FD7 /* SFSymbol.Communication.plist */,
+				CAAC6CE0257CCEF800033FD7 /* SFSymbol.Editing.plist */,
+				CAAC6CE1257CCEF800033FD7 /* SFSymbol.All.plist */,
+				CAAC6CE2257CCEF800033FD7 /* SFSymbol.Transportation.plist */,
+				CAAC6CE3257CCEF800033FD7 /* SFSymbol.Nature.plist */,
+				CAAC6CE4257CCEF800033FD7 /* SFSymbol.Human.plist */,
+				CAAC6CE5257CCEF800033FD7 /* SFSymbol.Commerce.plist */,
+				CAAC6CE6257CCEF800033FD7 /* SFSymbol.Keyboard.plist */,
+				CAAC6CE7257CCEF800033FD7 /* SFSymbol.Devices.plist */,
+				CAAC6CE8257CCEF800033FD7 /* SFSymbol.Weather.plist */,
+				CAAC6CE9257CCEF800033FD7 /* SFSymbol.TextFormatting.plist */,
+				CAAC6CEA257CCEF800033FD7 /* SFSymbol.Arrows.plist */,
+				CAAC6CEB257CCEF800033FD7 /* SFSymbol.Time.plist */,
+				CAAC6CEC257CCEF800033FD7 /* SFSymbol.Media.plist */,
+				CAAC6CED257CCEF800033FD7 /* SFSymbol.Indices.plist */,
+				CAAC6CEE257CCEF800033FD7 /* SFSymbol.Shapes.plist */,
+				CAAC6CEF257CCEF800033FD7 /* SFSymbol.Math.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CAAC6D1E257CD00B00033FD7 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6D22257CD00B00033FD7 /* SFSymbol.h */,
+				CAAC6D20257CD00B00033FD7 /* SFSymbol.m */,
+				CAAC6D24257CD00B00033FD7 /* SFSymbolCategory.h */,
+				CAAC6D21257CD00B00033FD7 /* SFSymbolCategory.m */,
+				CAAC6D1F257CD00B00033FD7 /* SFSymbolDatasource.h */,
+				CAAC6D23257CD00B00033FD7 /* SFSymbolDatasource.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		CAAC6D25257CD00B00033FD7 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6D28257CD00B00033FD7 /* ReusableTitleView.h */,
+				CAAC6D26257CD00B00033FD7 /* ReusableTitleView.m */,
+				CAAC6D29257CD00B00033FD7 /* SymbolPreviewCell.h */,
+				CAAC6D27257CD00B00033FD7 /* SymbolPreviewCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		CAAC6D2A257CD00B00033FD7 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6D2E257CD00B00033FD7 /* CategoriesViewController.h */,
+				CAAC6D32257CD00B00033FD7 /* CategoriesViewController.m */,
+				CAAC6D2C257CD00B00033FD7 /* SymbolDetailsViewController.h */,
+				CAAC6D30257CD00B00033FD7 /* SymbolDetailsViewController.m */,
+				CAAC6D2B257CD00B00033FD7 /* SymbolSearchResultsViewController.h */,
+				CAAC6D31257CD00B00033FD7 /* SymbolSearchResultsViewController.m */,
+				CAAC6D2F257CD00B00033FD7 /* SymbolsViewController.h */,
+				CAAC6D2D257CD00B00033FD7 /* SymbolsViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		CAAC6D48257CD32800033FD7 /* HeaderFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6D49257CD34000033FD7 /* PrefixHeader.pch */,
+			);
+			path = HeaderFiles;
 			sourceTree = "<group>";
 		};
 		CABF3FAA2571D72C00EBF0E0 /* Shortcuts */ = {
@@ -283,6 +483,7 @@
 			buildConfigurationList = CA1E8C62254E997800049305 /* Build configuration list for PBXNativeTarget "WGBEmoticonsFaceExtension" */;
 			buildPhases = (
 				CA1E8C55254E997300049305 /* Resources */,
+				F877F4C1AC655FC1D32F7F99 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,11 +555,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6CF7257CCEF800033FD7 /* SFSymbol.Nature.plist in Resources */,
 				CA1E8B222543F94F00049305 /* LaunchScreen.storyboard in Resources */,
+				CAAC6CFB257CCEF800033FD7 /* SFSymbol.Devices.plist in Resources */,
+				CAAC6CF8257CCEF800033FD7 /* SFSymbol.Human.plist in Resources */,
+				CAAC6CF0257CCEF800033FD7 /* SFSymbol.Connectivity.plist in Resources */,
+				CAAC6CFC257CCEF800033FD7 /* SFSymbol.Weather.plist in Resources */,
+				CAAC6CF3257CCEF800033FD7 /* SFSymbol.Communication.plist in Resources */,
+				CAAC6CF4257CCEF800033FD7 /* SFSymbol.Editing.plist in Resources */,
+				CAAC6CF6257CCEF800033FD7 /* SFSymbol.Transportation.plist in Resources */,
 				CA1E8B1F2543F94F00049305 /* Assets.xcassets in Resources */,
+				CAAC6CFE257CCEF800033FD7 /* SFSymbol.Arrows.plist in Resources */,
+				CAAC6D00257CCEF800033FD7 /* SFSymbol.Media.plist in Resources */,
 				CA1E8BD3254D0C3400049305 /* iconVersioning.sh in Resources */,
+				CAAC6CF9257CCEF800033FD7 /* SFSymbol.Commerce.plist in Resources */,
+				CAAC6D03257CCEF800033FD7 /* SFSymbol.Math.plist in Resources */,
+				CAAC6CF5257CCEF800033FD7 /* SFSymbol.All.plist in Resources */,
+				CAAC6CFF257CCEF800033FD7 /* SFSymbol.Time.plist in Resources */,
+				CAAC6D02257CCEF800033FD7 /* SFSymbol.Shapes.plist in Resources */,
+				CAAC6CFD257CCEF800033FD7 /* SFSymbol.TextFormatting.plist in Resources */,
+				CAAC6D01257CCEF800033FD7 /* SFSymbol.Indices.plist in Resources */,
+				CAAC6CF2257CCEF800033FD7 /* SFSymbol.Objects&Tools.plist in Resources */,
 				CAAC6C0425739DAC00033FD7 /* values-encoder in Resources */,
+				CAAC6CF1257CCEF800033FD7 /* SFSymbol.Health.plist in Resources */,
 				CA1E8B1D2543F94A00049305 /* Main.storyboard in Resources */,
+				CAAC6CFA257CCEF800033FD7 /* SFSymbol.Keyboard.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +595,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6D10257CCF1A00033FD7 /* SFSymbol.Shapes.plist in Resources */,
 				CAAC6C0525739DAC00033FD7 /* values-encoder in Resources */,
+				CAAC6D14257CCF1A00033FD7 /* SFSymbol.Devices.plist in Resources */,
+				CAAC6D0D257CCF1A00033FD7 /* SFSymbol.Editing.plist in Resources */,
+				CAAC6D12257CCF1A00033FD7 /* SFSymbol.Transportation.plist in Resources */,
+				CAAC6D0A257CCF1A00033FD7 /* SFSymbol.Keyboard.plist in Resources */,
+				CAAC6D1A257CCF1A00033FD7 /* SFSymbol.All.plist in Resources */,
+				CAAC6D11257CCF1A00033FD7 /* SFSymbol.Math.plist in Resources */,
+				CAAC6D0B257CCF1A00033FD7 /* SFSymbol.Health.plist in Resources */,
+				CAAC6D18257CCF1A00033FD7 /* SFSymbol.Communication.plist in Resources */,
+				CAAC6D0C257CCF1A00033FD7 /* SFSymbol.Commerce.plist in Resources */,
+				CAAC6D07257CCF1A00033FD7 /* SFSymbol.Weather.plist in Resources */,
+				CAAC6D15257CCF1A00033FD7 /* SFSymbol.Arrows.plist in Resources */,
+				CAAC6D08257CCF1A00033FD7 /* SFSymbol.Time.plist in Resources */,
+				CAAC6D17257CCF1A00033FD7 /* SFSymbol.Objects&Tools.plist in Resources */,
+				CAAC6D16257CCF1A00033FD7 /* SFSymbol.Media.plist in Resources */,
+				CAAC6D13257CCF1A00033FD7 /* SFSymbol.Indices.plist in Resources */,
+				CAAC6D19257CCF1A00033FD7 /* SFSymbol.TextFormatting.plist in Resources */,
+				CAAC6D0E257CCF1A00033FD7 /* SFSymbol.Connectivity.plist in Resources */,
+				CAAC6D0F257CCF1A00033FD7 /* SFSymbol.Human.plist in Resources */,
+				CAAC6D09257CCF1A00033FD7 /* SFSymbol.Nature.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,19 +668,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6CD6257CC5DC00033FD7 /* CustomLogoViewController.m in Sources */,
 				CAAC6B5225727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
 				CAAC6BB62573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CA1E8B1A2543F94A00049305 /* ViewController.m in Sources */,
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
+				CAAC6D88257CDE8400033FD7 /* SelectColorViewController.m in Sources */,
 				CABF400B25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
 				CAAC6BA325735A5400033FD7 /* WGBReachability.m in Sources */,
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
+				CAAC6D39257CD00B00033FD7 /* SymbolDetailsViewController.m in Sources */,
 				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
+				CAAC6D36257CD00B00033FD7 /* ReusableTitleView.m in Sources */,
+				CAAC6D33257CD00B00033FD7 /* SFSymbol.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
 				CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CAAC6D37257CD00B00033FD7 /* SymbolPreviewCell.m in Sources */,
+				CAAC6D35257CD00B00033FD7 /* SFSymbolDatasource.m in Sources */,
+				CAAC6D34257CD00B00033FD7 /* SFSymbolCategory.m in Sources */,
+				CAAC6D3A257CD00B00033FD7 /* SymbolSearchResultsViewController.m in Sources */,
+				CAAC6CD0257CC36300033FD7 /* AppMainViewController.m in Sources */,
 				CAAC6C0B25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */,
+				CAAC6D38257CD00B00033FD7 /* SymbolsViewController.m in Sources */,
+				CAAC6D3B257CD00B00033FD7 /* CategoriesViewController.m in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +706,9 @@
 				CAAC6B6025727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
 				CAAC6B5325727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
+				CAAC6D3F257CD03000033FD7 /* SFSymbolCategory.m in Sources */,
+				CAAC6D40257CD03000033FD7 /* SFSymbol.m in Sources */,
+				CAAC6D41257CD03000033FD7 /* SFSymbolDatasource.m in Sources */,
 				CAAC6BB72573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
 				CAAC6BA425735A5400033FD7 /* WGBReachability.m in Sources */,
@@ -546,7 +802,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -600,7 +856,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -616,8 +872,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E27WNKVHV9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/ChangeAppLogo/HeaderFiles/PrefixHeader.pch;
 				INFOPLIST_FILE = ChangeAppLogo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,8 +894,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E27WNKVHV9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/ChangeAppLogo/HeaderFiles/PrefixHeader.pch;
 				INFOPLIST_FILE = ChangeAppLogo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

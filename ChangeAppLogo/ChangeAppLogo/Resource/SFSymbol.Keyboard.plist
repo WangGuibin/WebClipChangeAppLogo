@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Keyboard.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>command</string>
+        <string>option</string>
+        <string>alt</string>
+        <string>delete.right</string>
+        <string>delete.right.fill</string>
+        <string>clear</string>
+        <string>clear.fill</string>
+        <string>delete.left</string>
+        <string>delete.left.fill</string>
+        <string>shift</string>
+        <string>shift.fill</string>
+        <string>capslock</string>
+        <string>capslock.fill</string>
+        <string>escape</string>
+        <string>power</string>
+        <string>globe</string>
+        <string>sun.min</string>
+        <string>sun.min.fill</string>
+        <string>sun.max</string>
+        <string>sun.max.fill</string>
+        <string>light.min</string>
+        <string>light.max</string>
+        <string>keyboard</string>
+        <string>keyboard.chevron.compact.down</string>
+        <string>eject</string>
+        <string>eject.fill</string>
+        <string>control</string>
+        <string>projective</string>
+    </array>
+</plist>

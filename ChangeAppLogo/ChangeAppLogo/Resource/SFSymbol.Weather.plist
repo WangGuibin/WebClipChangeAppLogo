@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Weather.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>sun.min</string>
+        <string>sun.min.fill</string>
+        <string>sun.max</string>
+        <string>sun.max.fill</string>
+        <string>sunrise</string>
+        <string>sunrise.fill</string>
+        <string>sunset</string>
+        <string>sunset.fill</string>
+        <string>sun.dust</string>
+        <string>sun.dust.fill</string>
+        <string>sun.haze</string>
+        <string>sun.haze.fill</string>
+        <string>moon</string>
+        <string>moon.fill</string>
+        <string>moon.circle</string>
+        <string>moon.circle.fill</string>
+        <string>zzz</string>
+        <string>moon.zzz</string>
+        <string>moon.zzz.fill</string>
+        <string>sparkles</string>
+        <string>moon.stars</string>
+        <string>moon.stars.fill</string>
+        <string>cloud</string>
+        <string>cloud.fill</string>
+        <string>cloud.drizzle</string>
+        <string>cloud.drizzle.fill</string>
+        <string>cloud.rain</string>
+        <string>cloud.rain.fill</string>
+        <string>cloud.heavyrain</string>
+        <string>cloud.heavyrain.fill</string>
+        <string>cloud.fog</string>
+        <string>cloud.fog.fill</string>
+        <string>cloud.hail</string>
+        <string>cloud.hail.fill</string>
+        <string>cloud.snow</string>
+        <string>cloud.snow.fill</string>
+        <string>cloud.sleet</string>
+        <string>cloud.sleet.fill</string>
+        <string>cloud.bolt</string>
+        <string>cloud.bolt.fill</string>
+        <string>cloud.sun</string>
+        <string>cloud.sun.fill</string>
+        <string>cloud.sun.rain</string>
+        <string>cloud.sun.rain.fill</string>
+        <string>cloud.sun.bolt</string>
+        <string>cloud.sun.bolt.fill</string>
+        <string>cloud.moon</string>
+        <string>cloud.moon.fill</string>
+        <string>cloud.moon.rain</string>
+        <string>cloud.moon.rain.fill</string>
+        <string>cloud.bolt.rain</string>
+        <string>cloud.bolt.rain.fill</string>
+        <string>cloud.moon.bolt</string>
+        <string>cloud.moon.bolt.fill</string>
+        <string>smoke</string>
+        <string>smoke.fill</string>
+        <string>wind</string>
+        <string>snow</string>
+        <string>wind.snow</string>
+        <string>tornado</string>
+        <string>tropicalstorm</string>
+        <string>hurricane</string>
+        <string>thermometer.sun</string>
+        <string>thermometer.snowflake</string>
+        <string>thermometer</string>
+    </array>
+</plist>

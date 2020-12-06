@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Human.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>person</string>
+        <string>person.fill</string>
+        <string>person.circle</string>
+        <string>person.circle.fill</string>
+        <string>person.badge.plus</string>
+        <string>person.badge.plus.fill</string>
+        <string>person.badge.minus</string>
+        <string>person.badge.minus.fill</string>
+        <string>person.2</string>
+        <string>person.2.fill</string>
+        <string>person.3</string>
+        <string>person.3.fill</string>
+        <string>person.crop.circle</string>
+        <string>person.crop.circle.fill</string>
+        <string>person.crop.circle.badge.plus</string>
+        <string>person.crop.circle.fill.badge.plus</string>
+        <string>person.crop.circle.badge.minus</string>
+        <string>person.crop.circle.fill.badge.minus</string>
+        <string>person.crop.circle.badge.checkmark</string>
+        <string>person.crop.circle.fill.badge.checkmark</string>
+        <string>person.crop.circle.badge.xmark</string>
+        <string>person.crop.circle.fill.badge.xmark</string>
+        <string>person.crop.circle.badge.exclam</string>
+        <string>person.crop.circle.fill.badge.exclam</string>
+        <string>person.crop.square</string>
+        <string>person.crop.square.fill</string>
+        <string>eye</string>
+        <string>eye.fill</string>
+        <string>eye.slash</string>
+        <string>eye.slash.fill</string>
+        <string>rectangle.stack.person.crop</string>
+        <string>rectangle.stack.person.crop.fill</string>
+        <string>person.2.square.stack</string>
+        <string>person.2.square.stack.fill</string>
+        <string>ear</string>
+        <string>hand.raised</string>
+        <string>hand.raised.fill</string>
+        <string>hand.raised.slash</string>
+        <string>hand.raised.slash.fill</string>
+        <string>hand.thumbsup</string>
+        <string>hand.thumbsup.fill</string>
+        <string>hand.thumbsdown</string>
+        <string>hand.thumbsdown.fill</string>
+        <string>hand.draw</string>
+        <string>hand.draw.fill</string>
+        <string>hand.point.left</string>
+        <string>hand.point.left.fill</string>
+        <string>hand.point.right</string>
+        <string>hand.point.right.fill</string>
+    </array>
+</plist>

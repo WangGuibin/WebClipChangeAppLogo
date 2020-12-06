@@ -177,6 +177,8 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LSLColorPickerView/LSLColorPickerView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
@@ -184,6 +186,8 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LSLColorPickerView/LSLColorPickerView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Media.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>play</string>
+        <string>play.fill</string>
+        <string>play.circle</string>
+        <string>play.circle.fill</string>
+        <string>play.rectangle</string>
+        <string>play.rectangle.fill</string>
+        <string>pause</string>
+        <string>pause.fill</string>
+        <string>pause.circle</string>
+        <string>pause.circle.fill</string>
+        <string>pause.rectangle</string>
+        <string>pause.rectangle.fill</string>
+        <string>stop</string>
+        <string>stop.fill</string>
+        <string>stop.circle</string>
+        <string>stop.circle.fill</string>
+        <string>playpause</string>
+        <string>playpause.fill</string>
+        <string>backward</string>
+        <string>backward.fill</string>
+        <string>forward</string>
+        <string>forward.fill</string>
+        <string>backward.end.alt</string>
+        <string>backward.end.alt.fill</string>
+        <string>forward.end.alt</string>
+        <string>forward.end.alt.fill</string>
+        <string>shuffle</string>
+        <string>repeat</string>
+        <string>repeat.1</string>
+        <string>goforward</string>
+        <string>gobackward</string>
+        <string>goforward.10</string>
+        <string>gobackward.10</string>
+        <string>goforward.15</string>
+        <string>gobackward.15</string>
+        <string>goforward.30</string>
+        <string>gobackward.30</string>
+        <string>goforward.45</string>
+        <string>gobackward.45</string>
+        <string>goforward.60</string>
+        <string>gobackward.60</string>
+        <string>goforward.75</string>
+        <string>gobackward.75</string>
+        <string>goforward.90</string>
+        <string>gobackward.90</string>
+        <string>goforward.10.ar</string>
+        <string>gobackward.10.ar</string>
+        <string>goforward.15.ar</string>
+        <string>gobackward.15.ar</string>
+        <string>goforward.30.ar</string>
+        <string>gobackward.30.ar</string>
+        <string>goforward.45.ar</string>
+        <string>gobackward.45.ar</string>
+        <string>goforward.60.ar</string>
+        <string>gobackward.60.ar</string>
+        <string>goforward.75.ar</string>
+        <string>gobackward.75.ar</string>
+        <string>goforward.90.ar</string>
+        <string>gobackward.90.ar</string>
+        <string>goforward.10.hi</string>
+        <string>gobackward.10.hi</string>
+        <string>goforward.15.hi</string>
+        <string>gobackward.15.hi</string>
+        <string>goforward.30.hi</string>
+        <string>gobackward.30.hi</string>
+        <string>goforward.45.hi</string>
+        <string>gobackward.45.hi</string>
+        <string>goforward.60.hi</string>
+        <string>gobackward.60.hi</string>
+        <string>goforward.75.hi</string>
+        <string>gobackward.75.hi</string>
+        <string>goforward.90.hi</string>
+        <string>gobackward.90.hi</string>
+        <string>goforward.plus</string>
+        <string>gobackward.minus</string>
+    </array>
+</plist>

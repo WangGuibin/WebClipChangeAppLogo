@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Devices.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>keyboard</string>
+        <string>keyboard.chevron.compact.down</string>
+        <string>hifispeaker</string>
+        <string>hifispeaker.fill</string>
+        <string>printer</string>
+        <string>printer.fill</string>
+        <string>tv</string>
+        <string>tv.fill</string>
+        <string>tv.circle</string>
+        <string>tv.circle.fill</string>
+        <string>tv.music.note</string>
+        <string>tv.music.note.fill</string>
+        <string>desktopcomputer</string>
+        <string>gamecontroller</string>
+        <string>gamecontroller.fill</string>
+        <string>headphones</string>
+    </array>
+</plist>

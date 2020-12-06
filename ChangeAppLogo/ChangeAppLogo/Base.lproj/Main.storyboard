@@ -17,12 +17,219 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eRS-J2-YUY"/>
+                        <segue destination="0Em-c8-dj0" kind="relationship" relationship="rootViewController" id="FI0-rY-5hR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UP8-Tq-9aU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1191" y="-48"/>
+            <point key="canvasLocation" x="-1710" y="-33"/>
+        </scene>
+        <!--更换App桌面图标-->
+        <scene sceneID="qF3-cx-Etq">
+            <objects>
+                <tableViewController id="0Em-c8-dj0" customClass="AppMainViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="36m-bO-6xG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Dit-R9-HFh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nTm-5H-G63">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nTm-5H-G63" id="KQ5-BV-bz9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义应用图标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwt-uA-cBQ">
+                                                    <rect key="frame" x="35" y="11.5" width="121.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vwt-uA-cBQ" firstAttribute="centerY" secondItem="KQ5-BV-bz9" secondAttribute="centerY" id="6AB-of-j3J"/>
+                                                <constraint firstItem="Vwt-uA-cBQ" firstAttribute="leading" secondItem="KQ5-BV-bz9" secondAttribute="leadingMargin" constant="15" id="QTg-pK-eDJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Gep-cb-UYs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VC3-5h-F14">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VC3-5h-F14" id="FyQ-fg-esI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基于Symbols生成图标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyJ-8L-5jl">
+                                                    <rect key="frame" x="35" y="11.5" width="169.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YyJ-8L-5jl" firstAttribute="centerY" secondItem="FyQ-fg-esI" secondAttribute="centerY" id="8JS-eP-Wx6"/>
+                                                <constraint firstItem="YyJ-8L-5jl" firstAttribute="leading" secondItem="FyQ-fg-esI" secondAttribute="leadingMargin" constant="15" id="zC3-Nk-4Fw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="16f-kQ-KSm" kind="show" id="bck-0B-8ef"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="0Em-c8-dj0" id="hZF-Dg-TZC"/>
+                            <outlet property="delegate" destination="0Em-c8-dj0" id="eE5-PD-hpA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="更换App桌面图标" id="wem-n9-BWM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlG-E3-WnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-996" y="-19"/>
+        </scene>
+        <!--基于Symbols生成Logo-->
+        <scene sceneID="ijS-Vs-0W0">
+            <objects>
+                <viewController id="16f-kQ-KSm" customClass="CustomLogoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rgh-8V-GNg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T3A-3v-EEc">
+                                <rect key="frame" x="143" y="132" width="128" height="128"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="NG0-ZT-mGG"/>
+                                    <constraint firstAttribute="width" constant="128" id="l7t-Hd-XyJ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="783-yO-fKF">
+                                <rect key="frame" x="57" y="304" width="300" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-lm-G6r">
+                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="选取图标">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectLogoAction:" destination="16f-kQ-KSm" eventType="touchUpInside" id="AzB-LP-U4J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUF-Da-grm">
+                                        <rect key="frame" x="168.5" y="0.0" width="131.5" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="图标粗细">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pickerThinBoldAction:" destination="16f-kQ-KSm" eventType="touchUpInside" id="rxz-qh-QuD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4HA-Jp-f3T"/>
+                                    <constraint firstAttribute="width" constant="300" id="9XR-5N-tdc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="GMJ-Nv-HQa">
+                                <rect key="frame" x="57" y="378" width="300" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIs-te-CAz">
+                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="图标前景色">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectTintColorAction:" destination="16f-kQ-KSm" eventType="touchUpInside" id="oqV-r0-n1J"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaE-x2-8sO">
+                                        <rect key="frame" x="168.5" y="0.0" width="131.5" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="图标背景色">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="selectBackgroundColorAction:" destination="16f-kQ-KSm" eventType="touchUpInside" id="QdE-lv-pTI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2S9-d6-oLc"/>
+                                    <constraint firstAttribute="width" constant="300" id="wBj-qb-eei"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rA-Js-R75">
+                                <rect key="frame" x="57" y="466" width="300" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9sL-nH-bHe"/>
+                                    <constraint firstAttribute="height" constant="44" id="Lhb-S7-bp5"/>
+                                </constraints>
+                                <state key="normal" title="保存Logo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateConfigAction:" destination="16f-kQ-KSm" eventType="touchUpInside" id="Eul-UX-Mbu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RpD-b9-iZR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="783-yO-fKF" firstAttribute="top" secondItem="T3A-3v-EEc" secondAttribute="bottom" constant="44" id="JFi-3F-QnX"/>
+                            <constraint firstItem="783-yO-fKF" firstAttribute="centerX" secondItem="rgh-8V-GNg" secondAttribute="centerX" id="Obf-Oh-XJO"/>
+                            <constraint firstItem="1rA-Js-R75" firstAttribute="centerX" secondItem="rgh-8V-GNg" secondAttribute="centerX" id="ROa-ED-DBk"/>
+                            <constraint firstItem="T3A-3v-EEc" firstAttribute="top" secondItem="RpD-b9-iZR" secondAttribute="top" constant="44" id="Ua5-zI-dPN"/>
+                            <constraint firstItem="GMJ-Nv-HQa" firstAttribute="centerX" secondItem="rgh-8V-GNg" secondAttribute="centerX" id="Uzq-4X-ky1"/>
+                            <constraint firstItem="1rA-Js-R75" firstAttribute="top" secondItem="GMJ-Nv-HQa" secondAttribute="bottom" constant="44" id="Zcy-Ui-2LC"/>
+                            <constraint firstItem="T3A-3v-EEc" firstAttribute="centerX" secondItem="rgh-8V-GNg" secondAttribute="centerX" id="fMJ-hF-A4A"/>
+                            <constraint firstItem="GMJ-Nv-HQa" firstAttribute="top" secondItem="783-yO-fKF" secondAttribute="bottom" constant="30" id="yuh-Gx-sYQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="基于Symbols生成Logo" id="WHh-2k-2Hk"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="T3A-3v-EEc" id="4BM-uP-bEF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTU-5a-Y9A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-997.10144927536237" y="646.875"/>
         </scene>
         <!--自定义应用图标-->
         <scene sceneID="tne-QT-ifu">
@@ -137,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562.31884057971024" y="-48.214285714285715"/>
+            <point key="canvasLocation" x="-265" y="-19"/>
         </scene>
         <!--选择App-->
         <scene sceneID="IkT-gJ-Tpa">
@@ -204,12 +411,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOD-nI-cGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79.710144927536234" y="-48.214285714285715"/>
+            <point key="canvasLocation" x="446" y="-48"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

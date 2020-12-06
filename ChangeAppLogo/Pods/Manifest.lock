@@ -3,6 +3,8 @@ PODS:
     - GCDWebServer/Core (= 3.5.4)
   - GCDWebServer/Core (3.5.4)
   - IQKeyboardManager (6.5.6)
+  - LSLColorPickerView (1.0.0)
+  - MBProgressHUD (1.2.0)
   - SDWebImage (5.9.1):
     - SDWebImage/Core (= 5.9.1)
   - SDWebImage/Core (5.9.1)
@@ -12,6 +14,8 @@ PODS:
 DEPENDENCIES:
   - GCDWebServer (~> 3.0)
   - IQKeyboardManager
+  - LSLColorPickerView
+  - MBProgressHUD
   - SDWebImage
   - TZImagePickerController
   - YYModel
@@ -20,6 +24,8 @@ SPEC REPOS:
   trunk:
     - GCDWebServer
     - IQKeyboardManager
+    - LSLColorPickerView
+    - MBProgressHUD
     - SDWebImage
     - TZImagePickerController
     - YYModel
@@ -27,10 +33,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  LSLColorPickerView: 4605ca8b1a5922f038321f4df4f1e4863a1056a3
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
   TZImagePickerController: 4f6e91cf00d67827ec23bd3c2f849cbd054b4979
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a1fd056be57ea60b8744590f5338f4c83c778a37
+PODFILE CHECKSUM: 22bd0a4fffaa13289cb66f4af3e7fed3ac7c65a2
 
 COCOAPODS: 1.10.0

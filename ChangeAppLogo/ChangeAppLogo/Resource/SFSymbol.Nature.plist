@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Nature.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>flame</string>
+        <string>flame.fill</string>
+        <string>bolt</string>
+        <string>bolt.fill</string>
+        <string>bolt.circle</string>
+        <string>bolt.circle.fill</string>
+        <string>bolt.slash</string>
+        <string>bolt.slash.fill</string>
+        <string>ant</string>
+        <string>ant.fill</string>
+        <string>ant.circle</string>
+        <string>ant.circle.fill</string>
+        <string>hare</string>
+        <string>hare.fill</string>
+        <string>tortoise</string>
+        <string>tortoise.fill</string>
+        <string>leaf.arrow.circlepath</string>
+    </array>
+</plist>

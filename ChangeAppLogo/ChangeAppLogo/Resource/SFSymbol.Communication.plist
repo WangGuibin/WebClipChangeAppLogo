@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Communication.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>mic</string>
+        <string>mic.fill</string>
+        <string>mic.circle</string>
+        <string>mic.circle.fill</string>
+        <string>mic.slash</string>
+        <string>mic.slash.fill</string>
+        <string>message</string>
+        <string>message.fill</string>
+        <string>message.circle</string>
+        <string>message.circle.fill</string>
+        <string>bubble.right</string>
+        <string>bubble.right.fill</string>
+        <string>bubble.left</string>
+        <string>bubble.left.fill</string>
+        <string>exclamationmark.bubble</string>
+        <string>exclamationmark.bubble.fill</string>
+        <string>quote.bubble</string>
+        <string>quote.bubble.fill</string>
+        <string>t.bubble</string>
+        <string>t.bubble.fill</string>
+        <string>text.bubble</string>
+        <string>text.bubble.fill</string>
+        <string>captions.bubble</string>
+        <string>captions.bubble.fill</string>
+        <string>plus.bubble</string>
+        <string>plus.bubble.fill</string>
+        <string>ellipses.bubble</string>
+        <string>ellipses.bubble.fill</string>
+        <string>bubble.left.and.bubble.right</string>
+        <string>bubble.left.and.bubble.right.fill</string>
+        <string>phone</string>
+        <string>phone.fill</string>
+        <string>phone.circle</string>
+        <string>phone.circle.fill</string>
+        <string>phone.badge.plus</string>
+        <string>phone.badge.plus.fill</string>
+        <string>phone.arrow.up.right</string>
+        <string>phone.fill.arrow.up.right</string>
+        <string>phone.arrow.down.left</string>
+        <string>phone.fill.arrow.down.left</string>
+        <string>phone.arrow.right</string>
+        <string>phone.fill.arrow.right</string>
+        <string>phone.down</string>
+        <string>phone.down.fill</string>
+        <string>phone.down.circle</string>
+        <string>phone.down.circle.fill</string>
+        <string>teletype</string>
+        <string>teletype.answer</string>
+        <string>video</string>
+        <string>video.fill</string>
+        <string>video.circle</string>
+        <string>video.circle.fill</string>
+        <string>video.slash</string>
+        <string>video.slash.fill</string>
+        <string>video.badge.plus</string>
+        <string>video.badge.plus.fill</string>
+        <string>arrow.up.right.video</string>
+        <string>arrow.up.right.video.fill</string>
+        <string>arrow.down.left.video</string>
+        <string>arrow.down.left.video.fill</string>
+        <string>questionmark.video</string>
+        <string>questionmark.video.fill</string>
+        <string>envelope</string>
+        <string>envelope.fill</string>
+        <string>envelope.circle</string>
+        <string>envelope.circle.fill</string>
+        <string>envelope.open</string>
+        <string>envelope.open.fill</string>
+        <string>envelope.badge</string>
+        <string>envelope.badge.fill</string>
+    </array>
+</plist>

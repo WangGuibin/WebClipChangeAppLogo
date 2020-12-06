@@ -11,4 +11,6 @@ target 'ChangeAppLogo' do
   pod "SDWebImage"
   pod 'IQKeyboardManager'
   pod 'TZImagePickerController'
+  pod 'MBProgressHUD'
+  pod 'LSLColorPickerView' #颜色选取
 end

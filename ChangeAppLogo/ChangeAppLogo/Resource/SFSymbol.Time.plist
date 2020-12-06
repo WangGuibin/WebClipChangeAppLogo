@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SFSymbol.Time.plist
+   SFSymbolsPreview
+
+   Created by YICAI YANG on 2020/5/28.
+   Copyright (c) 2020 YICAI YANG. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <string>clock</string>
+        <string>clock.fill</string>
+        <string>alarm</string>
+        <string>alarm.fill</string>
+        <string>stopwatch</string>
+        <string>stopwatch.fill</string>
+        <string>timer</string>
+    </array>
+</plist>
