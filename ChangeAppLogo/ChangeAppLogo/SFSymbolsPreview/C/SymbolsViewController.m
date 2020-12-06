@@ -187,12 +187,16 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{    
-//    [self.navigationController pushViewController:[SymbolDetailsViewController.alloc initWithSymbol:self.symbolsForDisplay[indexPath.item]]
-//                                         animated:YES];
-    SFSymbol *model = self.symbolsForDisplay[indexPath.item];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"kCallBackSymoblsResultNotification" object:model.name];
-    [self dismissViewControllerAnimated:YES completion:nil];
+{
+    if ([SFSymbolDatasource isSelectMode]) {
+        SFSymbol *model = self.symbolsForDisplay[indexPath.item];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kCallBackSymoblsResultNotification" object:model.name];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        [self.navigationController pushViewController:[SymbolDetailsViewController.alloc initWithSymbol:self.symbolsForDisplay[indexPath.item]]
+                                             animated:YES];
+    }
+    
 }
 
 - (void)changePreferredImageSymbolWeight

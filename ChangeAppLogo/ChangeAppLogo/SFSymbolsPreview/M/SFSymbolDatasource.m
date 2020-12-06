@@ -112,6 +112,13 @@ void storeUserActivityPreferredImageSymbolWeight(UIImageSymbolWeight weight)
     return datasource;
 }
 
++ (void)setSelectMode:(BOOL)isSelectMode{
+    [[NSUserDefaults standardUserDefaults] setBool:isSelectMode forKey:@"isSelectMode"];
+}
++ (BOOL)isSelectMode{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"isSelectMode"];
+}
+
 @end
 
 

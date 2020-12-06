@@ -55,6 +55,7 @@
 }
 
 - (IBAction)selectLogoAction:(UIButton *)sender {
+    [SFSymbolDatasource setSelectMode:YES];
     CategoriesViewController *vc = [CategoriesViewController new];
     UINavigationController *nvc = [UINavigationController.alloc initWithRootViewController:vc];
     [self presentViewController:nvc animated:YES completion:nil];

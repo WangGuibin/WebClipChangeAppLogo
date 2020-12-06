@@ -53,6 +53,10 @@
 
 @implementation CategoriesViewController
 
+- (void)dealloc{
+    [SFSymbolDatasource setSelectMode:NO];
+}
+
 - (SFSymbolCategory *)categoryForIndexPath:(NSIndexPath *)indexPath
 {
     return SFSymbolDatasource.datasource.categories[indexPath.row];

@@ -81,6 +81,26 @@
                                             <segue destination="16f-kQ-KSm" kind="show" id="bck-0B-8ef"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aCK-vB-1K5">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCK-vB-1K5" id="jyS-7r-s85">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看Symbols图标" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y9-Lk-Jfn">
+                                                    <rect key="frame" x="35" y="11.5" width="135" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9y9-Lk-Jfn" firstAttribute="centerY" secondItem="jyS-7r-s85" secondAttribute="centerY" id="Dnb-0f-Gjk"/>
+                                                <constraint firstItem="9y9-Lk-Jfn" firstAttribute="leading" secondItem="jyS-7r-s85" secondAttribute="leadingMargin" constant="15" id="fiX-8P-Eph"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -93,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlG-E3-WnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-996" y="-19"/>
+            <point key="canvasLocation" x="-945" y="-19"/>
         </scene>
         <!--基于Symbols生成Logo-->
         <scene sceneID="ijS-Vs-0W0">

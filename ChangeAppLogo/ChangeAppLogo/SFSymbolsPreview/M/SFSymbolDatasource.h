@@ -27,6 +27,9 @@ void storeUserActivityPreferredImageSymbolWeight(UIImageSymbolWeight weight);
 
 + (instancetype)datasource;
 
++ (void)setSelectMode:(BOOL)isSelectMode;
++ (BOOL)isSelectMode;
+
 @end
 
 

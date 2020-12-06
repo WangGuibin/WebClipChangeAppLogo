@@ -9,6 +9,7 @@
 #import "SymbolSearchResultsViewController.h"
 //#import "SymbolDetailsViewController.h"
 #import "ReusableTitleView.h"
+#import "SFSymbolDatasource.h"
 
 
 @interface SymbolSearchResultsViewController()
@@ -96,12 +97,15 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    SymbolDetailsViewController *detailViewController = [SymbolDetailsViewController.alloc initWithSymbol:self.symbolsForDisplay[indexPath.item]];
-//    [self.searchResultDisplayingNavigationController pushViewController:detailViewController animated:YES];
     
-    SFSymbol *model = self.symbolsForDisplay[indexPath.item];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"kCallBackSymoblsResultNotification" object:model.name];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([SFSymbolDatasource isSelectMode]) {
+        SFSymbol *model = self.symbolsForDisplay[indexPath.item];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"kCallBackSymoblsResultNotification" object:model.name];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }else{
+        SymbolDetailsViewController *detailViewController = [SymbolDetailsViewController.alloc initWithSymbol:self.symbolsForDisplay[indexPath.item]];
+        [self.searchResultDisplayingNavigationController pushViewController:detailViewController animated:YES];
+    }
 }
 
 @end

@@ -6,6 +6,8 @@
 //
 
 #import "AppMainViewController.h"
+#import "CategoriesViewController.h"
+#import "SFSymbolDatasource.h"
 
 @interface AppMainViewController ()
 
@@ -20,5 +22,15 @@
     
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 2) {
+        [SFSymbolDatasource setSelectMode:NO];
+        CategoriesViewController *vc = [CategoriesViewController new];
+        UINavigationController *nvc = [UINavigationController.alloc initWithRootViewController:vc];
+        [self presentViewController:nvc animated:YES completion:nil];
+    }
+    
+}
 
 @end
