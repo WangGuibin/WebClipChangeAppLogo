@@ -72,8 +72,7 @@
 /// @param isRemoveFromDestop 是否从桌面移除
 /// @param appName 应用标题
 /// @param uuid 唯一标识
-/// @param urlString urlscheme 可选
-/// @param bundleId 应用唯一标识 必选
+/// @param bundleId 应用唯一标识 必选 
 + (NSString *)createOneAppConfigWithIcon:(NSString *_Nullable)iconBase64
                           isRemoveFromDestop:(BOOL)isRemoveFromDestop
                                  appName:(NSString *)appName

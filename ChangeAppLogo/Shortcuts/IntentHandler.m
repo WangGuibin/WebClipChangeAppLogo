@@ -23,7 +23,7 @@
 #import "JudgeNetworkConnectIntent.h"
 #import "DetectQRCodeTool.h"
 #import "DetectedQRCodeIntent.h"
-
+#import "SFSymbolsIntentIntent.h"
 
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
@@ -34,7 +34,7 @@
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling,UUIDGenerateIntentHandling,MD5IntentHandling,ChangeLogoOnlyOneIntentHandling,ChangeBatchLogoConfigIntentHandling,ChangeBatchAppLogoGroupIntentHandling,JudgeNetworkConnectIntentHandling,DetectedQRCodeIntentHandling>
+@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling,UUIDGenerateIntentHandling,MD5IntentHandling,ChangeLogoOnlyOneIntentHandling,ChangeBatchLogoConfigIntentHandling,ChangeBatchAppLogoGroupIntentHandling,JudgeNetworkConnectIntentHandling,DetectedQRCodeIntentHandling,SFSymbolsIntentIntentHandling>
 
 @end
 
@@ -190,4 +190,14 @@
     completion(success);
 }
 
+///MARK:- 获取系统图标
+- (void)handleSFSymbolsIntent:(SFSymbolsIntentIntent *)intent completion:(void (^)(SFSymbolsIntentIntentResponse *response))completion NS_SWIFT_NAME(handle(intent:completion:)){
+    UIImage *iconImg = [UIImage systemImageNamed:intent.iconName withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:(UIImageSymbolWeightRegular)]];
+    NSData *iconData = UIImagePNGRepresentation(iconImg);
+    INFile *file = [INFile fileWithData:iconData filename:intent.iconName typeIdentifier:nil];
+    SFSymbolsIntentIntentResponse *result = [SFSymbolsIntentIntentResponse successIntentResponseWithImage:file];
+    completion(result);
+}
+
 @end
+

@@ -40,6 +40,7 @@
 		<string>JudgeNetworkConnectIntent</string>
 		<string>MD5Intent</string>
 		<string>PinWordsSegmentIntent</string>
+		<string>SFSymbolsIntentIntent</string>
 		<string>SearchDataStoreIntent</string>
 		<string>SocialValuesEncoderDecoderIntent</string>
 		<string>UUIDGenerateIntent</string>
