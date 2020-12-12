@@ -6,24 +6,32 @@
 //
 
 #import "IntentHandler.h"
-#import "DataStoreIntent.h"
-#import "SearchDataStoreIntent.h"
-#import "DeleteDataStoreIntent.h"
-#import "PinWordsSegmentIntent.h"
-#import "NSString+WordsSegmentExtension.h"
-#import "VCardTemplateIntent.h"
-#import "UUIDGenerateIntent.h"
-#import "MD5Intent.h"
-#import "NSString+WGBExtension.h"
-#import "ChangeLogoOnlyOneIntent.h"
-#import "ChageLogoMobileconfig.h"
-#import "ChangeBatchLogoConfigIntent.h"
-#import "ChangeBatchAppLogoGroupIntent.h"
-#import "WGBReachability.h"
-#import "JudgeNetworkConnectIntent.h"
-#import "DetectQRCodeTool.h"
-#import "DetectedQRCodeIntent.h"
-#import "SFSymbolsIntentIntent.h"
+
+//数据存储
+#import "DataStoreIntentHandler.h"
+#import "SearchDataStoreIntentHandler.h"
+#import "DeleteDataStoreIntentHandler.h"
+
+//生成唯一标识
+#import "GetUUIDHandler.h"
+#import "MD5IntentHandler.h"
+
+//分词
+#import "PinWordsSegmentIntentHandler.h"
+//vCard
+#import "VCardTemplateIntentHandler.h"
+
+//更换图标
+#import "ChangeLogoOnlyOneIntentHandler.h"
+#import "ChangeBatchLogoConfigIntentHandler.h"
+#import "ChangeBatchAppLogoGroupIntentHandler.h"
+
+//联网判断
+#import "JudgeNetworkConnectIntentHandler.h"
+//识别二维码
+#import "DetectedQRCodeIntentHandler.h"
+//SF Symbols
+#import "SFSymbolsIntentIntentHandler.h"
 
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
@@ -34,7 +42,7 @@
 // "<myApp> John saying hello"
 // "Search for messages in <myApp>"
 
-@interface IntentHandler () <DataStoreIntentHandling,SearchDataStoreIntentHandling,DeleteDataStoreIntentHandling,PinWordsSegmentIntentHandling,VCardTemplateIntentHandling,UUIDGenerateIntentHandling,MD5IntentHandling,ChangeLogoOnlyOneIntentHandling,ChangeBatchLogoConfigIntentHandling,ChangeBatchAppLogoGroupIntentHandling,JudgeNetworkConnectIntentHandling,DetectedQRCodeIntentHandling,SFSymbolsIntentIntentHandling>
+@interface IntentHandler ()
 
 @end
 
@@ -43,161 +51,60 @@
 - (id)handlerForIntent:(INIntent *)intent {
     // This is the default implementation.  If you want different objects to handle different intents,
     // you can override this and return the handler you want for that particular intent.
+    if ([intent isKindOfClass:[UUIDGenerateIntent class]]) {
+        return [GetUUIDHandler new];
+    }
     
+    if ([intent isKindOfClass:[MD5Intent class]]) {
+        return [MD5IntentHandler new];
+    }
+    
+    if ([intent isKindOfClass:[DataStoreIntent class]]) {
+        return [DataStoreIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[SearchDataStoreIntent class]]) {
+        return [SearchDataStoreIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[DeleteDataStoreIntent class]]) {
+        return [DeleteDataStoreIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[PinWordsSegmentIntent class]]) {
+        return [PinWordsSegmentIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[VCardTemplateIntent class]]) {
+        return [VCardTemplateIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[ChangeLogoOnlyOneIntent class]]) {
+        return [ChangeLogoOnlyOneIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[ChangeBatchLogoConfigIntent class]]) {
+        return [ChangeBatchLogoConfigIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[ChangeBatchAppLogoGroupIntent class]]) {
+        return [ChangeBatchAppLogoGroupIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[JudgeNetworkConnectIntent class]]) {
+        return [JudgeNetworkConnectIntentHandler new];
+    }
+    
+    if ([intent isKindOfClass:[DetectedQRCodeIntent class]]) {
+        return [DetectedQRCodeIntentHandler new];
+    }
+
+    if ([intent isKindOfClass:[SFSymbolsIntentIntent class]]) {
+        return [SFSymbolsIntentIntentHandler new];
+    }
+
     return self;
 }
-
-///MARK:- <DataStoreIntentHandling> 数据存储
-- (void)handleDataStore:(DataStoreIntent *)intent completion:(void (^)(DataStoreIntentResponse *response))completion{
-    NSString *value = intent.inputValue;
-    NSString *key = intent.storeKey;
-    if (!value || !key) {
-        DataStoreIntentResponse *errorCode = [[DataStoreIntentResponse alloc] initWithCode:DataStoreIntentResponseCodeFailure userActivity:nil];
-        completion(errorCode);
-        return;
-    }
-    [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    DataStoreIntentResponse *success = [DataStoreIntentResponse successIntentResponseWithResult:value];
-    completion(success);
-}
-
-///MARK:- <SearchDataStoreIntentHandling> 查找数据
-- (void)handleSearchDataStore:(SearchDataStoreIntent *)intent completion:(void (^)(SearchDataStoreIntentResponse *response))completion {
-    NSString *key = intent.storeKey;
-    if (!key) {
-        SearchDataStoreIntentResponse *errorCode = [[SearchDataStoreIntentResponse alloc] initWithCode:SearchDataStoreIntentResponseCodeFailure userActivity:nil];
-        completion(errorCode);
-        return;
-    }
-    NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-    SearchDataStoreIntentResponse *success = [SearchDataStoreIntentResponse successIntentResponseWithResult:value];
-    completion(success);
-}
-
-///MARK:- <DeleteDataStoreIntentHandling> 删除数据
-- (void)handleDeleteDataStore:(DeleteDataStoreIntent *)intent completion:(void (^)(DeleteDataStoreIntentResponse *response))completion {
-    NSString *key = intent.storeKey;
-    if (!key) {
-        completion([DeleteDataStoreIntentResponse failureIntentResponseWithResult:@(0)]);
-        return;
-    }
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    completion([DeleteDataStoreIntentResponse successIntentResponseWithResult:@(1)]);
-}
-
-///MARK:- <PinWordsSegmentIntentHandling> 分词功能
-- (void)handlePinWordsSegment:(PinWordsSegmentIntent *)intent completion:(void (^)(PinWordsSegmentIntentResponse *response))completion {
-    NSString *text = intent.text;
-    NSString *symbol = intent.symbol;
-    PinWordsSegmentModeEnum mode = intent.mode;
-    PINSegmentationOptions option = PINSegmentationOptionsNone;
-    if (mode == PinWordsSegmentModeEnumDeduplication) {
-        option = PINSegmentationOptionsDeduplication;
-    }else if(mode == PinWordsSegmentModeEnumKeepEnglish){
-        option = PINSegmentationOptionsKeepEnglish;
-    }else if(mode == PinWordsSegmentModeEnumKeepSymbols){
-        option = PINSegmentationOptionsKeepSymbols;
-    }else{
-        option = PINSegmentationOptionsNone;
-    }
-    
-    NSArray<NSString *> *textArray = [text segment:option];
-    if (textArray.count <= 1) {
-        PinWordsSegmentIntentResponse *error = [[PinWordsSegmentIntentResponse alloc] initWithCode:(PinWordsSegmentIntentResponseCodeFailure) userActivity:nil];
-        completion(error);
-    }else{
-        NSString *result = [textArray componentsJoinedByString:symbol];
-        PinWordsSegmentIntentResponse *success = [PinWordsSegmentIntentResponse successIntentResponseWithResults:result];
-        completion(success);
-    }
-}
-
-///MARK:- <VCardTemplateIntentHandling> vCard模板生成
-- (void)handleVCardTemplate:(VCardTemplateIntent *)intent completion:(void (^)(VCardTemplateIntentResponse *response))completion {
-//BEGIN:VCARD
-//VERSION:3.0
-//N:;词典 (name);;;
-//ORG:词典 (org);
-//PHOTO;ENCODING=b:词典 (image);
-//URL:词典 (url);
-//END:VCARD
-    
-    NSString *name = intent.name;
-    NSString *org = intent.org;
-    NSString *image = intent.image;
-    NSString *url = intent.url;
-    if (!name) {
-        completion([[VCardTemplateIntentResponse alloc] initWithCode:(VCardTemplateIntentResponseCodeFailure) userActivity:nil]);
-        return;
-    }
-    NSString *vCard = [NSString stringWithFormat:@"BEGIN:VCARD\nVERSION:3.0\nN:;%@;;;\nORG:%@;\nPHOTO;ENCODING=b:%@;\nURL:%@;\nEND:VCARD",name,org,image,url];
-    VCardTemplateIntentResponse *success = [VCardTemplateIntentResponse successIntentResponseWithResult:vCard];
-    completion(success);
-}
-
-
-///MARK:- 生成UUID
-- (void)handleUUIDGenerate:(UUIDGenerateIntent *)intent completion:(void (^)(UUIDGenerateIntentResponse *response))completion {
-    UUIDGenerateIntentResponse *success = [UUIDGenerateIntentResponse successIntentResponseWithUuid:[NSString UUID]];
-    completion(success);
-}
-
-///MARK:- 生成MD5
-- (void)handleMD5:(MD5Intent *)intent completion:(void (^)(MD5IntentResponse *response))completion {
-    NSString *str = intent.text;
-    MD5IntentResponse *success = [MD5IntentResponse successIntentResponseWithMd5:[str md5String]];
-    completion(success);
-}
-
-///MARK:- 一次生成一个更换应用图标的描述文件
-- (void)handleChangeLogoOnlyOne:(ChangeLogoOnlyOneIntent *)intent completion:(void (^)(ChangeLogoOnlyOneIntentResponse *response))completion {
-    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:intent.iconBase64 isRemoveFromDestop:intent.isRemoveDesktop appName:intent.appName uuid:[NSUUID UUID].UUIDString bundleId:intent.bundleId];
-    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:appconfigStr appSetName:intent.appName uuid:[NSUUID UUID].UUIDString];
-    NSData *data = [fileString dataUsingEncoding:NSUTF8StringEncoding];
-    INFile *file = [INFile fileWithData:data filename:@"result" typeIdentifier:@"mobileconfig"];
-    ChangeLogoOnlyOneIntentResponse *success = [ChangeLogoOnlyOneIntentResponse successIntentResponseWithResult:file];
-    completion(success);
-}
-
-///MARK:- 一次生成更换应用图标的描述文件配置1
-- (void)handleChangeBatchLogoConfig:(ChangeBatchLogoConfigIntent *)intent completion:(void (^)(ChangeBatchLogoConfigIntentResponse *response))completion {
-    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:intent.base64 isRemoveFromDestop:intent.isRemoveDesktop appName:intent.appName uuid:[NSUUID UUID].UUIDString bundleId:intent.bundleId];
-    ChangeBatchLogoConfigIntentResponse *success = [ChangeBatchLogoConfigIntentResponse successIntentResponseWithResult:appconfigStr];
-    completion(success);
-}
-
-///MARK:- 一次生成更换应用图标的描述文件配置2
-- (void)handleChangeBatchAppLogoGroup:(ChangeBatchAppLogoGroupIntent *)intent completion:(void (^)(ChangeBatchAppLogoGroupIntentResponse *response))completion {
-    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:intent.appConfigs appSetName:intent.name uuid:[NSUUID UUID].UUIDString];
-    ChangeBatchAppLogoGroupIntentResponse *success = [ChangeBatchAppLogoGroupIntentResponse successIntentResponseWithResult:fileString];
-    completion(success);
-}
-
-///MARK:- 是否联网
-- (void)handleJudgeNetworkConnect:(JudgeNetworkConnectIntent *)intent completion:(void (^)(JudgeNetworkConnectIntentResponse *response))completion {
-    BOOL isReachable = [WGBReachability judgeIsConnectionAvailable];
-    JudgeNetworkConnectIntentResponse *success = [JudgeNetworkConnectIntentResponse successIntentResponseWithResult:@(isReachable)];
-    completion(success);
-}
-
-///MARK:- 识别二维码
-- (void)handleDetectedQRCode:(DetectedQRCodeIntent *)intent completion:(void (^)(DetectedQRCodeIntentResponse *response))completion NS_SWIFT_NAME(handle(intent:completion:)){
-    UIImage *image = [UIImage imageWithData:intent.image.data];
-    NSString *text = [DetectQRCodeTool detectQrCodeWithImage:image];
-    DetectedQRCodeIntentResponse *success = [DetectedQRCodeIntentResponse successIntentResponseWithText:text];
-    completion(success);
-}
-
-///MARK:- 获取系统图标
-- (void)handleSFSymbolsIntent:(SFSymbolsIntentIntent *)intent completion:(void (^)(SFSymbolsIntentIntentResponse *response))completion NS_SWIFT_NAME(handle(intent:completion:)){
-    UIImage *iconImg = [UIImage systemImageNamed:intent.iconName withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:(UIImageSymbolWeightRegular)]];
-    NSData *iconData = UIImagePNGRepresentation(iconImg);
-    INFile *file = [INFile fileWithData:iconData filename:intent.iconName typeIdentifier:nil];
-    SFSymbolsIntentIntentResponse *result = [SFSymbolsIntentIntentResponse successIntentResponseWithImage:file];
-    completion(result);
-}
-
+ 
 @end
 

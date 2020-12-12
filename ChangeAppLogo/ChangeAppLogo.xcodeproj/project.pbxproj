@@ -88,6 +88,32 @@
 		CAAC6D40257CD03000033FD7 /* SFSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D20257CD00B00033FD7 /* SFSymbol.m */; };
 		CAAC6D41257CD03000033FD7 /* SFSymbolDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D23257CD00B00033FD7 /* SFSymbolDatasource.m */; };
 		CAAC6D88257CDE8400033FD7 /* SelectColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */; };
+		CAAC6E132584871A00033FD7 /* GetUUIDHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */; };
+		CAAC6E142584871A00033FD7 /* GetUUIDHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */; };
+		CAAC6E2525848B8100033FD7 /* MD5IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E2425848B8100033FD7 /* MD5IntentHandler.m */; };
+		CAAC6E2625848B8100033FD7 /* MD5IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E2425848B8100033FD7 /* MD5IntentHandler.m */; };
+		CAAC6E2C25848C2700033FD7 /* DataStoreIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E2B25848C2700033FD7 /* DataStoreIntentHandler.m */; };
+		CAAC6E2D25848C2700033FD7 /* DataStoreIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E2B25848C2700033FD7 /* DataStoreIntentHandler.m */; };
+		CAAC6E3425848CA500033FD7 /* SearchDataStoreIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E3325848CA500033FD7 /* SearchDataStoreIntentHandler.m */; };
+		CAAC6E3525848CA500033FD7 /* SearchDataStoreIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E3325848CA500033FD7 /* SearchDataStoreIntentHandler.m */; };
+		CAAC6E3E25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E3D25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m */; };
+		CAAC6E3F25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E3D25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m */; };
+		CAAC6E4525848D2F00033FD7 /* PinWordsSegmentIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E4425848D2F00033FD7 /* PinWordsSegmentIntentHandler.m */; };
+		CAAC6E4625848D2F00033FD7 /* PinWordsSegmentIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E4425848D2F00033FD7 /* PinWordsSegmentIntentHandler.m */; };
+		CAAC6E4C25848D3F00033FD7 /* VCardTemplateIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E4B25848D3F00033FD7 /* VCardTemplateIntentHandler.m */; };
+		CAAC6E4D25848D3F00033FD7 /* VCardTemplateIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E4B25848D3F00033FD7 /* VCardTemplateIntentHandler.m */; };
+		CAAC6E5325848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E5225848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m */; };
+		CAAC6E5425848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E5225848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m */; };
+		CAAC6E5A25848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E5925848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m */; };
+		CAAC6E5B25848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E5925848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m */; };
+		CAAC6E6125848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6025848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m */; };
+		CAAC6E6225848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6025848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m */; };
+		CAAC6E6825848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6725848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m */; };
+		CAAC6E6925848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6725848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m */; };
+		CAAC6E6F25848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6E25848DA000033FD7 /* DetectedQRCodeIntentHandler.m */; };
+		CAAC6E7025848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6E25848DA000033FD7 /* DetectedQRCodeIntentHandler.m */; };
+		CAAC6E7625848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */; };
+		CAAC6E7725848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */; };
 		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
@@ -210,6 +236,32 @@
 		CAAC6D49257CD34000033FD7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CAAC6D86257CDE8400033FD7 /* SelectColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectColorViewController.h; sourceTree = "<group>"; };
 		CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectColorViewController.m; sourceTree = "<group>"; };
+		CAAC6E112584871A00033FD7 /* GetUUIDHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetUUIDHandler.h; sourceTree = "<group>"; };
+		CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetUUIDHandler.m; sourceTree = "<group>"; };
+		CAAC6E2325848B8100033FD7 /* MD5IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5IntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E2425848B8100033FD7 /* MD5IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5IntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E2A25848C2700033FD7 /* DataStoreIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataStoreIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E2B25848C2700033FD7 /* DataStoreIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataStoreIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E3225848CA500033FD7 /* SearchDataStoreIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchDataStoreIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E3325848CA500033FD7 /* SearchDataStoreIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchDataStoreIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E3C25848D1D00033FD7 /* DeleteDataStoreIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeleteDataStoreIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E3D25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeleteDataStoreIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E4325848D2F00033FD7 /* PinWordsSegmentIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinWordsSegmentIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E4425848D2F00033FD7 /* PinWordsSegmentIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinWordsSegmentIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E4A25848D3F00033FD7 /* VCardTemplateIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCardTemplateIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E4B25848D3F00033FD7 /* VCardTemplateIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCardTemplateIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E5125848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeLogoOnlyOneIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E5225848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeLogoOnlyOneIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E5825848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeBatchLogoConfigIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E5925848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeBatchLogoConfigIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E5F25848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeBatchAppLogoGroupIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E6025848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeBatchAppLogoGroupIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E6625848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JudgeNetworkConnectIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E6725848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JudgeNetworkConnectIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E6D25848DA000033FD7 /* DetectedQRCodeIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetectedQRCodeIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E6E25848DA000033FD7 /* DetectedQRCodeIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetectedQRCodeIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6E7425848DAE00033FD7 /* SFSymbolsIntentIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSymbolsIntentIntentHandler.h; sourceTree = "<group>"; };
+		CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSymbolsIntentIntentHandler.m; sourceTree = "<group>"; };
 		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
 		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
@@ -421,9 +473,43 @@
 			path = HeaderFiles;
 			sourceTree = "<group>";
 		};
+		CAAC6E3125848C6800033FD7 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				CAAC6E112584871A00033FD7 /* GetUUIDHandler.h */,
+				CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */,
+				CAAC6E2325848B8100033FD7 /* MD5IntentHandler.h */,
+				CAAC6E2425848B8100033FD7 /* MD5IntentHandler.m */,
+				CAAC6E2A25848C2700033FD7 /* DataStoreIntentHandler.h */,
+				CAAC6E2B25848C2700033FD7 /* DataStoreIntentHandler.m */,
+				CAAC6E3225848CA500033FD7 /* SearchDataStoreIntentHandler.h */,
+				CAAC6E3325848CA500033FD7 /* SearchDataStoreIntentHandler.m */,
+				CAAC6E3C25848D1D00033FD7 /* DeleteDataStoreIntentHandler.h */,
+				CAAC6E3D25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m */,
+				CAAC6E4325848D2F00033FD7 /* PinWordsSegmentIntentHandler.h */,
+				CAAC6E4425848D2F00033FD7 /* PinWordsSegmentIntentHandler.m */,
+				CAAC6E4A25848D3F00033FD7 /* VCardTemplateIntentHandler.h */,
+				CAAC6E4B25848D3F00033FD7 /* VCardTemplateIntentHandler.m */,
+				CAAC6E5125848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.h */,
+				CAAC6E5225848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m */,
+				CAAC6E5825848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.h */,
+				CAAC6E5925848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m */,
+				CAAC6E5F25848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.h */,
+				CAAC6E6025848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m */,
+				CAAC6E6625848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.h */,
+				CAAC6E6725848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m */,
+				CAAC6E6D25848DA000033FD7 /* DetectedQRCodeIntentHandler.h */,
+				CAAC6E6E25848DA000033FD7 /* DetectedQRCodeIntentHandler.m */,
+				CAAC6E7425848DAE00033FD7 /* SFSymbolsIntentIntentHandler.h */,
+				CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		CABF3FAA2571D72C00EBF0E0 /* Shortcuts */ = {
 			isa = PBXGroup;
 			children = (
+				CAAC6E3125848C6800033FD7 /* Handlers */,
 				CABF400825724A2D00EBF0E0 /* Category */,
 				CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */,
 				CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */,
@@ -670,30 +756,43 @@
 			files = (
 				CAAC6CD6257CC5DC00033FD7 /* CustomLogoViewController.m in Sources */,
 				CAAC6B5225727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
+				CAAC6E5325848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m in Sources */,
+				CAAC6E3E25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m in Sources */,
 				CAAC6BB62573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CA1E8B1A2543F94A00049305 /* ViewController.m in Sources */,
+				CAAC6E6F25848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */,
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
+				CAAC6E3425848CA500033FD7 /* SearchDataStoreIntentHandler.m in Sources */,
+				CAAC6E4C25848D3F00033FD7 /* VCardTemplateIntentHandler.m in Sources */,
 				CAAC6D88257CDE8400033FD7 /* SelectColorViewController.m in Sources */,
 				CABF400B25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
 				CAAC6BA325735A5400033FD7 /* WGBReachability.m in Sources */,
+				CAAC6E6825848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m in Sources */,
+				CAAC6E5A25848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m in Sources */,
 				CA1E8B252543F94F00049305 /* main.m in Sources */,
 				CAAC6D39257CD00B00033FD7 /* SymbolDetailsViewController.m in Sources */,
 				CA1E8B592544487000049305 /* FilesManagerViewController.m in Sources */,
 				CAAC6D36257CD00B00033FD7 /* ReusableTitleView.m in Sources */,
 				CAAC6D33257CD00B00033FD7 /* SFSymbol.m in Sources */,
 				CA1E8B312544112800049305 /* AppStoreModel.m in Sources */,
+				CAAC6E6125848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m in Sources */,
 				CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
+				CAAC6E4525848D2F00033FD7 /* PinWordsSegmentIntentHandler.m in Sources */,
 				CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CAAC6E7625848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */,
 				CAAC6D37257CD00B00033FD7 /* SymbolPreviewCell.m in Sources */,
 				CAAC6D35257CD00B00033FD7 /* SFSymbolDatasource.m in Sources */,
 				CAAC6D34257CD00B00033FD7 /* SFSymbolCategory.m in Sources */,
 				CAAC6D3A257CD00B00033FD7 /* SymbolSearchResultsViewController.m in Sources */,
 				CAAC6CD0257CC36300033FD7 /* AppMainViewController.m in Sources */,
 				CAAC6C0B25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */,
+				CAAC6E2525848B8100033FD7 /* MD5IntentHandler.m in Sources */,
 				CAAC6D38257CD00B00033FD7 /* SymbolsViewController.m in Sources */,
 				CAAC6D3B257CD00B00033FD7 /* CategoriesViewController.m in Sources */,
+				CAAC6E132584871A00033FD7 /* GetUUIDHandler.m in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
+				CAAC6E2C25848C2700033FD7 /* DataStoreIntentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,17 +800,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAC6E2625848B8100033FD7 /* MD5IntentHandler.m in Sources */,
 				CAAC6C0C25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */,
 				CABF400C25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
+				CAAC6E3F25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m in Sources */,
+				CAAC6E4625848D2F00033FD7 /* PinWordsSegmentIntentHandler.m in Sources */,
+				CAAC6E7725848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */,
+				CAAC6E6225848D7D00033FD7 /* ChangeBatchAppLogoGroupIntentHandler.m in Sources */,
+				CAAC6E6925848D8E00033FD7 /* JudgeNetworkConnectIntentHandler.m in Sources */,
 				CAAC6B6025727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CABF3FD72571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CAAC6E142584871A00033FD7 /* GetUUIDHandler.m in Sources */,
+				CAAC6E3525848CA500033FD7 /* SearchDataStoreIntentHandler.m in Sources */,
 				CAAC6B5325727AAA00033FD7 /* NSString+WGBExtension.m in Sources */,
 				CAAC6D3F257CD03000033FD7 /* SFSymbolCategory.m in Sources */,
 				CAAC6D40257CD03000033FD7 /* SFSymbol.m in Sources */,
 				CAAC6D41257CD03000033FD7 /* SFSymbolDatasource.m in Sources */,
+				CAAC6E2D25848C2700033FD7 /* DataStoreIntentHandler.m in Sources */,
 				CAAC6BB72573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
 				CAAC6BA425735A5400033FD7 /* WGBReachability.m in Sources */,
+				CAAC6E7025848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */,
+				CAAC6E4D25848D3F00033FD7 /* VCardTemplateIntentHandler.m in Sources */,
+				CAAC6E5B25848D6D00033FD7 /* ChangeBatchLogoConfigIntentHandler.m in Sources */,
+				CAAC6E5425848D5300033FD7 /* ChangeLogoOnlyOneIntentHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

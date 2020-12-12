@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GetUUIDHandler.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -36,5 +43,9 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
+
+//- (id)application:(UIApplication *)application handlerForIntent:(INIntent *)intent{
+//    return [GetUUIDHandler new];
+//}
 
 @end
