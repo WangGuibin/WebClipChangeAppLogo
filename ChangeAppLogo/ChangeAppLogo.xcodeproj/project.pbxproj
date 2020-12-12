@@ -114,6 +114,8 @@
 		CAAC6E7025848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E6E25848DA000033FD7 /* DetectedQRCodeIntentHandler.m */; };
 		CAAC6E7625848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */; };
 		CAAC6E7725848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */; };
+		CAAC6EE82584F50B00033FD7 /* UIColor+Extends.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6EE72584F50B00033FD7 /* UIColor+Extends.m */; };
+		CAAC6EE92584F50B00033FD7 /* UIColor+Extends.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6EE72584F50B00033FD7 /* UIColor+Extends.m */; };
 		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
@@ -262,6 +264,8 @@
 		CAAC6E6E25848DA000033FD7 /* DetectedQRCodeIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetectedQRCodeIntentHandler.m; sourceTree = "<group>"; };
 		CAAC6E7425848DAE00033FD7 /* SFSymbolsIntentIntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSymbolsIntentIntentHandler.h; sourceTree = "<group>"; };
 		CAAC6E7525848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSymbolsIntentIntentHandler.m; sourceTree = "<group>"; };
+		CAAC6EE62584F50B00033FD7 /* UIColor+Extends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extends.h"; sourceTree = "<group>"; };
+		CAAC6EE72584F50B00033FD7 /* UIColor+Extends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extends.m"; sourceTree = "<group>"; };
 		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
 		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
@@ -522,6 +526,8 @@
 		CABF400825724A2D00EBF0E0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CAAC6EE62584F50B00033FD7 /* UIColor+Extends.h */,
+				CAAC6EE72584F50B00033FD7 /* UIColor+Extends.m */,
 				CAAC6B5025727AAA00033FD7 /* NSString+WGBExtension.h */,
 				CAAC6B5125727AAA00033FD7 /* NSString+WGBExtension.m */,
 				CABF400925724A7800EBF0E0 /* NSString+WordsSegmentExtension.h */,
@@ -793,6 +799,7 @@
 				CAAC6E132584871A00033FD7 /* GetUUIDHandler.m in Sources */,
 				CA1E8B172543F94A00049305 /* SceneDelegate.m in Sources */,
 				CAAC6E2C25848C2700033FD7 /* DataStoreIntentHandler.m in Sources */,
+				CAAC6EE82584F50B00033FD7 /* UIColor+Extends.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,6 +826,7 @@
 				CAAC6E2D25848C2700033FD7 /* DataStoreIntentHandler.m in Sources */,
 				CAAC6BB72573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */,
+				CAAC6EE92584F50B00033FD7 /* UIColor+Extends.m in Sources */,
 				CAAC6BA425735A5400033FD7 /* WGBReachability.m in Sources */,
 				CAAC6E7025848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */,
 				CAAC6E4D25848D3F00033FD7 /* VCardTemplateIntentHandler.m in Sources */,
