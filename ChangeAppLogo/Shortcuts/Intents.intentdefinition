@@ -2188,7 +2188,7 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>获取系统图标</string>
+			<string>获取系统图标(宽高取值范围100~2048) </string>
 			<key>INIntentDescriptionID</key>
 			<string>li5iq1</string>
 			<key>INIntentIneligibleForSuggestions</key>
@@ -2399,7 +2399,7 @@
 						<key>INIntentParameterMetadataDefaultValue</key>
 						<integer>128</integer>
 						<key>INIntentParameterMetadataMaximumValue</key>
-						<integer>1024</integer>
+						<integer>2048</integer>
 						<key>INIntentParameterMetadataMinimumValue</key>
 						<integer>100</integer>
 						<key>INIntentParameterMetadataType</key>
@@ -2441,7 +2441,7 @@
 						<key>INIntentParameterMetadataDefaultValue</key>
 						<integer>128</integer>
 						<key>INIntentParameterMetadataMaximumValue</key>
-						<integer>1024</integer>
+						<integer>2048</integer>
 						<key>INIntentParameterMetadataMinimumValue</key>
 						<integer>100</integer>
 						<key>INIntentParameterMetadataType</key>

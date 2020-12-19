@@ -1,11 +1,11 @@
 //
-//  ViewController.m
+//  GenerateAppLogoConfigViewController.m
 //  ChangeAppLogo
 //
 //  Created by 王贵彬 on 2020/10/24.
 //
 
-#import "ViewController.h"
+#import "GenerateAppLogoConfigViewController.h"
 #import <GCDWebServer.h>
 #import "GCDWebServerDataResponse.h"
 #import <SafariServices/SafariServices.h>
@@ -14,7 +14,6 @@
 #import <TZImagePickerController.h>
 #import "FilesManagerViewController.h"
 #import "ChageLogoMobileconfig.h"
-#import "SocialValuesEncoderDecoder.h"
 
 //官方接口：
 //1、通过appId获取信息
@@ -22,7 +21,7 @@
 //2、通过应用名称获取信息
 //https://itunes.apple.com/search?term=你的应用程序名称&entity=software
 
-@interface ViewController ()<SFSafariViewControllerDelegate>
+@interface GenerateAppLogoConfigViewController ()<SFSafariViewControllerDelegate>
 
 @property (nonatomic, strong) GCDWebServer *webServer;
 
@@ -32,11 +31,10 @@
 @property (weak, nonatomic) IBOutlet UISwitch *isRemoveSwitch;
 
 @property (nonatomic, strong) AppInfoModel *currentModel;
-@property (nonatomic, strong) UIImage *iconImg;
 
 @end
 
-@implementation ViewController
+@implementation GenerateAppLogoConfigViewController
 
 
 - (void)viewDidLoad {
@@ -44,27 +42,21 @@
     if(!self.webServer.isRunning){
         [self.webServer startWithPort:8090 bonjourName:nil];
     }
-//    [SocialValuesEncoderDecoder shareCoder];
     self.selectAppBtn.layer.masksToBounds = YES;
     self.selectIconBtn.layer.masksToBounds = YES;
     // Do any additional setup after loading the view.
     NSLog(@"%@",NSHomeDirectory());
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"文件" style:(UIBarButtonItemStylePlain) target:self action:@selector(skipFilesManagerPage)];
-    
-    
+    if(self.iconImg){
+        [self.selectIconBtn setBackgroundImage:self.iconImg forState:UIControlStateNormal];
+        [self.selectIconBtn setTitle:@"" forState:UIControlStateNormal];
+    }
 }
 
 - (void)skipFilesManagerPage{
     FilesManagerViewController *fileVC = [FilesManagerViewController new];
     [self.navigationController pushViewController:fileVC animated:YES];
-//    SocialValuesEncoderDecoder *coder = [SocialValuesEncoderDecoder shareCoder];
-//    coder.text = @"牛逼";
-//    coder.isEncode = YES;
-//    [coder setCallBackResultBlock:^(NSString * _Nonnull result) {
-//        NSLog(@"reslult:===> %@ ",result);
-//    }];
-//    [coder sendCovertJS];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -114,7 +106,7 @@
     NSString *uuid2 = [NSUUID UUID].UUIDString;//随机2
     
     NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:base64Img isRemoveFromDestop:self.isRemoveSwitch.on appName:appName uuid:uuid1 bundleId:bundleId];
-    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:appconfigStr appSetName:@"图标易容术的描述文件📃" uuid:uuid2];
+    NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:appconfigStr appSetName:[NSString stringWithFormat:@"%@的桌面logo描述文件",appName] uuid:uuid2];
 
     NSString *fileName = [NSString stringWithFormat:@"%@.mobileconfig",appName];
     NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@",fileName]];

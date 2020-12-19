@@ -18,8 +18,9 @@
     UIColor *tinColor = [UIColor colorFromHexCode:intent.tintColor];
     UIColor *bgColor = [UIColor colorFromHexCode:intent.backgroundColor];
     if (!tinColor) {
-        tinColor = [UIColor blackColor];
+        tinColor = [UIColor colorWithRed:arc4random()%256/255.0f green:arc4random()%256/255.0f  blue:arc4random()%256/255.0f alpha:1.0f];
     }
+    
     if (!bgColor) {
         bgColor = [UIColor colorWithRed:arc4random()%256/255.0f green:arc4random()%256/255.0f  blue:arc4random()%256/255.0f alpha:1.0f];
     }

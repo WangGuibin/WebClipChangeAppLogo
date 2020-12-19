@@ -27,6 +27,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>获取拍照权限</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>更换图标需要选择相册的图片</string>
 	<key>NSUserActivityTypes</key>
