@@ -206,11 +206,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>gBbelq</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>19H2</string>
+	<string>20C69</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12A7300</string>
+	<string>12C33</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.0.1</string>
+	<string>12.3</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -224,6 +224,8 @@
 			<string>SO7PY8</string>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
+			<key>INIntentInput</key>
+			<string>inputValue</string>
 			<key>INIntentLastParameterTag</key>
 			<integer>4</integer>
 			<key>INIntentManagedParameterCombinations</key>
@@ -1233,7 +1235,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<false/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>${text}生成MD5摘要字符串</string>
+					<string>输入text${text}生成MD5摘要字符串</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>rxme9i</string>
 				</dict>
@@ -1254,7 +1256,7 @@
 					<key>INIntentParameterMetadata</key>
 					<dict>
 						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
+						<string>None</string>
 						<key>INIntentParameterMetadataDefaultValueID</key>
 						<string>ZZPevs</string>
 					</dict>

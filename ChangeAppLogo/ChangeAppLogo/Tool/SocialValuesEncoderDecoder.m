@@ -43,7 +43,7 @@ static SocialValuesEncoderDecoder *_coder = nil;
 
 - (void)removeDelegate{
     [[self.webView configuration].userContentController  removeScriptMessageHandlerForName:@"clickEncode"];
-    [[self.webView configuration].userContentController addScriptMessageHandler:self name:@"clickDecode"];
+    [[self.webView configuration].userContentController removeScriptMessageHandlerForName:@"clickDecode"];
 }
 
 - (void)setIsEncode:(BOOL)isEncode{
