@@ -86,7 +86,6 @@
 		CAAC6D3F257CD03000033FD7 /* SFSymbolCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D21257CD00B00033FD7 /* SFSymbolCategory.m */; };
 		CAAC6D40257CD03000033FD7 /* SFSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D20257CD00B00033FD7 /* SFSymbol.m */; };
 		CAAC6D41257CD03000033FD7 /* SFSymbolDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D23257CD00B00033FD7 /* SFSymbolDatasource.m */; };
-		CAAC6D88257CDE8400033FD7 /* SelectColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */; };
 		CAAC6E132584871A00033FD7 /* GetUUIDHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */; };
 		CAAC6E142584871A00033FD7 /* GetUUIDHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */; };
 		CAAC6E2525848B8100033FD7 /* MD5IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6E2425848B8100033FD7 /* MD5IntentHandler.m */; };
@@ -237,8 +236,6 @@
 		CAAC6D31257CD00B00033FD7 /* SymbolSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SymbolSearchResultsViewController.m; sourceTree = "<group>"; };
 		CAAC6D32257CD00B00033FD7 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		CAAC6D49257CD34000033FD7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		CAAC6D86257CDE8400033FD7 /* SelectColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectColorViewController.h; sourceTree = "<group>"; };
-		CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectColorViewController.m; sourceTree = "<group>"; };
 		CAAC6E112584871A00033FD7 /* GetUUIDHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetUUIDHandler.h; sourceTree = "<group>"; };
 		CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetUUIDHandler.m; sourceTree = "<group>"; };
 		CAAC6E2325848B8100033FD7 /* MD5IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MD5IntentHandler.h; sourceTree = "<group>"; };
@@ -525,8 +522,6 @@
 				CAAC6CCF257CC36300033FD7 /* AppMainViewController.m */,
 				CAAC6CD4257CC5DC00033FD7 /* CustomLogoViewController.h */,
 				CAAC6CD5257CC5DC00033FD7 /* CustomLogoViewController.m */,
-				CAAC6D86257CDE8400033FD7 /* SelectColorViewController.h */,
-				CAAC6D87257CDE8400033FD7 /* SelectColorViewController.m */,
 				CA1E8B182543F94A00049305 /* GenerateAppLogoConfigViewController.h */,
 				CA1E8B192543F94A00049305 /* GenerateAppLogoConfigViewController.m */,
 				CA1E8B3725441B3500049305 /* AppListViewController.h */,
@@ -800,7 +795,6 @@
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
 				CAAC6E3425848CA500033FD7 /* SearchDataStoreIntentHandler.m in Sources */,
 				CAAC6E4C25848D3F00033FD7 /* VCardTemplateIntentHandler.m in Sources */,
-				CAAC6D88257CDE8400033FD7 /* SelectColorViewController.m in Sources */,
 				CAAC6F7F258DF18B00033FD7 /* CoreValuesToolViewController.m in Sources */,
 				CABF400B25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
 				CAAC6BA325735A5400033FD7 /* WGBReachability.m in Sources */,

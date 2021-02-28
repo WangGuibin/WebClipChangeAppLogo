@@ -8,17 +8,17 @@
 #import "CustomLogoViewController.h"
 #import "CategoriesViewController.h"
 #import "SFSymbolDatasource.h"
-#import "SelectColorViewController.h"
 #import "GenerateAppLogoConfigViewController.h"
 #import <TZImagePickerController.h>
 
-@interface CustomLogoViewController ()
+@interface CustomLogoViewController ()<UIColorPickerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
 
 @property (nonatomic, copy) NSString *symoblName;
 @property (nonatomic, strong) UIColor *tintColor;
 @property (nonatomic, strong) UIColor *bgColor;
+@property (nonatomic, assign) BOOL isClickBgColorFlag;
 @property (nonatomic, assign) UIImageSymbolWeight imgWeight;
 
 @property (nonatomic, assign) BOOL isSFSymbols;
@@ -106,22 +106,33 @@
 }
 
 - (IBAction)selectTintColorAction:(UIButton *)sender {
-    SelectColorViewController *selectColorVC = [SelectColorViewController new];
-    [self presentViewController:selectColorVC animated:YES completion:nil];
-    [selectColorVC setCallBackBlock:^(UIColor *color) {
-        self.tintColor = color;
-        [self previewLogoAction];
-    }];
+    self.isClickBgColorFlag = NO;
+    UIColorPickerViewController *colorSelectVC = [UIColorPickerViewController new];
+    colorSelectVC.delegate = self;
+    [self presentViewController:colorSelectVC animated:YES completion:nil];
 }
 
 - (IBAction)selectBackgroundColorAction:(UIButton *)sender {
-    SelectColorViewController *selectColorVC = [SelectColorViewController new];
-    [self presentViewController:selectColorVC animated:YES completion:nil];
-    [selectColorVC setCallBackBlock:^(UIColor *color) {
-        self.bgColor = color;
-        [self previewLogoAction];
-    }];
+    self.isClickBgColorFlag = YES;
+    UIColorPickerViewController *colorSelectVC = [UIColorPickerViewController new];
+    colorSelectVC.delegate = self;
+    [self presentViewController:colorSelectVC animated:YES completion:nil];
 }
+///MARK:- <UIColorPickerViewControllerDelegate>
+/// Called when the `selectedColor` changes. 实时获取改变的颜色
+- (void)colorPickerViewControllerDidSelectColor:(UIColorPickerViewController *)viewController{
+    
+}
+/// animate alongside the dismissal. 选择完成之后的颜色
+- (void)colorPickerViewControllerDidFinish:(UIColorPickerViewController *)viewController{
+    if (self.isClickBgColorFlag) {
+        self.bgColor = viewController.selectedColor;
+    }else{
+        self.tintColor = viewController.selectedColor;
+    }
+    [self previewLogoAction];
+}
+
 
 - (IBAction)generateConfigAction:(UIButton *)sender {
 

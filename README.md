@@ -9,12 +9,24 @@ iOS14利用WebClip更换图标,做到无缝启动App
     <img alt="GitHub search hit counter" src="https://img.shields.io/github/search/wangguibin/WebClipChangeAppLogo/webclip?color=red&style=flat-square">
 </p>
 
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/wangguibin/WebClipChangeAppLogo.svg)](https://starchart.cc/wangguibin/WebClipChangeAppLogo)
+      
+[![Sparkline](https://stars.medv.io/Wangguibin/WebClipChangeAppLogo.svg)](https://stars.medv.io/Wangguibin/WebClipChangeAppLogo)
+
+
 目前已有功能如图: 
 
 | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00001.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00002.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00003.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00004.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00005.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00006.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00007.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00008.png) |
-| ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00009.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon000010.png) |                                                              |                                                              |
+|                                                              |                                                              |                                                              |                                                              |
+|                                                              |                                                              |                                                              |                                                              |
+![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon00009.png) | ![](https://cdn.jsdelivr.net/gh/WangGuibin/WebClipChangeAppLogo/images/icon000010.png) | ![]( https://cdn.jsdelivr.net/gh/WangGuibin/MyFilesRepo/images/20210228194644.png)
+
+
 
 **TODO List:**
 
