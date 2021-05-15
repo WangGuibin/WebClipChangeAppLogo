@@ -44,5 +44,4 @@ iOS14利用WebClip更换图标,做到无缝启动App
 
 #####   [1. Webclip生成桌面logo配置的原理解析](./WebClipDescription.md)
 
-##### [2. 如何为自己的应用添加捷径自定义拓展](./addshortcuts.md)
-
+#####  [2. 如何为自己的应用添加捷径自定义拓展](./addshortcuts.md)

@@ -31,6 +31,10 @@
 	<string>获取拍照权限</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>更换图标需要选择相册的图片</string>
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>ChangeBatchAppLogoGroupIntent</string>

@@ -1024,7 +1024,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.ChangeAppLogo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1046,7 +1046,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.ChangeAppLogo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1060,7 +1060,7 @@
 				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.ChangeAppLogo.WGBEmoticonsFaceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.WGBEmoticonsFaceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1075,7 +1075,7 @@
 				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.ChangeAppLogo.WGBEmoticonsFaceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.WGBEmoticonsFaceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1093,7 +1093,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.ChangeAppLogo.Shortcuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1111,7 +1111,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.ChangeAppLogo.Shortcuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

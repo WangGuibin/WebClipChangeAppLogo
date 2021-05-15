@@ -10,6 +10,7 @@
 - 下载Mac App  `Apple configurator2`
 
 ## 2. 描述文件解析(直接上代码了)
+具体可查看源码 [ChageLogoMobileconfig.m](./ChangeAppLogo/ChangeAppLogo/FeatureModule/Model/ChageLogoMobileconfig.m)文件
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?><!DOCTYPE plist PUBLIC '-//Apple//DTD PLIST 1.0//EN' 'http://www.apple.com/DTDs/PropertyList-1.0.dtd'>
@@ -91,7 +92,7 @@
 
 -  把描述文件托管到文件服务器上或者互联网网盘然后使用手机自带的`Safari`浏览器下载打开安装即可
 
-- `App Store`下载第三方换图标`App`也可快速实现功能~ (良莠不齐,有些是要跳空白页再跳的,有些是跳捷径再跳的,有些是webclip处理好的~ 比如: `趣图标`和`捷径集`以及`捷径盒`里的一些捷径) 
+- <del>`App Store`下载第三方换图标`App`也可快速实现功能~ (良莠不齐,有些是要跳空白页再跳的,有些是跳捷径再跳的,有些是webclip处理好的~ 比如: `趣图标`和`捷径集`以及`捷径盒`里的一些捷径) </del> (iOS14.3 添加捷径打开应用并添加到主屏幕可以选取相册自定义图片 有一点瑕疵就是第一次启动这个捷径时会类似弹一个推送横幅的弹窗 所以如果仅仅只是替换图标系统捷径就可以轻松实现 体验好一些的话就得通过WebClip去实现了) 
 
 ## 4. 大致原理
 
@@ -114,7 +115,6 @@
 美团 com.meituan.imeituan
 拼多多 com.xunmeng.pinduoduo
 时光相册 com.ss.iphone.everphoto
-V脉 com.weimai.vmy
 知乎 com.zhihu.ios
 豆瓣 com.douban.frodo
 王者荣耀 com.tencent.smoba
@@ -154,12 +154,11 @@ QQ com.tencent.mqq
 简书-创作你的创作 com.jianshu.Hugo
 ```
 
-## 5. 尝试一下这个微信替身(用手机`Safari`打开)  [点击安装](https://cdn.jsdelivr.net/gh/WangGuibin/MyFilesRepo/files/weixin.mobileconfig)
+## 5. 尝试一下这个微信替身(用手机`Safari`打开)  [点击安装](https://cdn.jsdelivr.net/gh/WangGuibin/MyFilesRepo/images/1621059762.mobileconfig)
 
 iOS代码实现可以如下这样打开Safari加载远程配置文件即可:
 ```swift
-
-        let downStr = "https://cdn.jsdelivr.net/gh/WangGuibin/MyFilesRepo/files/weixin.mobileconfig"
+        let downStr = "https://cdn.jsdelivr.net/gh/WangGuibin/MyFilesRepo/images/1621059762.mobileconfig"
         let realURL = URL(string: downStr)
         UIApplication.shared.openURL(realURL!)
 
