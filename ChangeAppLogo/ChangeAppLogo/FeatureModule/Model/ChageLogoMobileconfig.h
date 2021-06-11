@@ -28,16 +28,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /// 创建一个应用的局部描述文件代码
-/// @param iconBase64 图标base64 可选
+/// @param iconBase64 图标base64
 /// @param isRemoveFromDestop 是否从桌面移除
 /// @param appName 应用标题
 /// @param uuid 唯一标识
 /// @param bundleId 应用唯一标识 必选
+/// @param URL universal link 或者 URLScheme
 + (NSString *)createOneAppConfigWithIcon:(NSString *_Nullable)iconBase64
                           isRemoveFromDestop:(BOOL)isRemoveFromDestop
                                  appName:(NSString *)appName
                                     uuid:(NSString *)uuid
-                                bundleId:(NSString *)bundleId;
+                                bundleId:(NSString *)bundleId
+                                     URL:(NSString *_Nullable)URL;
 
 
 /// 把app的配置组装成一个完整的WebClip描述文件

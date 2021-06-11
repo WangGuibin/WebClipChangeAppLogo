@@ -322,7 +322,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入应用名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1A-jq-z0l">
-                                <rect key="frame" x="57" y="300" width="300" height="44"/>
+                                <rect key="frame" x="57" y="438" width="300" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="DBm-Uy-EaX"/>
                                     <constraint firstAttribute="height" constant="44" id="aEY-cA-yzi"/>
@@ -331,7 +331,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6a-sZ-yCs">
-                                <rect key="frame" x="100" y="444" width="214" height="64"/>
+                                <rect key="frame" x="100" y="582" width="214" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="HhL-vR-5xD"/>
@@ -349,35 +349,57 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否允许桌面上删除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWp-Ig-egI">
-                                <rect key="frame" x="57" y="374" width="138" height="18"/>
+                                <rect key="frame" x="57" y="512" width="138" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s91-11-mku">
-                                <rect key="frame" x="308" y="367.5" width="51" height="31"/>
+                                <rect key="frame" x="308" y="505.5" width="51" height="31"/>
                             </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入universal link或者URLScheme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaT-xA-Rbn">
+                                <rect key="frame" x="57" y="374" width="300" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入bundleId" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cph-fu-agG">
+                                <rect key="frame" x="57" y="310" width="300" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="vV2-vP-XJ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="I1A-jq-z0l" firstAttribute="top" secondItem="gaT-xA-Rbn" secondAttribute="bottom" constant="20" id="2MF-fW-jdt"/>
+                            <constraint firstItem="gaT-xA-Rbn" firstAttribute="width" secondItem="I1A-jq-z0l" secondAttribute="width" id="3PD-jG-s8L"/>
                             <constraint firstItem="xWp-Ig-egI" firstAttribute="leading" secondItem="I1A-jq-z0l" secondAttribute="leading" id="4d2-3e-uPz"/>
                             <constraint firstItem="XBL-20-8wr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5WU-qa-T2z"/>
+                            <constraint firstItem="cph-fu-agG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A7t-7j-7z3"/>
+                            <constraint firstItem="gaT-xA-Rbn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ce3-ou-vhy"/>
                             <constraint firstItem="s91-11-mku" firstAttribute="centerY" secondItem="xWp-Ig-egI" secondAttribute="centerY" id="KSl-Fa-5Ge"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBL-20-8wr" secondAttribute="trailing" constant="50" id="M7g-xP-4If"/>
                             <constraint firstItem="I1A-jq-z0l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qbj-f4-MJk"/>
                             <constraint firstItem="y6a-sZ-yCs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="S5H-ST-cep"/>
                             <constraint firstItem="XBL-20-8wr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WoB-vj-Oiu"/>
                             <constraint firstItem="y6a-sZ-yCs" firstAttribute="top" secondItem="I1A-jq-z0l" secondAttribute="bottom" constant="100" id="XIj-Fb-fOJ"/>
-                            <constraint firstItem="I1A-jq-z0l" firstAttribute="top" secondItem="XBL-20-8wr" secondAttribute="bottom" constant="30" id="ZUj-nk-C8l"/>
+                            <constraint firstItem="cph-fu-agG" firstAttribute="height" secondItem="gaT-xA-Rbn" secondAttribute="height" id="ag9-Kb-nda"/>
                             <constraint firstItem="xWp-Ig-egI" firstAttribute="top" secondItem="I1A-jq-z0l" secondAttribute="bottom" constant="30" id="dQo-ty-2iV"/>
+                            <constraint firstItem="gaT-xA-Rbn" firstAttribute="height" secondItem="I1A-jq-z0l" secondAttribute="height" id="eNi-M2-1bM"/>
+                            <constraint firstItem="gaT-xA-Rbn" firstAttribute="top" secondItem="cph-fu-agG" secondAttribute="bottom" constant="20" id="p6E-9k-Tte"/>
                             <constraint firstItem="s91-11-mku" firstAttribute="trailing" secondItem="I1A-jq-z0l" secondAttribute="trailing" id="pgu-JF-A0Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6a-sZ-yCs" secondAttribute="trailing" constant="100" id="r1j-p5-hUp"/>
+                            <constraint firstItem="cph-fu-agG" firstAttribute="top" secondItem="XBL-20-8wr" secondAttribute="bottom" constant="40" id="zUo-Ch-9zY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="自定义应用图标" id="Wiz-5g-sD9"/>
                     <connections>
+                        <outlet property="URLTextfield" destination="gaT-xA-Rbn" id="L54-QF-9On"/>
                         <outlet property="appNameTextfield" destination="I1A-jq-z0l" id="5aU-oE-pg5"/>
+                        <outlet property="bundleIdTextfield" destination="cph-fu-agG" id="kDo-S4-K4d"/>
                         <outlet property="isRemoveSwitch" destination="s91-11-mku" id="OgG-do-QDy"/>
                         <outlet property="selectAppBtn" destination="CTL-fy-kfj" id="xrX-gp-b0M"/>
                         <outlet property="selectIconBtn" destination="K9l-8F-ftL" id="Dty-Yt-1PB"/>

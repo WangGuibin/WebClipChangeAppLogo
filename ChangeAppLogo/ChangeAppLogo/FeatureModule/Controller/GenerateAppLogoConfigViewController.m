@@ -25,12 +25,14 @@
 
 @property (nonatomic, strong) GCDWebServer *webServer;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *bundleIdTextfield;
+@property (weak, nonatomic) IBOutlet UITextField *URLTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *appNameTextfield;
+
 @property (weak, nonatomic) IBOutlet UIButton *selectAppBtn;
 @property (weak, nonatomic) IBOutlet UIButton *selectIconBtn;
 @property (weak, nonatomic) IBOutlet UISwitch *isRemoveSwitch;
-
-@property (nonatomic, strong) AppInfoModel *currentModel;
 
 @end
 
@@ -67,7 +69,8 @@
 - (IBAction)getAppAction:(UIButton *)sender {
     AppListViewController *appVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AppListViewController"];
     [appVC setCallBack:^(AppInfoModel * _Nonnull model) {
-        self.currentModel = model;
+        self.bundleIdTextfield.text = model.bundleId;
+        self.appNameTextfield.text = model.trackName;
         [self.selectAppBtn sd_setBackgroundImageWithURL:[NSURL URLWithString:model.artworkUrl512] forState:UIControlStateNormal];
         [self.selectAppBtn setTitle:@"" forState:UIControlStateNormal];
     }];
@@ -96,16 +99,17 @@
     [self createConfigFile];
 }
 
-
 - (void)createConfigFile{
-    NSString *appName = self.appNameTextfield.text? : self.currentModel.trackName;
-    NSString *bundleId = self.currentModel.bundleId;
+    NSString *appName = self.appNameTextfield.text;
+    NSString *bundleId = self.bundleIdTextfield.text;
+    NSString *URL = [self.URLTextfield.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
     NSData *iconData = UIImageJPEGRepresentation(self.iconImg, 0.7);
     NSString *base64Img = [iconData base64EncodedStringWithOptions:(NSDataBase64Encoding64CharacterLineLength)];
     NSString *uuid1 = [NSUUID UUID].UUIDString;//随机1
     NSString *uuid2 = [NSUUID UUID].UUIDString;//随机2
     
-    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:base64Img isRemoveFromDestop:self.isRemoveSwitch.on appName:appName uuid:uuid1 bundleId:bundleId];
+    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:base64Img isRemoveFromDestop:self.isRemoveSwitch.on appName:appName uuid:uuid1 bundleId:bundleId URL:URL];
     NSString *fileString = [ChageLogoMobileconfig addConfigIntoGroupWithConfigs:appconfigStr appSetName:[NSString stringWithFormat:@"%@的桌面logo描述文件",appName] uuid:uuid2];
 
     NSString *fileName = [NSString stringWithFormat:@"%@.mobileconfig",appName];
@@ -130,10 +134,8 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-prefs:root=General&path=ManagedConfigurationList/PurgatoryInstallRequested"] options:@{} completionHandler:nil];
 }
 
-
 //重置页面数据
 - (void)cleanPage{
-    self.currentModel = nil;
     self.iconImg = nil;
     [self.selectAppBtn setBackgroundImage:nil forState:UIControlStateNormal];
     [self.selectAppBtn setTitle:@"选取App" forState:UIControlStateNormal];
@@ -141,7 +143,6 @@
     [self.selectIconBtn setTitle:@"选取图标" forState:UIControlStateNormal];
     self.appNameTextfield.text = nil;
 }
-
 
 - (GCDWebServer *)webServer {
     if (!_webServer) {

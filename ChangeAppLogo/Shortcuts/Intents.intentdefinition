@@ -208,9 +208,9 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>20C69</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12C33</string>
+	<string>12E262</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.3</string>
+	<string>12.5</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -1345,10 +1345,10 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>6</integer>
+			<integer>7</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key>iconBase64,isRemoveDesktop,bundleId,appName</key>
+				<key>iconBase64,isRemoveDesktop,bundleId,appName,URL</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
@@ -1522,6 +1522,44 @@
 					<key>INIntentParameterType</key>
 					<string>String</string>
 				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>universal link或者URLScheme</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>hVltdC</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>5</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>6bUhHc</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>URL</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>7</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
 			</array>
 			<key>INIntentResponse</key>
 			<dict>
@@ -1592,10 +1630,10 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>13</integer>
+			<integer>14</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
-				<key>appName,base64,isRemoveDesktop,bundleId</key>
+				<key>appName,base64,isRemoveDesktop,bundleId,URL</key>
 				<dict>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
@@ -1766,6 +1804,44 @@
 					</array>
 					<key>INIntentParameterTag</key>
 					<integer>12</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterConfigurable</key>
+					<true/>
+					<key>INIntentParameterDisplayName</key>
+					<string>universal link 或者 URLScheme</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>0khCjl</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>5</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>tGiJbA</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>URL</string>
+					<key>INIntentParameterPromptDialogs</key>
+					<array>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Configuration</string>
+						</dict>
+						<dict>
+							<key>INIntentParameterPromptDialogCustom</key>
+							<true/>
+							<key>INIntentParameterPromptDialogType</key>
+							<string>Primary</string>
+						</dict>
+					</array>
+					<key>INIntentParameterTag</key>
+					<integer>14</integer>
 					<key>INIntentParameterType</key>
 					<string>String</string>
 				</dict>

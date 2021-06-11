@@ -12,7 +12,7 @@
 
 ///MARK:- 一次生成更换应用图标的描述文件配置1
 - (void)handleChangeBatchLogoConfig:(ChangeBatchLogoConfigIntent *)intent completion:(void (^)(ChangeBatchLogoConfigIntentResponse *response))completion {
-    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:intent.base64 isRemoveFromDestop:intent.isRemoveDesktop appName:intent.appName uuid:[NSUUID UUID].UUIDString bundleId:intent.bundleId];
+    NSString *appconfigStr = [ChageLogoMobileconfig createOneAppConfigWithIcon:intent.base64 isRemoveFromDestop:intent.isRemoveDesktop appName:intent.appName uuid:[NSUUID UUID].UUIDString bundleId:intent.bundleId URL:intent.URL];
     ChangeBatchLogoConfigIntentResponse *success = [ChangeBatchLogoConfigIntentResponse successIntentResponseWithResult:appconfigStr];
     completion(success);
 }

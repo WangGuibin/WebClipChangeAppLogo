@@ -55,15 +55,22 @@
  <key>Precomposed</key>
  <true/>
  
- //可不填
+ //可不填 iOS14.4需要填写 配合bundleId才能无缝过渡,这个URL应该是app的universal link
+ 我试过填写的 https://www.baidu.com 配合微博的bundleId 结果打开微博然后唤起webView跳转了百度~ ... 匪夷所思...
  <key>URL</key>
  <string>URL</string>
  
- //bundleId 必填 不然会白屏过渡
+ //bundleId 必填 不然无法指定是打开哪个app
  <key>TargetApplicationBundleIdentifier</key>
  <string>%@</string>
   
 </dict>
+
+ ### 更新于2021年6月11日 20:45:06
+ *******************************************************************************************
+ 最近恰好学了Vue 写了一个在线工具练手 结合在线工具可以方便调试 (不需要打包app这么麻烦,也不需要去写捷径折腾~)
+ https://github.com/WangGuibin/webclicp-vue-app
+ 苹果捷径iOS14.3以上即可实现换图标的功能 只是第一次启动会弹通知栏~ 就这~
 */
 
 
@@ -72,16 +79,24 @@
 /// @param isRemoveFromDestop 是否从桌面移除
 /// @param appName 应用标题
 /// @param uuid 唯一标识
-/// @param bundleId 应用唯一标识 必选 
+/// @param bundleId 应用唯一标识 必选
+/// @param URL universal link 或者 URLScheme
 + (NSString *)createOneAppConfigWithIcon:(NSString *_Nullable)iconBase64
                           isRemoveFromDestop:(BOOL)isRemoveFromDestop
                                  appName:(NSString *)appName
                                     uuid:(NSString *)uuid
                                 bundleId:(NSString *)bundleId
+                                     URL:(NSString *_Nullable)URL
 {
     NSString *iconText = [NSString stringWithFormat:@"<key>Icon</key><data>%@</data>",iconBase64];
     if (!iconBase64.length) {
         iconText = @"";
+    }
+    
+    if (URL.length) {
+        URL = [NSString stringWithFormat:@"<key>URL</key>\n<string>%@</string>\n",URL];
+    }else{
+        URL = @"";
     }
         
     NSMutableString *strM = [NSMutableString string];
@@ -104,8 +119,7 @@
     [strM appendFormat:@"<string>%@</string>\n",uuid];
     [strM appendFormat:@"<key>PayloadVersion</key>\n"];
     [strM appendFormat:@"<real>1</real>\n"];
-    [strM appendFormat:@"<key>Precomposed</key><true/>\n"];
-    [strM appendFormat:@"<key>URL</key>\n<string>URL</string>\n"];
+    [strM appendFormat:@"<key>Precomposed</key><true/>\n%@",URL];
     [strM appendFormat:@"<key>TargetApplicationBundleIdentifier</key>\n"];
     [strM appendFormat:@"<string>%@</string>\n",bundleId];
     [strM appendFormat:@"</dict>\n"];
