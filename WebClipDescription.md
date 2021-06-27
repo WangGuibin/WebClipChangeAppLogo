@@ -103,6 +103,7 @@
 - 把各个需要替换的字段更新生成新的描述文件进行安装即可 
 - 其实可以一个描述文件包含多个书签或者应用,因为内部`PayloadContent`那一层是一个`array`,我发现`捷径集`好像就是这样实现的
 - 至于签不签名好像并不影响使用
+如需签名则需要SSL证书,可参考[签名教程](https://github.com/Kennytian/node-web-clips)
 
 #### 想方设法获取应用的BundleId
 [我写了一个捷径去获取应用的BundleId](https://www.icloud.com/shortcuts/6712dc78b5e04af28473a3bf9a80893c)

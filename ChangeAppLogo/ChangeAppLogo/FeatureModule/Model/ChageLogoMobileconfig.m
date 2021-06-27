@@ -15,6 +15,9 @@
 
 
 /**
+ 
+ 以下这种方式类似于模板,修改一些参数,然后写文件~  逛github时发现一个仓库貌似是外国友人用SwiftUI写的 https://github.com/mamunul/WebClip 他是直接用PropertyListEncoder写xml文件感觉不那么啰嗦...😄 算了 俺也不想改了 就这吧~
+ 
 <dict>
  //是否全屏
  <key>FullScreen</key>
