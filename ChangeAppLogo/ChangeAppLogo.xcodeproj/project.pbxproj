@@ -582,6 +582,7 @@
 				CA1E8B0D2543F94A00049305 /* Resources */,
 				25FCBE681DA6EB9E1640555A /* [CP] Embed Pods Frameworks */,
 				CA1E8C5F254E997800049305 /* Embed App Extensions */,
+				CA81894F27A77456003988CC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -776,6 +777,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CA81894F27A77456003988CC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh test_ipa.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1024,7 +1042,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1046,7 +1064,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1060,7 +1078,7 @@
 				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.WGBEmoticonsFaceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.WGBEmoticonsFaceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1075,7 +1093,7 @@
 				DEVELOPMENT_TEAM = E27WNKVHV9;
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.WGBEmoticonsFaceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.WGBEmoticonsFaceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1093,7 +1111,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.Shortcuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1111,7 +1129,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoderWGB.iOSApp.Shortcuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
