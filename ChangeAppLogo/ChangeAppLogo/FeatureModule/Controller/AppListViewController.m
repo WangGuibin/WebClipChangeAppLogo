@@ -7,6 +7,7 @@
 
 #import "AppListViewController.h"
 #import <UIImageView+WebCache.h>
+#import "InstalledAppManager.h"
 
 @interface AppCell : UITableViewCell
 
@@ -74,6 +75,8 @@
     // Do any additional setup after loading the view.
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerClass:[AppCell class] forCellReuseIdentifier:NSStringFromClass([AppCell class])];
+    self.title = @"选择应用";
+    [self searchDataWithKeyword:@"微信"];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -85,7 +88,11 @@
     if (!self.appNameTF.text.length) {
         return;
     }
-    [AppStoreModel getAppInfoFromAppStoreWithAppName:self.appNameTF.text callBack:^(AppStoreModel * _Nonnull AppModel) {
+    [self searchDataWithKeyword:self.appNameTF.text];
+}
+
+- (void)searchDataWithKeyword:(NSString *)keyword{
+    [AppStoreModel getAppInfoFromAppStoreWithAppName:keyword callBack:^(AppStoreModel * _Nonnull AppModel) {
         self.bigModel = AppModel;
         self.appNameTF.text = nil;
         [self.tableView reloadData];
@@ -107,6 +114,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     AppInfoModel *model = self.bigModel.results[indexPath.row];
+    if(![[InstalledAppManager share] isInstalledWithId:model.bundleId]){
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"系统检测到未安装【%@】",model.trackName] message:@"是否前往App Store进行下载?" preferredStyle:(UIAlertControllerStyleAlert)];
+        [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        }]];
+        [alertVC addAction:[UIAlertAction actionWithTitle:@"前往下载" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%ld",model.trackId]]];
+        }]];
+        [self presentViewController:alertVC animated:YES completion:nil];
+        return;
+    }
     !self.callBack? : self.callBack(model);
     [self.navigationController popViewControllerAnimated:YES];
 }

@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "GetUUIDHandler.h"
+#import "InstalledAppManager.h"
 
 @interface AppDelegate ()
 
@@ -17,15 +17,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self registerDefaultsFromSettingsBundle];
     self.window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
-
+    [[InstalledAppManager share] syncData];
     return YES;
 }
 
+
+//MARK: - 注册setting bundle
+- (void)registerDefaultsFromSettingsBundle{
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+    if(!settingsBundle) {
+        NSLog(@"Could not find Settings.bundle");
+        return;
+    }
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences) {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+         if(key) {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    //注册一下 然后可以理解为plist中的Identifier和DefaultValue就是对应着NSUserDefaults中的key和value
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+}
 
 #pragma mark - UISceneSession lifecycle
 
@@ -44,8 +65,5 @@
 }
 
 
-//- (id)application:(UIApplication *)application handlerForIntent:(INIntent *)intent{
-//    return [GetUUIDHandler new];
-//}
 
 @end

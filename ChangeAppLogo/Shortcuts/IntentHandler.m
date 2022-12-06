@@ -7,6 +7,9 @@
 
 #import "IntentHandler.h"
 
+#import "OpenAppHandler.h" //打开指定app
+#import "VCardContactHandler.h" //添加联系人
+
 //数据存储
 #import "DataStoreIntentHandler.h"
 #import "SearchDataStoreIntentHandler.h"
@@ -51,6 +54,14 @@
 - (id)handlerForIntent:(INIntent *)intent {
     // This is the default implementation.  If you want different objects to handle different intents,
     // you can override this and return the handler you want for that particular intent.
+    if ([intent isKindOfClass:[OpenAppIntentIntent class]]) {
+        return [OpenAppHandler new];
+    }
+
+    if ([intent isKindOfClass:[VCardContactIntent class]]) {
+        return [VCardContactHandler new];
+    }
+
     if ([intent isKindOfClass:[UUIDGenerateIntent class]]) {
         return [GetUUIDHandler new];
     }

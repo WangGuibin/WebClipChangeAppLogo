@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>DefaultValue</key>
+			<string>42bf688</string>
+			<key>Key</key>
+			<string>sha</string>
+			<key>Title</key>
+			<string>git sha</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>main</string>
+			<key>Key</key>
+			<string>branch</string>
+			<key>Title</key>
+			<string>当前分支</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>Wangguibin</string>
+			<key>Key</key>
+			<string>commiter</string>
+			<key>Title</key>
+			<string>提交者</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>Tue Feb 8 19:46:27 2022 +0800</string>
+			<key>Key</key>
+			<string>commit_date</string>
+			<key>Title</key>
+			<string>提交时间</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>Tue Dec 6 19:38:41 CST 2022</string>
+			<key>Key</key>
+			<string>build_time</string>
+			<key>Title</key>
+			<string>上一次编译时间(倒数第二次)</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>detail</string>
+</dict>
+</plist>

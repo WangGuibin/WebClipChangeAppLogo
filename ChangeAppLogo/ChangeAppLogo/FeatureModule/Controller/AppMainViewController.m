@@ -8,6 +8,9 @@
 #import "AppMainViewController.h"
 #import "CategoriesViewController.h"
 #import "SFSymbolDatasource.h"
+#import "OpenAppWithIDController.h"
+#import "InstalledAppListViewController.h"
+#import "InstalledAppManager.h"
 
 @interface AppMainViewController ()
 
@@ -29,6 +32,21 @@
         CategoriesViewController *vc = [CategoriesViewController new];
         UINavigationController *nvc = [UINavigationController.alloc initWithRootViewController:vc];
         [self presentViewController:nvc animated:YES completion:nil];
+    }
+    
+    if(indexPath.row == 4){
+        [self.navigationController pushViewController:[OpenAppWithIDController new] animated:YES];
+    }
+    
+    if(indexPath.row == 5){
+        if([InstalledAppManager share].isLoaded){
+            [self.navigationController pushViewController:[InstalledAppListViewController new] animated:YES];
+        }else{
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"请稍等,应用数据还未加载完毕" preferredStyle:(UIAlertControllerStyleAlert)];
+            [alertVC addAction:[UIAlertAction actionWithTitle:@"OK👌" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+            }]];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }
     }
     
 }

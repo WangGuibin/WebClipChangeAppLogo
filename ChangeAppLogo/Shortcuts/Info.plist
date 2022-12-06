@@ -46,11 +46,13 @@
 				<string>INSetMessageAttributeIntent</string>
 				<string>JudgeNetworkConnectIntent</string>
 				<string>MD5Intent</string>
+				<string>OpenAppIntentIntent</string>
 				<string>PinWordsSegmentIntent</string>
 				<string>SFSymbolsIntentIntent</string>
 				<string>SearchDataStoreIntent</string>
 				<string>SocialValuesEncoderDecoderIntent</string>
 				<string>UUIDGenerateIntent</string>
+				<string>VCardContactIntent</string>
 				<string>VCardTemplateIntent</string>
 			</array>
 		</dict>

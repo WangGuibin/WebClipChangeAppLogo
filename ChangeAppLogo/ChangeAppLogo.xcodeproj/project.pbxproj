@@ -116,6 +116,12 @@
 		CAAC6EE92584F50B00033FD7 /* UIColor+Extends.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6EE72584F50B00033FD7 /* UIColor+Extends.m */; };
 		CAAC6F7F258DF18B00033FD7 /* CoreValuesToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6F7E258DF18B00033FD7 /* CoreValuesToolViewController.m */; };
 		CAAC6F91258DF32900033FD7 /* ChageLogoMobileconfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAC6B5E25727FE100033FD7 /* ChageLogoMobileconfig.m */; };
+		CAAFF8D42928CCBF000A3ABE /* OpenAppWithIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF8D32928CCBF000A3ABE /* OpenAppWithIDController.m */; };
+		CAAFF8D72928CE97000A3ABE /* OpenAppHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF8D62928CE97000A3ABE /* OpenAppHandler.m */; };
+		CAAFF8DA2928D612000A3ABE /* VCardContactHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF8D92928D612000A3ABE /* VCardContactHandler.m */; };
+		CAAFF8DD2928F48D000A3ABE /* InstalledAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF8DC2928F48D000A3ABE /* InstalledAppListViewController.m */; };
+		CAAFF8E32928FBCF000A3ABE /* InstalledAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAAFF8E22928FBCF000A3ABE /* InstalledAppManager.m */; };
+		CAAFF8E52930E588000A3ABE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CAAFF8E42930E588000A3ABE /* Settings.bundle */; };
 		CABF3FAD2571D72C00EBF0E0 /* IntentHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */; };
 		CABF3FC32571D72C00EBF0E0 /* Shortcuts.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CABF3FD52571E19600EBF0E0 /* Intents.intentdefinition */; };
@@ -269,6 +275,17 @@
 		CAAC6EE72584F50B00033FD7 /* UIColor+Extends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extends.m"; sourceTree = "<group>"; };
 		CAAC6F7D258DF18A00033FD7 /* CoreValuesToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreValuesToolViewController.h; sourceTree = "<group>"; };
 		CAAC6F7E258DF18B00033FD7 /* CoreValuesToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreValuesToolViewController.m; sourceTree = "<group>"; };
+		CAAFF8D22928CCBF000A3ABE /* OpenAppWithIDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenAppWithIDController.h; sourceTree = "<group>"; };
+		CAAFF8D32928CCBF000A3ABE /* OpenAppWithIDController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenAppWithIDController.m; sourceTree = "<group>"; };
+		CAAFF8D52928CE97000A3ABE /* OpenAppHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenAppHandler.h; sourceTree = "<group>"; };
+		CAAFF8D62928CE97000A3ABE /* OpenAppHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenAppHandler.m; sourceTree = "<group>"; };
+		CAAFF8D82928D612000A3ABE /* VCardContactHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCardContactHandler.h; sourceTree = "<group>"; };
+		CAAFF8D92928D612000A3ABE /* VCardContactHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCardContactHandler.m; sourceTree = "<group>"; };
+		CAAFF8DB2928F48D000A3ABE /* InstalledAppListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstalledAppListViewController.h; sourceTree = "<group>"; };
+		CAAFF8DC2928F48D000A3ABE /* InstalledAppListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstalledAppListViewController.m; sourceTree = "<group>"; };
+		CAAFF8E12928FBCF000A3ABE /* InstalledAppManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstalledAppManager.h; sourceTree = "<group>"; };
+		CAAFF8E22928FBCF000A3ABE /* InstalledAppManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstalledAppManager.m; sourceTree = "<group>"; };
+		CAAFF8E42930E588000A3ABE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CABF3FA92571D72C00EBF0E0 /* Shortcuts.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Shortcuts.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABF3FAB2571D72C00EBF0E0 /* IntentHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntentHandler.h; sourceTree = "<group>"; };
 		CABF3FAC2571D72C00EBF0E0 /* IntentHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntentHandler.m; sourceTree = "<group>"; };
@@ -351,6 +368,7 @@
 				CA1E8B132543F94A00049305 /* AppDelegate.m */,
 				CA1E8B152543F94A00049305 /* SceneDelegate.h */,
 				CA1E8B162543F94A00049305 /* SceneDelegate.m */,
+				CAAFF8E42930E588000A3ABE /* Settings.bundle */,
 				CA1E8B1B2543F94A00049305 /* Main.storyboard */,
 				CA1E8B1E2543F94F00049305 /* Assets.xcassets */,
 				CA1E8B202543F94F00049305 /* LaunchScreen.storyboard */,
@@ -379,6 +397,8 @@
 				CAAC6BB52573610D00033FD7 /* DetectQRCodeTool.m */,
 				CAAC6C0925739DDE00033FD7 /* SocialValuesEncoderDecoder.h */,
 				CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */,
+				CAAFF8E12928FBCF000A3ABE /* InstalledAppManager.h */,
+				CAAFF8E22928FBCF000A3ABE /* InstalledAppManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -470,6 +490,10 @@
 		CAAC6E3125848C6800033FD7 /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				CAAFF8D52928CE97000A3ABE /* OpenAppHandler.h */,
+				CAAFF8D62928CE97000A3ABE /* OpenAppHandler.m */,
+				CAAFF8D82928D612000A3ABE /* VCardContactHandler.h */,
+				CAAFF8D92928D612000A3ABE /* VCardContactHandler.m */,
 				CAAC6E112584871A00033FD7 /* GetUUIDHandler.h */,
 				CAAC6E122584871A00033FD7 /* GetUUIDHandler.m */,
 				CAAC6E2325848B8100033FD7 /* MD5IntentHandler.h */,
@@ -535,6 +559,10 @@
 				CA1E8B582544487000049305 /* FilesManagerViewController.m */,
 				CAAC6F7D258DF18A00033FD7 /* CoreValuesToolViewController.h */,
 				CAAC6F7E258DF18B00033FD7 /* CoreValuesToolViewController.m */,
+				CAAFF8D22928CCBF000A3ABE /* OpenAppWithIDController.h */,
+				CAAFF8D32928CCBF000A3ABE /* OpenAppWithIDController.m */,
+				CAAFF8DB2928F48D000A3ABE /* InstalledAppListViewController.h */,
+				CAAFF8DC2928F48D000A3ABE /* InstalledAppListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -680,6 +708,7 @@
 			files = (
 				CAAC6CF7257CCEF800033FD7 /* SFSymbol.Nature.plist in Resources */,
 				CA1E8B222543F94F00049305 /* LaunchScreen.storyboard in Resources */,
+				CAAFF8E52930E588000A3ABE /* Settings.bundle in Resources */,
 				CAAC6CFB257CCEF800033FD7 /* SFSymbol.Devices.plist in Resources */,
 				CAAC6CF8257CCEF800033FD7 /* SFSymbol.Human.plist in Resources */,
 				CAAC6CF0257CCEF800033FD7 /* SFSymbol.Connectivity.plist in Resources */,
@@ -799,7 +828,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho ${BUILD_DIR} > build_dir_var\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho ${BUILD_DIR} > build_dir_var\nsh get_git_info.sh \n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -814,6 +843,7 @@
 				CAAC6E3E25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m in Sources */,
 				CAAC6BB62573610D00033FD7 /* DetectQRCodeTool.m in Sources */,
 				CA1E8B1A2543F94A00049305 /* GenerateAppLogoConfigViewController.m in Sources */,
+				CAAFF8DD2928F48D000A3ABE /* InstalledAppListViewController.m in Sources */,
 				CAAC6E6F25848DA000033FD7 /* DetectedQRCodeIntentHandler.m in Sources */,
 				CA1E8B142543F94A00049305 /* AppDelegate.m in Sources */,
 				CA1E8B3925441B3500049305 /* AppListViewController.m in Sources */,
@@ -834,6 +864,8 @@
 				CAAC6B5F25727FE100033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CAAC6E4525848D2F00033FD7 /* PinWordsSegmentIntentHandler.m in Sources */,
 				CABF3FD62571E19600EBF0E0 /* Intents.intentdefinition in Sources */,
+				CAAFF8E32928FBCF000A3ABE /* InstalledAppManager.m in Sources */,
+				CAAFF8D42928CCBF000A3ABE /* OpenAppWithIDController.m in Sources */,
 				CAAC6E7625848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */,
 				CAAC6D37257CD00B00033FD7 /* SymbolPreviewCell.m in Sources */,
 				CAAC6D35257CD00B00033FD7 /* SFSymbolDatasource.m in Sources */,
@@ -859,6 +891,8 @@
 				CAAC6F91258DF32900033FD7 /* ChageLogoMobileconfig.m in Sources */,
 				CAAC6C0C25739DDF00033FD7 /* SocialValuesEncoderDecoder.m in Sources */,
 				CABF400C25724A7800EBF0E0 /* NSString+WordsSegmentExtension.m in Sources */,
+				CAAFF8D72928CE97000A3ABE /* OpenAppHandler.m in Sources */,
+				CAAFF8DA2928D612000A3ABE /* VCardContactHandler.m in Sources */,
 				CAAC6E3F25848D1D00033FD7 /* DeleteDataStoreIntentHandler.m in Sources */,
 				CAAC6E4625848D2F00033FD7 /* PinWordsSegmentIntentHandler.m in Sources */,
 				CAAC6E7725848DAE00033FD7 /* SFSymbolsIntentIntentHandler.m in Sources */,
@@ -924,6 +958,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Versioned";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -984,6 +1022,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1038,6 +1080,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26378B57F9725400CB10744B /* Pods-ChangeAppLogo.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ChangeAppLogo/ChangeAppLogo.entitlements;
@@ -1052,7 +1098,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
@@ -1063,6 +1109,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 546A2614ABC86A5F0F68863C /* Pods-ChangeAppLogo.release.xcconfig */;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ChangeAppLogo/ChangeAppLogo.entitlements;
@@ -1077,7 +1127,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
@@ -1094,7 +1144,7 @@
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.WGBEmoticonsFaceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.ios.WGBEmoticonsFaceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1112,7 +1162,7 @@
 				INFOPLIST_FILE = WGBEmoticonsFaceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.WGBEmoticonsFaceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.ios.WGBEmoticonsFaceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1133,7 +1183,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.Shortcuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.ios.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
@@ -1154,7 +1204,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.demo.Shortcuts;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderwgb.ios.Shortcuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;

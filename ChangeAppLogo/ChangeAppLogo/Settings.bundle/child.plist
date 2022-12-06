@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>child</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>这是子面板组头标题</string>
+			<key>FooterText</key>
+			<string>子面板菜单尾部说明文字</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>编译信息</string>
+			<key>File</key>
+			<string>gitInfo</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>ChageLogoMobileconfig.h</string>
+			<key>File</key>
+			<string>ChageLogoMobileconfigh</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>ChageLogoMobileconfig.m</string>
+			<key>File</key>
+			<string>ChageLogoMobileconfigm</string>
+		</dict>
+	</array>
+</dict>
+</plist>

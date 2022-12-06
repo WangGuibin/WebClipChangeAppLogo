@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>detail</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>//
+//  ChageLogoMobileconfig.m
+//  ChangeAppLogo
+//
+//  Created by 王贵彬 on 2020/11/28.
+//
+
+#import &quot;ChageLogoMobileconfig.h&quot;
+
+@implementation ChageLogoMobileconfig
+//NSString *iconText = [NSString stringWithFormat:@&quot;&lt;key&gt;Icon&lt;/key&gt;&lt;data&gt;%@&lt;/data&gt;&quot;,base64Img];
+//if (!base64Img.length) {
+//    iconText = @&quot;&quot;;
+//}
+
+
+/**
+ 
+ 以下这种方式类似于模板,修改一些参数,然后写文件~  逛github时发现一个仓库貌似是外国友人用SwiftUI写的 https://github.com/mamunul/WebClip 他是直接用PropertyListEncoder写xml文件感觉不那么啰嗦...😄 算了 俺也不想改了 就这吧~
+ 
+&lt;dict&gt;
+ //是否全屏
+ &lt;key&gt;FullScreen&lt;/key&gt;
+  &lt;true/&gt;
+ //是否移除
+ &lt;key&gt;IsRemovable&lt;/key&gt;
+ &lt;%@/&gt;
+ 
+ %@ //图标 iconText
+ 
+ &lt;key&gt;Label&lt;/key&gt;
+ &lt;string&gt;%@&lt;/string&gt;
+ 
+ //描述
+ &lt;key&gt;PayloadDescription&lt;/key&gt;
+ &lt;string&gt;配置 Web Clip 设置&lt;/string&gt;
+ 
+ //应用描述文件的名字
+ &lt;key&gt;PayloadDisplayName&lt;/key&gt;
+ &lt;string&gt;Web Clip&lt;/string&gt;
+ 
+ //应用描述唯一id 后缀与PayloadUUID一致
+ &lt;key&gt;PayloadIdentifier&lt;/key&gt;
+ &lt;string&gt;com.apple.webClip.managed.xxx&lt;/string&gt;
+ 
+ //类型
+ &lt;key&gt;PayloadType&lt;/key&gt;
+ &lt;string&gt;com.apple.webClip.managed&lt;/string&gt;
+ 
+ &lt;key&gt;PayloadUUID&lt;/key&gt;
+ &lt;string&gt;UUID&lt;/string&gt;
+ 
+ //版本
+ &lt;key&gt;PayloadVersion&lt;/key&gt;
+ &lt;real&gt;1&lt;/real&gt;
+ 
+ //预组装?
+ &lt;key&gt;Precomposed&lt;/key&gt;
+ &lt;true/&gt;
+ 
+ //可不填 iOS14.4需要填写 配合bundleId才能无缝过渡,这个URL应该是app的universal link
+ 我试过填写的 https://www.baidu.com 配合微博的bundleId 结果打开微博然后唤起webView跳转了百度~ ... 匪夷所思...
+ &lt;key&gt;URL&lt;/key&gt;
+ &lt;string&gt;URL&lt;/string&gt;
+ 
+ //bundleId 必填 不然无法指定是打开哪个app
+ &lt;key&gt;TargetApplicationBundleIdentifier&lt;/key&gt;
+ &lt;string&gt;%@&lt;/string&gt;
+  
+&lt;/dict&gt;
+
+ ### 更新于2021年6月11日 20:45:06
+ *******************************************************************************************
+ 最近恰好学了Vue 写了一个在线工具练手 结合在线工具可以方便调试 (不需要打包app这么麻烦,也不需要去写捷径折腾~)
+ https://github.com/WangGuibin/webclicp-vue-app
+ 苹果捷径iOS14.3以上即可实现换图标的功能 只是第一次启动会弹通知栏~ 就这~
+*/
+
+
+/// 创建一个应用的局部描述文件代码
+/// @param iconBase64 图标base64
+/// @param isRemoveFromDestop 是否从桌面移除
+/// @param appName 应用标题
+/// @param uuid 唯一标识
+/// @param bundleId 应用唯一标识 必选
+/// @param URL universal link 或者 URLScheme
++ (NSString *)createOneAppConfigWithIcon:(NSString *_Nullable)iconBase64
+                          isRemoveFromDestop:(BOOL)isRemoveFromDestop
+                                 appName:(NSString *)appName
+                                    uuid:(NSString *)uuid
+                                bundleId:(NSString *)bundleId
+                                     URL:(NSString *_Nullable)URL
+{
+    NSString *iconText = [NSString stringWithFormat:@&quot;&lt;key&gt;Icon&lt;/key&gt;&lt;data&gt;%@&lt;/data&gt;&quot;,iconBase64];
+    if (!iconBase64.length) {
+        iconText = @&quot;&quot;;
+    }
+    
+    if (URL.length) {
+        URL = [NSString stringWithFormat:@&quot;&lt;key&gt;URL&lt;/key&gt;\n&lt;string&gt;%@&lt;/string&gt;\n&quot;,URL];
+    }else{
+        URL = @&quot;&quot;;
+    }
+        
+    NSMutableString *strM = [NSMutableString string];
+    [strM appendFormat:@&quot;&lt;dict&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;FullScreen&lt;/key&gt;&lt;true/&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;IsRemovable&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;%@/&gt;\n&quot;,isRemoveFromDestop?@&quot;true&quot;:@&quot;false&quot;];
+    [strM appendFormat:@&quot;%@\n&quot;,iconText];
+    [strM appendFormat:@&quot;&lt;key&gt;Label&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;%@&lt;/string&gt;\n&quot;,appName];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadDescription&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;配置 Web Clip 设置&lt;/string&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadDisplayName&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;Web Clip&lt;/string&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadIdentifier&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;com.apple.webClip.managed.%@&lt;/string&gt;\n&quot;,uuid];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadType&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;com.apple.webClip.managed&lt;/string&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadUUID&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;%@&lt;/string&gt;\n&quot;,uuid];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadVersion&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;real&gt;1&lt;/real&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;Precomposed&lt;/key&gt;&lt;true/&gt;\n%@&quot;,URL];
+    [strM appendFormat:@&quot;&lt;key&gt;TargetApplicationBundleIdentifier&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;%@&lt;/string&gt;\n&quot;,bundleId];
+    [strM appendFormat:@&quot;&lt;/dict&gt;\n&quot;];
+//    NSLog(@&quot;%@&quot;,strM);
+    return [strM copy];
+}
+
+
+/// 把app的配置组装成一个完整的WebClip描述文件
+/// @param configs app的描述文件代码
+/// @param appSetName 集合描述文件的名字 可选
+/// @param uuid 唯一标识
++ (NSString *)addConfigIntoGroupWithConfigs:(NSString *)configs
+                                 appSetName:(NSString *_Nullable)appSetName
+                                       uuid:(NSString *)uuid
+
+{
+    appSetName = appSetName?:@&quot;WebClip描述文件&quot;;
+    
+    NSMutableString *strM = [NSMutableString string];
+    [strM appendFormat:@&quot;&lt;?xml version=&apos;1.0&apos; encoding=&apos;UTF-8&apos;?&gt;&lt;!DOCTYPE plist PUBLIC &apos;-//Apple//DTD PLIST 1.0//EN&apos; &apos;http://www.apple.com/DTDs/PropertyList-1.0.dtd&apos;&gt;&lt;plist version=&apos;1.0&apos;&gt;&lt;dict&gt;&lt;key&gt;PayloadContent&lt;/key&gt;&lt;array&gt;\n&quot;];
+    [strM appendFormat:@&quot;%@\n&quot;,configs];
+    [strM appendFormat:@&quot;&lt;/array&gt;&lt;key&gt;PayloadDisplayName&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;%@&lt;/string&gt;\n&quot;,appSetName];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadIdentifier&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;CoderWGB.%@&lt;/string&gt;\n&quot;,uuid];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadRemovalDisallowed&lt;/key&gt;&lt;false/&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadType&lt;/key&gt;&lt;string&gt;Configuration&lt;/string&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadUUID&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;string&gt;%@&lt;/string&gt;\n&quot;,uuid];
+    [strM appendFormat:@&quot;&lt;key&gt;PayloadVersion&lt;/key&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;integer&gt;1&lt;/integer&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;/dict&gt;\n&quot;];
+    [strM appendFormat:@&quot;&lt;/plist&gt;\n&quot;];
+    NSLog(@&quot;%@&quot;,strM);
+    return [strM copy];
+}
+
+
+@end
+</string>
+		</dict>
+	</array>
+</dict>
+</plist>
