@@ -11,6 +11,7 @@
 #import "OpenAppWithIDController.h"
 #import "InstalledAppListViewController.h"
 #import "InstalledAppManager.h"
+#import "SGWiFiUploadManager.h"
 
 @interface AppMainViewController ()
 
@@ -55,9 +56,32 @@
         }
     }
     
+    if(indexPath.row == 6){
+        [self setupServer];
+    }
     
-    
-    
+}
+
+- (void)setupServer {
+    SGWiFiUploadManager *mgr = [SGWiFiUploadManager sharedManager];
+    BOOL success = [mgr startHTTPServerAtPort:10086];
+    //报存到Documents目录下
+    NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    mgr.savePath = path;
+    if (success) {
+        [mgr setFileUploadStartCallback:^(NSString *fileName, NSString *savePath) {
+            NSLog(@"File %@ Upload Start", fileName);
+        }];
+        [mgr setFileUploadProgressCallback:^(NSString *fileName, NSString *savePath, CGFloat progress) {
+            NSLog(@"File %@ on progress %f", fileName, progress);
+        }];
+        [mgr setFileUploadFinishCallback:^(NSString *fileName, NSString *savePath) {
+            NSLog(@"File Upload Finish %@ at %@", fileName, savePath);
+        }];
+    }
+    [mgr showWiFiPageFrontViewController:self dismiss:^{
+        [mgr stopHTTPServer];
+    }];
 }
 
 @end
