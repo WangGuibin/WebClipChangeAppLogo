@@ -601,21 +601,21 @@
 		CA6EF0CA29D95304009B704E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CA6EF0EA29D95304009B704E /* Categories */,
+				CA6EF0CF29D95304009B704E /* HTTPAuthenticationRequest.h */,
+				CA6EF0E929D95304009B704E /* HTTPAuthenticationRequest.m */,
 				CA6EF0CB29D95304009B704E /* HTTPConnection.h */,
+				CA6EF0DF29D95304009B704E /* HTTPConnection.m */,
 				CA6EF0CC29D95304009B704E /* HTTPLogging.h */,
 				CA6EF0CD29D95304009B704E /* HTTPMessage.h */,
-				CA6EF0CE29D95304009B704E /* WebSocket.h */,
-				CA6EF0CF29D95304009B704E /* HTTPAuthenticationRequest.h */,
-				CA6EF0D029D95304009B704E /* Responses */,
-				CA6EF0DD29D95304009B704E /* HTTPServer.h */,
 				CA6EF0DE29D95304009B704E /* HTTPMessage.m */,
-				CA6EF0DF29D95304009B704E /* HTTPConnection.m */,
-				CA6EF0E029D95304009B704E /* WebSocket.m */,
 				CA6EF0E129D95304009B704E /* HTTPResponse.h */,
-				CA6EF0E229D95304009B704E /* Mime */,
-				CA6EF0E929D95304009B704E /* HTTPAuthenticationRequest.m */,
-				CA6EF0EA29D95304009B704E /* Categories */,
+				CA6EF0DD29D95304009B704E /* HTTPServer.h */,
 				CA6EF0F129D95304009B704E /* HTTPServer.m */,
+				CA6EF0E229D95304009B704E /* Mime */,
+				CA6EF0D029D95304009B704E /* Responses */,
+				CA6EF0CE29D95304009B704E /* WebSocket.h */,
+				CA6EF0E029D95304009B704E /* WebSocket.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -624,17 +624,17 @@
 			isa = PBXGroup;
 			children = (
 				CA6EF0D129D95304009B704E /* HTTPAsyncFileResponse.h */,
-				CA6EF0D229D95304009B704E /* HTTPErrorResponse.m */,
-				CA6EF0D329D95304009B704E /* HTTPDataResponse.m */,
-				CA6EF0D429D95304009B704E /* HTTPRedirectResponse.h */,
-				CA6EF0D529D95304009B704E /* HTTPDynamicFileResponse.m */,
-				CA6EF0D629D95304009B704E /* HTTPFileResponse.m */,
 				CA6EF0D729D95304009B704E /* HTTPAsyncFileResponse.m */,
-				CA6EF0D829D95304009B704E /* HTTPRedirectResponse.m */,
 				CA6EF0D929D95304009B704E /* HTTPDataResponse.h */,
-				CA6EF0DA29D95304009B704E /* HTTPErrorResponse.h */,
-				CA6EF0DB29D95304009B704E /* HTTPFileResponse.h */,
+				CA6EF0D329D95304009B704E /* HTTPDataResponse.m */,
 				CA6EF0DC29D95304009B704E /* HTTPDynamicFileResponse.h */,
+				CA6EF0D529D95304009B704E /* HTTPDynamicFileResponse.m */,
+				CA6EF0DA29D95304009B704E /* HTTPErrorResponse.h */,
+				CA6EF0D229D95304009B704E /* HTTPErrorResponse.m */,
+				CA6EF0DB29D95304009B704E /* HTTPFileResponse.h */,
+				CA6EF0D629D95304009B704E /* HTTPFileResponse.m */,
+				CA6EF0D429D95304009B704E /* HTTPRedirectResponse.h */,
+				CA6EF0D829D95304009B704E /* HTTPRedirectResponse.m */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -643,11 +643,11 @@
 			isa = PBXGroup;
 			children = (
 				CA6EF0E329D95304009B704E /* MultipartFormDataParser.h */,
-				CA6EF0E429D95304009B704E /* MultipartMessageHeader.h */,
-				CA6EF0E529D95304009B704E /* MultipartMessageHeaderField.m */,
 				CA6EF0E629D95304009B704E /* MultipartFormDataParser.m */,
+				CA6EF0E429D95304009B704E /* MultipartMessageHeader.h */,
 				CA6EF0E729D95304009B704E /* MultipartMessageHeader.m */,
 				CA6EF0E829D95304009B704E /* MultipartMessageHeaderField.h */,
+				CA6EF0E529D95304009B704E /* MultipartMessageHeaderField.m */,
 			);
 			path = Mime;
 			sourceTree = "<group>";
@@ -668,18 +668,18 @@
 		CA6EF0F229D95304009B704E /* CocoaLumberjack */ = {
 			isa = PBXGroup;
 			children = (
-				CA6EF0F329D95304009B704E /* DDTTYLogger.m */,
-				CA6EF0F429D95304009B704E /* DDLog.h */,
-				CA6EF0F529D95304009B704E /* DDAbstractDatabaseLogger.h */,
-				CA6EF0F629D95304009B704E /* DDASLLogger.m */,
 				CA6EF0F729D95304009B704E /* CocoaLumberjack-About.txt */,
+				CA6EF0F529D95304009B704E /* DDAbstractDatabaseLogger.h */,
+				CA6EF10129D95304009B704E /* DDAbstractDatabaseLogger.m */,
+				CA6EF10329D95304009B704E /* DDASLLogger.h */,
+				CA6EF0F629D95304009B704E /* DDASLLogger.m */,
 				CA6EF0F829D95304009B704E /* DDFileLogger.h */,
-				CA6EF0F929D95304009B704E /* Extensions */,
+				CA6EF10229D95304009B704E /* DDFileLogger.m */,
+				CA6EF0F429D95304009B704E /* DDLog.h */,
 				CA6EF0FF29D95304009B704E /* DDLog.m */,
 				CA6EF10029D95304009B704E /* DDTTYLogger.h */,
-				CA6EF10129D95304009B704E /* DDAbstractDatabaseLogger.m */,
-				CA6EF10229D95304009B704E /* DDFileLogger.m */,
-				CA6EF10329D95304009B704E /* DDASLLogger.h */,
+				CA6EF0F329D95304009B704E /* DDTTYLogger.m */,
+				CA6EF0F929D95304009B704E /* Extensions */,
 			);
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
@@ -688,8 +688,8 @@
 			isa = PBXGroup;
 			children = (
 				CA6EF0FA29D95304009B704E /* ContextFilterLogFormatter.h */,
-				CA6EF0FB29D95304009B704E /* DispatchQueueLogFormatter.h */,
 				CA6EF0FC29D95304009B704E /* ContextFilterLogFormatter.m */,
+				CA6EF0FB29D95304009B704E /* DispatchQueueLogFormatter.h */,
 				CA6EF0FD29D95304009B704E /* DispatchQueueLogFormatter.m */,
 				CA6EF0FE29D95304009B704E /* README.txt */,
 			);
