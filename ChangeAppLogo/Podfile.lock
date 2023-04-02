@@ -8,6 +8,31 @@ PODS:
     - SDWebImage/Core (= 5.9.1)
   - SDWebImage/Core (5.9.1)
   - TZImagePickerController (3.4.3)
+  - WGBToolKit (0.1.3):
+    - WGBToolKit/DebugTool (= 0.1.3)
+    - WGBToolKit/Foundation (= 0.1.3)
+    - WGBToolKit/UIKit (= 0.1.3)
+  - WGBToolKit/DebugTool (0.1.3):
+    - WGBToolKit/DebugTool/InjectionIIIHelper (= 0.1.3)
+  - WGBToolKit/DebugTool/InjectionIIIHelper (0.1.3)
+  - WGBToolKit/Foundation (0.1.3):
+    - WGBToolKit/Foundation/NSArray (= 0.1.3)
+    - WGBToolKit/Foundation/NSDictionary (= 0.1.3)
+    - WGBToolKit/Foundation/NSObject (= 0.1.3)
+  - WGBToolKit/Foundation/NSArray (0.1.3)
+  - WGBToolKit/Foundation/NSDictionary (0.1.3)
+  - WGBToolKit/Foundation/NSObject (0.1.3)
+  - WGBToolKit/UIKit (0.1.3):
+    - WGBToolKit/UIKit/Components (= 0.1.3)
+    - WGBToolKit/UIKit/UIButton (= 0.1.3)
+    - WGBToolKit/UIKit/UIColor (= 0.1.3)
+  - WGBToolKit/UIKit/Components (0.1.3):
+    - WGBToolKit/UIKit/Components/JHSoundWaveView (= 0.1.3)
+    - WGBToolKit/UIKit/Components/YBAttributeTextTapAction (= 0.1.3)
+  - WGBToolKit/UIKit/Components/JHSoundWaveView (0.1.3)
+  - WGBToolKit/UIKit/Components/YBAttributeTextTapAction (0.1.3)
+  - WGBToolKit/UIKit/UIButton (0.1.3)
+  - WGBToolKit/UIKit/UIColor (0.1.3)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -16,9 +41,12 @@ DEPENDENCIES:
   - MBProgressHUD
   - SDWebImage
   - TZImagePickerController
+  - WGBToolKit (~> 0.1.3)
   - YYModel
 
 SPEC REPOS:
+  https://gitee.com/wangguibin/my-pod-specs.git:
+    - WGBToolKit
   trunk:
     - GCDWebServer
     - IQKeyboardManager
@@ -33,8 +61,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
   TZImagePickerController: 4f6e91cf00d67827ec23bd3c2f849cbd054b4979
+  WGBToolKit: d2666ba275c78b0d158e0d9a2d50c760ae1cd854
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: f5d2b5dcfc8c22fc0e00e0260ff936729d9f84f1
+PODFILE CHECKSUM: 08fbddb746b07a7b67acde997be3ede3b2067662
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.12.0

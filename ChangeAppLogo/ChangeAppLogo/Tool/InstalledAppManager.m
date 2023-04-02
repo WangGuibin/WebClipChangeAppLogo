@@ -123,4 +123,19 @@
 }
 
 
+
+/// 打开指定应用
+/// - Parameter bundleId: 应用唯一标识
+/// - return 返回YES说明打开了 NO则说明打开失败
+- (BOOL)openAppWithId:(NSString *)bundleId{
+    Class LSApplicationWorkspace  = NSClassFromString(@"LSApplicationWorkspace");
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    NSObject * workspace = [LSApplicationWorkspace performSelector:@selector(defaultWorkspace)];
+    NSString *bundleID = [bundleId stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    BOOL isOpen = [workspace performSelector:@selector(openApplicationWithBundleID:) withObject:bundleID];
+#pragma clang diagnostic pop
+    return isOpen;
+}
+
 @end

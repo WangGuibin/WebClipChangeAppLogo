@@ -22,7 +22,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.tableFooterView = [UIView new];
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加书签" style:(UIBarButtonItemStylePlain) target:self action:@selector(addBookMark)];
+}
+
+- (void)addBookMark{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://run.mocky.io/v3/b2075aee-16d9-4187-9830-045d771362d0"] options:@{} completionHandler:^(BOOL success) {
+        
+    }];
 }
 
 
@@ -48,6 +54,9 @@
             [self presentViewController:alertVC animated:YES completion:nil];
         }
     }
+    
+    
+    
     
 }
 

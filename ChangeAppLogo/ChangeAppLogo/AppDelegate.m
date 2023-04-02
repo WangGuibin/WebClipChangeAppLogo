@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "InstalledAppManager.h"
+#import "BaseTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,8 @@
     [self registerDefaultsFromSettingsBundle];
     self.window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-    self.window.rootViewController = vc;
+//    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    self.window.rootViewController = [BaseTabBarController new];
     [self.window makeKeyAndVisible];
     [[InstalledAppManager share] syncData];
     return YES;

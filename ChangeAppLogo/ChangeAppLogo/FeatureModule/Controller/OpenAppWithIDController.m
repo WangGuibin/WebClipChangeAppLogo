@@ -7,6 +7,7 @@
 
 #import "OpenAppWithIDController.h"
 #import "AppListViewController.h"
+#import "InstalledAppManager.h"
 
 @interface OpenAppWithIDController ()
 
@@ -46,7 +47,7 @@
     [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
     }]];
     [alertVC addAction:[UIAlertAction actionWithTitle:@"打开" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        NSString *bundleID = [[alertVC.textFields.firstObject text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString *bundleID = [alertVC.textFields.firstObject text];
         [self openAppWithId:bundleID];
     }]];
     [self presentViewController:alertVC animated:YES completion:nil];
@@ -75,20 +76,14 @@
 
 
 - (BOOL)openAppWithId:(NSString *)bundleId{
-    Class LSApplicationWorkspace  = NSClassFromString(@"LSApplicationWorkspace");
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-    NSObject * workspace = [LSApplicationWorkspace performSelector:@selector(defaultWorkspace)];
-    BOOL isopen = [workspace performSelector:@selector(openApplicationWithBundleID:) withObject:bundleId];
-#pragma clang diagnostic pop
-    
-    if(!isopen){
+    BOOL isOpen = [[InstalledAppManager share] openAppWithId:bundleId];
+    if(!isOpen){
         UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"友情提示" message:@"您未安装该App或者bundleId不正确" preferredStyle:(UIAlertControllerStyleAlert)];
         [alertVC addAction:[UIAlertAction actionWithTitle:@"我已知晓" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
         }]];
         [self presentViewController:alertVC animated:YES completion:nil];
     }
-    return isopen;
+    return isOpen;
 }
 
 @end

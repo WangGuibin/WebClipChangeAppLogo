@@ -75,7 +75,7 @@
     // Do any additional setup after loading the view.
     self.tableView.tableFooterView = [UIView new];
     [self.tableView registerClass:[AppCell class] forCellReuseIdentifier:NSStringFromClass([AppCell class])];
-    self.title = @"选择应用";
+    self.navigationItem.title = @"选择应用";
     [self searchDataWithKeyword:@"微信"];
 }
 

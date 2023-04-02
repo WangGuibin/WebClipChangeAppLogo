@@ -1,0 +1,6 @@
+framework module WGBToolKit {
+  umbrella header "WGBToolKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
