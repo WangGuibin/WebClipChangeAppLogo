@@ -2,6 +2,7 @@ name: Build App
 
 on:
   push:
+    tags: '*.*.*'
     branches: [ main ]
     
   workflow_dispatch:
