@@ -23,7 +23,8 @@ jobs:
         configuration: Release
     - name: Package Zip
       run: |
-          export BUILD_DIR=$(xcodebuild -project ChangeAppLogo/ChangeAppLogo.xcodeproj -scheme ChangeAppLogo -configuration Release -showBuildSettings  | grep -m 1 "BUILT_PRODUCTS_DIR" | grep -oEi "\/*.app")
+          #export BUILD_DIR=$(xcodebuild -project ChangeAppLogo/ChangeAppLogo.xcodeproj -scheme ChangeAppLogo -configuration Release -showBuildSettings  | grep -m 1 "BUILT_PRODUCTS_DIR" | grep -oEi "\/*.app")
+          export BUILD_DIR=$(xcodebuild -project ChangeAppLogo/ChangeAppLogo.xcodeproj -scheme ChangeAppLogo -configuration Release -showBuildSettings | awk -F= '/BUILT_PRODUCTS_DIR/{print $2}' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | sed 's/\/$//')/Build/Products/Release-iphoneos/ChangeAppLogo.app
           (cd "$BUILD_DIR" ; zip -r ChangeAppLogo.app.zip ./ChangeAppLogo.app)
           cp "$BUILD_DIR/ChangeAppLogo.app.zip" .
           
