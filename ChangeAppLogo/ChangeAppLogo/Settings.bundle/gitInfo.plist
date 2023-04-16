@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>DefaultValue</key>
-			<string>7b2a602</string>
+			<string>26a49f2</string>
 			<key>Key</key>
 			<string>sha</string>
 			<key>Title</key>
@@ -36,7 +36,7 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>Sun Apr 2 14:48:22 2023 +0800</string>
+			<string>2023-04-02 22:13:14 </string>
 			<key>Key</key>
 			<string>commit_date</string>
 			<key>Title</key>
@@ -46,11 +46,11 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>Sun Apr 2 19:43:36 CST 2023</string>
+			<string>2023-04-16 15:43:27</string>
 			<key>Key</key>
 			<string>build_time</string>
 			<key>Title</key>
-			<string>上一次编译时间(倒数第二次)</string>
+			<string>编译时间</string>
 			<key>Type</key>
 			<string>PSTitleValueSpecifier</string>
 		</dict>

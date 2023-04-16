@@ -36,6 +36,15 @@
     [self.tableView reloadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if(!self.dataSource.count){
+        self.dataSource = [InstalledAppManager share].installedApps;
+        [self.tableView reloadData];
+    }
+}
+
+
 #pragma mark -  UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSource.count;

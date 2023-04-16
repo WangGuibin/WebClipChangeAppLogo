@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray <AppInfoModel *> *results;
 
 // 搜索🔍APP 获取APP数据
-+ (void)getAppInfoFromAppStoreWithAppName:(NSString *)appName
++ (void)wgb_getAppInfoFromAppStoreWithAppName:(NSString *)appName
                                  callBack:(void(^)(AppStoreModel *AppModel))callBack;
 
 @end

@@ -21,6 +21,8 @@
 		CA1E8BD3254D0C3400049305 /* iconVersioning.sh in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8BD2254D0C3400049305 /* iconVersioning.sh */; };
 		CA1E8C5A254E997800049305 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1E8C59254E997800049305 /* Stickers.xcassets */; };
 		CA1E8C5E254E997800049305 /* WGBEmoticonsFaceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CA53283D29DD9AD600128D74 /* LSApplicationWorkspace in Resources */ = {isa = PBXBuildFile; fileRef = CA53283C29DD9AD600128D74 /* LSApplicationWorkspace */; };
+		CA53283F29DD9C1000128D74 /* LSApplicationProxy in Resources */ = {isa = PBXBuildFile; fileRef = CA53283E29DD9C1000128D74 /* LSApplicationProxy */; };
 		CA6EF06829D90662009B704E /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6EF06729D90662009B704E /* BaseTabBarController.m */; };
 		CA6EF10829D95304009B704E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = CA6EF0B429D95304009B704E /* index.html */; };
 		CA6EF10929D95304009B704E /* upload.html in Resources */ = {isa = PBXBuildFile; fileRef = CA6EF0B529D95304009B704E /* upload.html */; };
@@ -205,6 +207,10 @@
 		26378B57F9725400CB10744B /* Pods-ChangeAppLogo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeAppLogo.debug.xcconfig"; path = "Target Support Files/Pods-ChangeAppLogo/Pods-ChangeAppLogo.debug.xcconfig"; sourceTree = "<group>"; };
 		546A2614ABC86A5F0F68863C /* Pods-ChangeAppLogo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeAppLogo.release.xcconfig"; path = "Target Support Files/Pods-ChangeAppLogo/Pods-ChangeAppLogo.release.xcconfig"; sourceTree = "<group>"; };
 		6A30A8282D12E15DA7AEC5AC /* Pods_ChangeAppLogo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChangeAppLogo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA078F9329EBDB13005BBCB1 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
+		CA078F9429EBDB13005BBCB1 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
+		CA078F9529EBDB13005BBCB1 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
+		CA078F9629EBDB13005BBCB1 /* symbols */ = {isa = PBXFileReference; lastKnownFileType = file; path = symbols; sourceTree = "<group>"; };
 		CA1E8B0F2543F94A00049305 /* ChangeAppLogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChangeAppLogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1E8B122543F94A00049305 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA1E8B132543F94A00049305 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,6 +233,8 @@
 		CA1E8C57254E997300049305 /* WGBEmoticonsFaceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WGBEmoticonsFaceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1E8C59254E997800049305 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		CA1E8C5B254E997800049305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA53283C29DD9AD600128D74 /* LSApplicationWorkspace */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSApplicationWorkspace; sourceTree = "<group>"; };
+		CA53283E29DD9C1000128D74 /* LSApplicationProxy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LSApplicationProxy; sourceTree = "<group>"; };
 		CA67FF1D27A9014E003D9742 /* ChangeAppLogo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChangeAppLogo.entitlements; sourceTree = "<group>"; };
 		CA67FF1E27A9014E003D9742 /* Shortcuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Shortcuts.entitlements; sourceTree = "<group>"; };
 		CA67FF1F27A90167003D9742 /* WGBEmoticonsFaceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WGBEmoticonsFaceExtension.entitlements; sourceTree = "<group>"; };
@@ -443,9 +451,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CA078F9229EBDB13005BBCB1 /* ConfuseTool */ = {
+			isa = PBXGroup;
+			children = (
+				CA078F9329EBDB13005BBCB1 /* codeObfuscation.h */,
+				CA078F9429EBDB13005BBCB1 /* confuse.sh */,
+				CA078F9529EBDB13005BBCB1 /* func.list */,
+				CA078F9629EBDB13005BBCB1 /* symbols */,
+			);
+			path = ConfuseTool;
+			sourceTree = "<group>";
+		};
 		CA1E8B062543F94A00049305 = {
 			isa = PBXGroup;
 			children = (
+				CA078F9229EBDB13005BBCB1 /* ConfuseTool */,
 				CA1E8B112543F94A00049305 /* ChangeAppLogo */,
 				CA1E8C58254E997300049305 /* WGBEmoticonsFaceExtension */,
 				CABF3FAA2571D72C00EBF0E0 /* Shortcuts */,
@@ -718,6 +738,8 @@
 				CAAC6C0A25739DDF00033FD7 /* SocialValuesEncoderDecoder.m */,
 				CAAFF8E12928FBCF000A3ABE /* InstalledAppManager.h */,
 				CAAFF8E22928FBCF000A3ABE /* InstalledAppManager.m */,
+				CA53283E29DD9C1000128D74 /* LSApplicationProxy */,
+				CA53283C29DD9AD600128D74 /* LSApplicationWorkspace */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -946,6 +968,7 @@
 				25FCBE681DA6EB9E1640555A /* [CP] Embed Pods Frameworks */,
 				CA1E8C5F254E997800049305 /* Embed App Extensions */,
 				CA81894F27A77456003988CC /* ShellScript */,
+				CA078F9A29EBDB9B005BBCB1 /* ConfusedCode */,
 			);
 			buildRules = (
 			);
@@ -1039,6 +1062,7 @@
 				CA1E8B222543F94F00049305 /* LaunchScreen.storyboard in Resources */,
 				CA6EF12429D95304009B704E /* CocoaLumberjack-About.txt in Resources */,
 				CA6EF10929D95304009B704E /* upload.html in Resources */,
+				CA53283F29DD9C1000128D74 /* LSApplicationProxy in Resources */,
 				CA6EF10E29D95304009B704E /* SGWiFiUpload.bundle in Resources */,
 				CAAFF8E52930E588000A3ABE /* Settings.bundle in Resources */,
 				CA6EF12729D95304009B704E /* README.txt in Resources */,
@@ -1049,6 +1073,7 @@
 				CAAC6CF3257CCEF800033FD7 /* SFSymbol.Communication.plist in Resources */,
 				CAAC6CF4257CCEF800033FD7 /* SFSymbol.Editing.plist in Resources */,
 				CAAC6CF6257CCEF800033FD7 /* SFSymbol.Transportation.plist in Resources */,
+				CA53283D29DD9AD600128D74 /* LSApplicationWorkspace in Resources */,
 				CA1E8B1F2543F94F00049305 /* Assets.xcassets in Resources */,
 				CAAC6CFE257CCEF800033FD7 /* SFSymbol.Arrows.plist in Resources */,
 				CAAC6D00257CCEF800033FD7 /* SFSymbol.Media.plist in Resources */,
@@ -1148,6 +1173,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CA078F9A29EBDB9B005BBCB1 /* ConfusedCode */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = ConfusedCode;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 混淆代码\nsh $PROJECT_DIR/ConfuseTool/confuse.sh\n";
 		};
 		CA81894F27A77456003988CC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

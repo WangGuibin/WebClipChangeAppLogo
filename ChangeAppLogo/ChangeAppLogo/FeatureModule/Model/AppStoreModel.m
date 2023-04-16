@@ -27,7 +27,7 @@
 
 
 // 搜索🔍APP 获取APP数据
-+ (void)getAppInfoFromAppStoreWithAppName:(NSString *)appName
++ (void)wgb_getAppInfoFromAppStoreWithAppName:(NSString *)appName
                                  callBack:(void(^)(AppStoreModel *AppModel))callBack{
     NSString *urlStr = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&entity=software&country=cn",appName];
     NSString *realStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];

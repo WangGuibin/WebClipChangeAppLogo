@@ -92,7 +92,7 @@
 }
 
 - (void)searchDataWithKeyword:(NSString *)keyword{
-    [AppStoreModel getAppInfoFromAppStoreWithAppName:keyword callBack:^(AppStoreModel * _Nonnull AppModel) {
+    [AppStoreModel wgb_getAppInfoFromAppStoreWithAppName:keyword callBack:^(AppStoreModel * _Nonnull AppModel) {
         self.bigModel = AppModel;
         self.appNameTF.text = nil;
         [self.tableView reloadData];

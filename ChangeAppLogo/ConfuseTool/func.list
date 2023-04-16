@@ -1,0 +1,9 @@
+wgb_addBookMark
+wgb_backgroundSession
+wgb_beginDownload
+wgb_endBackgroundTask
+wgb_getAppInfoFromAppStoreWithAppName
+wgb_handleEnterBackground
+wgb_handleEnterForeground
+wgb_setupServer
+wgb_startBackgroundTask

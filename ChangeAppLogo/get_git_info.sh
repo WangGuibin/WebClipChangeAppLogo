@@ -9,12 +9,13 @@ current_git_branch=$(git symbolic-ref --short -q HEAD)
 git_last_commiter=$(git log -1 --pretty=format:'%an')
 
 #最后一次提交的时间
-git_last_commit_date=$(git log -1 --format='%cd')
+git_last_commit_date=$(git log -1 --format='%ai')
+git_last_commit_date=${git_last_commit_date%%+*}
 
 #编译时间
-build_time=$(date)
+build_time=`date "+%Y-%m-%d %H:%M:%S"`
 
-message="git_sha: ${last_git_sha}\nbranch: ${current_git_branch}\ncommiter: ${git_last_commiter}\ncommit_date: ${git_last_commit_date}\nbuildTime: ${build_time}"
+#message="git_sha: ${last_git_sha}\nbranch: ${current_git_branch}\ncommiter: ${git_last_commiter}\ncommit_date: ${git_last_commit_date}\nbuildTime: ${build_time}"
 
 
 item=$(cat <<EOF 
@@ -46,7 +47,7 @@ item=$(cat <<EOF
       "Key": "commit_date"
     },
      {
-      "Title": "上一次编译时间(倒数第二次)",
+      "Title": "编译时间",
       "Type": "PSTitleValueSpecifier",
       "DefaultValue" : "${build_time}",
       "Key": "build_time"

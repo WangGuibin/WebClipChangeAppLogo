@@ -12,6 +12,7 @@
 #import "InstalledAppListViewController.h"
 #import "InstalledAppManager.h"
 #import "SGWiFiUploadManager.h"
+#import <SafariServices/SafariServices.h>
 
 @interface AppMainViewController ()<NSURLSessionDelegate>
 
@@ -32,18 +33,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.tableFooterView = [UIView new];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加书签" style:(UIBarButtonItemStylePlain) target:self action:@selector(addBookMark)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加书签" style:(UIBarButtonItemStylePlain) target:self action:@selector(wgb_addBookMark)];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleEnterForeground) name:UIApplicationDidBecomeActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wgb_handleEnterForeground) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wgb_handleEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 
 
-- (void)addBookMark{
+- (void)wgb_addBookMark{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://run.mocky.io/v3/b2075aee-16d9-4187-9830-045d771362d0"] options:@{} completionHandler:^(BOOL success) {
         
     }];
+    
+   
+//添加书签 其实是书签里的阅读列表
+//    NSURL *saveURL = [NSURL URLWithString:@"https://run.mocky.io/v3/b2075aee-16d9-4187-9830-045d771362d0"];
+//    NSError *error;
+//    BOOL result = [[SSReadingList defaultReadingList] addReadingListItemWithURL:saveURL title:@"图标易容术" previewText:@"添加书签"  error:&error];
+//    if(error){
+//        NSLog(@"%@",error);
+//    }
 }
 
 
@@ -71,12 +81,12 @@
     }
     
     if(indexPath.row == 6){
-        [self setupServer];
+        [self wgb_setupServer];
     }
     
 }
 
-- (void)setupServer {
+- (void)wgb_setupServer {
     self.isStartUploadFileService = YES;
     SGWiFiUploadManager *mgr = [SGWiFiUploadManager sharedManager];
     BOOL success = [mgr startHTTPServerAtPort:10086];
@@ -102,19 +112,19 @@
 
 
 //进入前台
-- (void)handleEnterForeground {
+- (void)wgb_handleEnterForeground {
     self.isBackGround = NO;
     [[UIApplication sharedApplication] endBackgroundTask:self->bgTask];
-    [self endBackgroundTask];
+    [self wgb_endBackgroundTask];
 }
 
 //进入后台
-- (void)handleEnterBackground {
+- (void)wgb_handleEnterBackground {
     self.isBackGround = YES;
-    [self startBackgroundTask];
+    [self wgb_startBackgroundTask];
 }
 
-- (void)endBackgroundTask {
+- (void)wgb_endBackgroundTask {
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self->bgTask != UIBackgroundTaskInvalid) {
             [[UIApplication sharedApplication] endBackgroundTask:self->bgTask];
@@ -124,14 +134,14 @@
 }
 
 
-- (void)startBackgroundTask{
+- (void)wgb_startBackgroundTask{
     if(!self.isStartUploadFileService){
         return;
     }
     // begin和end成对出现
     self->bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
             NSLog(@"后台任务超时了~ ");
-            [self endBackgroundTask];
+            [self wgb_endBackgroundTask];
         }];
         
     //10秒之后打印一下还剩多长时间 实测只有30秒左右后台运行任务时间
@@ -151,7 +161,7 @@
 
 
 //后台任务
-- (NSURLSession *)backgroundSession{
+- (NSURLSession *)wgb_backgroundSession{
     static NSURLSession *session = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -160,11 +170,11 @@
     });
     return session;
 }
-- (void)beginDownload{
+- (void)wgb_beginDownload{
     //弄个假地址 不耗流量重复请求
     NSURL *downloadURL = [NSURL URLWithString:@"downloadsString"];
     NSURLRequest *request = [NSURLRequest requestWithURL:downloadURL];
-    self.session = [self backgroundSession];
+    self.session = [self wgb_backgroundSession];
     self.downloadTask = [self.session downloadTaskWithRequest:request];
     [self.downloadTask resume];
 }
@@ -181,8 +191,8 @@
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
     if (self.isBackGround) {
-        [self endBackgroundTask];//停止掉
-        [self startBackgroundTask];//重新开
+        [self wgb_endBackgroundTask];//停止掉
+        [self wgb_startBackgroundTask];//重新开
     }
 }
 
