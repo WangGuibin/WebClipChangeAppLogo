@@ -23,7 +23,7 @@ jobs:
         configuration: Release
     - name: Package Zip
       run: |
-          export BUILD_DIR=$(xcodebuild -project ChangeAppLogo/ChangeAppLogo.xcodeproj -scheme ChangeAppLogo -configuration Release -showBuildSettings  | grep -m 1 "BUILT_PRODUCTS_DIR" | grep -oEi "\/.*")
+          export BUILD_DIR=$(xcodebuild -project ChangeAppLogo/ChangeAppLogo.xcodeproj -scheme ChangeAppLogo -configuration Release -showBuildSettings  | grep -m 1 "BUILT_PRODUCTS_DIR" | grep -oEi "\/*.app")
           (cd "$BUILD_DIR" ; zip -r ChangeAppLogo.app.zip ./ChangeAppLogo.app)
           cp "$BUILD_DIR/ChangeAppLogo.app.zip" .
           
